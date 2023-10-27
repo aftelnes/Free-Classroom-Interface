@@ -1,0 +1,22 @@
+import React from "react";
+import { useState } from "react";
+import { DateInput } from "@mantine/dates";
+import "@mantine/dates/styles.css";
+import classes from "../styles/InputDate/InputDate.module.css";
+
+function InputDate() {
+  const [date, setDate] = useState<Date | null>(null);
+  return (
+    <DateInput
+      className={classes.inputDate}
+      value={date}
+      onChange={setDate}
+      label='Дата'
+      placeholder='Выберите дату'
+      clearable
+      onDateChange={(date: Date) => console.log(`date = ${date}`)}
+    />
+  );
+}
+
+export default InputDate;

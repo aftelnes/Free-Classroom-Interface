@@ -30,6 +30,7 @@ function InputDate() {
     label: "\u0414\u0430\u0442\u0430",
     placeholder: "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0434\u0430\u0442\u0443",
     clearable: true,
+    withAsterisk: true,
     onDateChange: function onDateChange(date) {
       return console.log("date = ".concat(date));
     }

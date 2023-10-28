@@ -1,5 +1,5 @@
 .ui {
-  background-color: rgb(196, 196, 196);
+  background-color: rgb(255, 255, 255);
   width: 50vw;
   height: 110vh;
   margin-left: 25vw;
@@ -10,7 +10,7 @@
   width: 24vw;
   height: 105vh;
   margin: 0.5vw;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 225, 225);
   float: left;
   text-align: center;
   border-radius: 10px;
@@ -21,4 +21,11 @@
   font-weight: 600;
   font-size: 20px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.ui .findbtn {
+  width: 7vw;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }

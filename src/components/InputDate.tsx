@@ -14,6 +14,7 @@ function InputDate() {
       label='Дата'
       placeholder='Выберите дату'
       clearable
+      withAsterisk
       onDateChange={(date: Date) => console.log(`date = ${date}`)}
     />
   );

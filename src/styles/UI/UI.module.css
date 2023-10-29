@@ -25,7 +25,5 @@
 
 .ui .findbtn {
   width: 7vw;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  margin-left: -6.9vw;
 }

@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./styles/UI/UI.module.css";
 import InputDate from "./components/InputDate";
 import InputLessonNumber from "./components/InputLessonNumber";
 import InputMinimalCapacity from "./components/InputMinimalCapacity";
-import { Button } from "@mantine/core";
+import { Burger, Button } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
+import InputFaculties from "./components/InputFaculties";
+import OutputDate from "./components/OutputDate";
 import { MantineProvider } from "@mantine/core";
+import BurgerInfo from "./components/BurgerBtn";
 
 function App() {
   return (
@@ -17,12 +20,15 @@ function App() {
           <InputDate />
           <InputLessonNumber />
           <InputMinimalCapacity />
+          <InputFaculties />
           <Button variant='filled' className={classes.findbtn}>
             Найти
           </Button>
         </div>
         <div className={classes.areas}>
           <h3 className={classes.h3}>Результат</h3>
+          <OutputDate />
+          <Burger />
         </div>
       </div>
     </MantineProvider>

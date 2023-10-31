@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _core = require("@mantine/core");
 var _OutPutDateModule = _interopRequireDefault(require("../styles/OutputDate/OutPutDate.module.css"));
+var _Menu = _interopRequireDefault(require("./Menu"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var OutputDate = function OutputDate() {
   var elements = [{
@@ -33,7 +34,7 @@ var OutputDate = function OutputDate() {
       className: _OutPutDateModule.default.faculty
     }, element.faculty), /*#__PURE__*/React.createElement(_core.Table.Td, {
       className: _OutPutDateModule.default.placesNum
-    }, element.placesNum));
+    }, element.placesNum, /*#__PURE__*/React.createElement(_Menu.default, null)));
   });
   return /*#__PURE__*/React.createElement(_core.Table, {
     className: _OutPutDateModule.default.outputDate

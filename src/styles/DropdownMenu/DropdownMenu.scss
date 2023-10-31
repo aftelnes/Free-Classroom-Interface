@@ -1,0 +1,29 @@
+$fontSize: 10px;
+$marginTop: 0.2vw;
+$blueColor: rgb(0, 110, 255);
+
+.actionIcon{
+    border: 0;
+    margin-left: 2vw;
+}
+
+.dropdownMenu {
+  border-radius: $fontSize;
+  height: 13vh;
+  margin-left: 4vw;
+}
+
+.dropdownMenu .label {
+  font-size: $fontSize;
+  margin-top: $marginTop;
+  padding: 0;
+}
+
+.dropdownMenu .item {
+  width: 6vw;
+  font-size: $fontSize;
+  color: $blueColor;
+  margin-top: $marginTop;
+  padding: 0;
+  border: 1px solid $blueColor;
+}

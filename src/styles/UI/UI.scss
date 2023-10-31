@@ -1,5 +1,8 @@
+$backgroundColor: rgb(255, 255, 255);
+$backgroundColorArea: rgb(255, 226, 226);
+
 .ui {
-  background-color: rgb(255, 255, 255);
+  background-color: $backgroundColor;
   width: 50vw;
   height: 110vh;
   margin-left: 25vw;
@@ -10,7 +13,7 @@
   width: 24vw;
   height: 105vh;
   margin: 0.5vw;
-  background-color: rgb(255, 225, 225);
+  background-color: $backgroundColorArea;
   float: left;
   text-align: center;
   border-radius: 10px;

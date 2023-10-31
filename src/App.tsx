@@ -10,6 +10,7 @@ import InputFaculties from "./components/InputFaculties";
 import OutputDate from "./components/OutputDate";
 import { MantineProvider } from "@mantine/core";
 import BurgerInfo from "./components/BurgerBtn";
+import MenuInfo from "./components/Menu";
 
 function App() {
   return (
@@ -28,7 +29,6 @@ function App() {
         <div className={classes.areas}>
           <h3 className={classes.h3}>Результат</h3>
           <OutputDate />
-          <Burger />
         </div>
       </div>
     </MantineProvider>

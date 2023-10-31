@@ -1,0 +1,25 @@
+.actionIcon {
+  border: 0;
+  margin-left: 2vw;
+}
+
+.dropdownMenu {
+  border-radius: 10px;
+  height: 13vh;
+  margin-left: 4vw;
+}
+
+.dropdownMenu .label {
+  font-size: 10px;
+  margin-top: 0.2vw;
+  padding: 0;
+}
+
+.dropdownMenu .item {
+  width: 6vw;
+  font-size: 10px;
+  color: rgb(0, 110, 255);
+  margin-top: 0.2vw;
+  padding: 0;
+  border: 1px solid rgb(0, 110, 255);
+}

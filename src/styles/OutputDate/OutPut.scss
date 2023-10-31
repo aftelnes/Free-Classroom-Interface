@@ -1,19 +1,22 @@
+$backgroundColor: rgb(255, 255, 255);
+
+
 .outputDate{
     border-radius: 7px;
     width: 15vw;
-    margin-left: 5vw
+    margin-left: 5vw;
 }
 
 .outputDate .class{
-    background-color: rgb(255, 255, 255);
+    background-color: $backgroundColor;
     border-radius: 5px 0 0 5px ;
 }
 
 .outputDate .faculty {
-    background-color: rgb(255, 255, 255);
+    background-color: $backgroundColor;
 }
 
 .outputDate .placesNum {
-    background-color: rgb(255, 255, 255);
+    background-color: $backgroundColor;
     border-radius: 0 5px 5px 0;
 }

@@ -21,11 +21,12 @@ function MenuInfo() {
         </ActionIcon>
       </Menu.Target>
 
-      <Menu.Dropdown className={classes.dropdownMenu}>
+      <Menu.Dropdown className={classes.dropdownMenu} w={140}>
         <Menu.Label className={classes.label}>Оснащение</Menu.Label>
         <Menu.Item className={classes.item}>КОМПЬЮТЕРЫ: </Menu.Item>
         <Menu.Item className={classes.item}>ПРОЕКТОР: </Menu.Item>
         <Menu.Item className={classes.item}>МАРКЕРНАЯ ДОСКА:</Menu.Item>
+        <div>проверочка</div>
       </Menu.Dropdown>
     </Menu>
   );

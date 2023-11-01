@@ -9,8 +9,7 @@ import "@mantine/dates/styles.css";
 import InputFaculties from "./components/InputFaculties";
 import OutputDate from "./components/OutputDate";
 import { MantineProvider } from "@mantine/core";
-import BurgerInfo from "./components/BurgerBtn";
-import MenuInfo from "./components/Menu";
+import ResultDiv from "./components/ResultDiv";
 
 function App() {
   return (
@@ -28,7 +27,10 @@ function App() {
         </div>
         <div className={classes.areas}>
           <h3 className={classes.h3}>Результат</h3>
-          <OutputDate />
+          {/* <OutputDate /> */}
+          <ResultDiv />
+          <ResultDiv />
+          <ResultDiv />
         </div>
       </div>
     </MantineProvider>

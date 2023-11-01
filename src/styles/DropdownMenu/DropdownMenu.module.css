@@ -1,12 +1,13 @@
 .actionIcon {
   border: 0;
-  margin-left: 2vw;
+  float: right;
+  margin-right: 0.2vw;
 }
 
 .dropdownMenu {
   border-radius: 10px;
   height: 13vh;
-  margin-left: 4vw;
+  margin-left: 2.5vw;
 }
 
 .dropdownMenu .label {

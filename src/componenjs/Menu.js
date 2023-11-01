@@ -24,7 +24,8 @@ function MenuInfo() {
     },
     stroke: 1.5
   }))), /*#__PURE__*/React.createElement(_core.Menu.Dropdown, {
-    className: _DropdownMenuModule.default.dropdownMenu
+    className: _DropdownMenuModule.default.dropdownMenu,
+    w: 140
   }, /*#__PURE__*/React.createElement(_core.Menu.Label, {
     className: _DropdownMenuModule.default.label
   }, "\u041E\u0441\u043D\u0430\u0449\u0435\u043D\u0438\u0435"), /*#__PURE__*/React.createElement(_core.Menu.Item, {
@@ -33,7 +34,7 @@ function MenuInfo() {
     className: _DropdownMenuModule.default.item
   }, "\u041F\u0420\u041E\u0415\u041A\u0422\u041E\u0420: "), /*#__PURE__*/React.createElement(_core.Menu.Item, {
     className: _DropdownMenuModule.default.item
-  }, "\u041C\u0410\u0420\u041A\u0415\u0420\u041D\u0410\u042F \u0414\u041E\u0421\u041A\u0410:")));
+  }, "\u041C\u0410\u0420\u041A\u0415\u0420\u041D\u0410\u042F \u0414\u041E\u0421\u041A\u0410:"), /*#__PURE__*/React.createElement("div", null, "\u043F\u0440\u043E\u0432\u0435\u0440\u043E\u0447\u043A\u0430")));
 }
 var _default = MenuInfo;
 exports.default = _default;

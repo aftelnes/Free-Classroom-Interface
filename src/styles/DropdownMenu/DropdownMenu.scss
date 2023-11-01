@@ -4,13 +4,15 @@ $blueColor: rgb(0, 110, 255);
 
 .actionIcon{
     border: 0;
-    margin-left: 2vw;
+    // margin-top: 0.15vw;
+    float: right;
+    margin-right: 0.2vw;
 }
 
 .dropdownMenu {
   border-radius: $fontSize;
   height: 13vh;
-  margin-left: 4vw;
+  margin-left: 2.5vw;
 }
 
 .dropdownMenu .label {

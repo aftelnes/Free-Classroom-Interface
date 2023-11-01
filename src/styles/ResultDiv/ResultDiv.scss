@@ -1,0 +1,51 @@
+$backgroundColor: rgb(255, 255, 255);
+
+.resultDiv {
+  background-color: $backgroundColor;
+  width: 20vw;
+  margin-left: 2vw;
+  border-radius: 7px;
+  height: 6vh;
+  border: 0.5px solid rgb(209, 209, 209);
+  margin-bottom: 0.2vw;
+}
+
+@mixin divs {
+  margin-top: 0.4vw;
+  height: 4vh;
+  font-size: 14px;
+  float: left;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  border-radius: 7px;
+}
+
+.resultDiv .image {
+  @include divs;
+  width: 2vw;
+  padding-top: 0.25vw;
+  padding-left: 1vw;
+}
+.resultDiv .classNum {
+  @include divs;
+  width: 3.9vw;
+  padding-top: 0.05vw;
+  padding-left: 0.9vw;
+  text-align: left;
+}
+.resultDiv .facultyName {
+  @include divs;
+  width: 3.9vw;
+  padding-top: 0.05vw;
+  text-align: left;
+}
+.resultDiv .places {
+  @include divs;
+  width: 3.9vw;
+  padding-top: 0.05vw;
+  text-align: left;
+}
+.resultDiv .menu {
+  @include divs;
+  width: 3.9vw;
+}

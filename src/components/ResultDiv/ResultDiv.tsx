@@ -1,10 +1,11 @@
-import classes from "../styles/ResultDiv/ResultDiv.module.css";
-import MenuInfo from "./Menu";
+import classes from "./ResultDiv.module.css";
+import MenuInfo from "../Menu";
 import { Image } from "@mantine/core";
-import facultyicon from ".././images/faculteImage.svg";
-import placesicon from ".././images/placesImage.svg";
+import facultyicon from "../../images/faculteImage.svg";
+import placesicon from "../../images/placesImage.svg";
 
-const ResultDiv = () => {
+
+const ResultDiv: React.FC = () => {
   return (
     <div className={classes.resultDiv}>
       <div className={classes.classNum}>304Н</div>

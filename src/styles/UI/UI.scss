@@ -9,22 +9,39 @@ $backgroundColorArea: rgb(255, 226, 226);
   border-radius: 10px;
 }
 
-.ui .areas {
+@mixin areas {
   width: 24vw;
-  height: 105vh;
+  // height: 105vh;
   margin: 0.5vw;
   background-color: $backgroundColor;
   float: left;
   text-align: center;
   border-radius: 10px;
+  padding-bottom: 2vw;
 }
 
-.ui .h3 {
+.ui .inputDataArea {
+  @include areas;
+}
+.ui .outputDataArea {
+  @include areas;
+  margin-top: 13vw;
+  height: 60vh;
+}
+
+@mixin header {
   text-align: center;
-  font-weight: 600;
-  font-size: 20px;
+  font-size: 21px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+.ui .findClass {
+  @include header;
+}
+.ui .resultClass {
+  @include header;
+  text-align: left;
+  margin-left: 2vw;
 }
 
 .ui .findbtn {

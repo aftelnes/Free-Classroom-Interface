@@ -1,21 +1,28 @@
 import { useState } from "react";
 import { NativeSelect } from "@mantine/core";
-import classes from "../styles/InputDate/InputDate.module.css";
+import { observer } from "mobx-react-lite";
+import InputDateAndLessonNumber from "../../store/inputdate";
+import classes from "./InputDate.module.css";
 
-const InputLessonNumber = () => {
+const InputLessonNumber: React.FC = observer(() => {
   const [lessonNumber, setLessonNumber] = useState("");
+
+  const onChaneClicked = (event: any) => {
+    setLessonNumber(event.currentTarget.value);
+    InputDateAndLessonNumber.changeLessonNumState(true);
+  };
 
   return (
     <NativeSelect
       className={classes.inputDate}
       value={lessonNumber}
-      onChange={(event) => setLessonNumber(event.currentTarget.value)}
+      onChange={(event) => onChaneClicked(event)}
       data={["1", "2", "3", "4", "5", "6", "7", "8", "9"]}
       withAsterisk
       label='Номер занятия'
       placeholder='Выберите номер занятия'
     />
   );
-};
+});
 
 export default InputLessonNumber;

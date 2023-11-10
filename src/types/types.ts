@@ -1,7 +1,6 @@
 export interface IFaculty {
-  id: 0;
+  id: number;
   name: string;
   short_name: string;
-  link_source_timetable: string;
-  inactive: true;
+  inactive: boolean;
 }

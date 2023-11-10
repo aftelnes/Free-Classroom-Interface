@@ -1,12 +1,12 @@
 import { Menu, Button, Text, rem } from "@mantine/core";
 import BurgerInfo from "./BurgerBtn";
 import { Burger } from "@mantine/core";
-import classes from "../styles/DropdownMenu/DropdownMenu.module.css";
+import classes from "./DropdownMenu/DropdownMenu.module.css";
 
 import { IconAdjustments, IconMenu2 } from "@tabler/icons-react";
 import { ActionIcon } from "@mantine/core";
 
-function MenuInfo() {
+const MenuInfo: React.FC = () => {
   return (
     <Menu shadow='md' width={200}>
       <Menu.Target>
@@ -21,15 +21,17 @@ function MenuInfo() {
         </ActionIcon>
       </Menu.Target>
 
-      <Menu.Dropdown className={classes.dropdownMenu} w={140}>
+      <Menu.Dropdown className={classes.dropdownMenu} w={125}>
         <Menu.Label className={classes.label}>Оснащение</Menu.Label>
-        <Menu.Item className={classes.item}>КОМПЬЮТЕРЫ: </Menu.Item>
+        {/* <Menu.Item className={classes.item}>КОМПЬЮТЕРЫ: </Menu.Item>
         <Menu.Item className={classes.item}>ПРОЕКТОР: </Menu.Item>
-        <Menu.Item className={classes.item}>МАРКЕРНАЯ ДОСКА:</Menu.Item>
-        <div>проверочка</div>
+        <Menu.Item className={classes.item}>МАРКЕРНАЯ ДОСКА:</Menu.Item> */}
+        <div className={classes.div}>КОМПЬЮТЕРЫ: 22</div>
+        <div className={classes.div}>ПРОЕКТОР: 1</div>
+        <div className={classes.div}>МАРКЕРНАЯ ДОСКА: 2</div>
       </Menu.Dropdown>
     </Menu>
   );
-}
+};
 
 export default MenuInfo;

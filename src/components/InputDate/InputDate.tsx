@@ -2,10 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { DateInput } from "@mantine/dates";
 import "@mantine/dates/styles.css";
-import classes from "../styles/InputDate/InputDate.module.css";
-import axios from "axios";
+import classes from "./InputDate.module.css";
+import { observer } from "mobx-react-lite";
+import InputDateAndLessonNumber from "../../store/inputdate";
 
-function InputDate() {
+const InputDate: React.FC = observer(() => {
   const [date, setDate] = useState<Date | null>(null);
 
   return (
@@ -17,9 +18,14 @@ function InputDate() {
       placeholder='Выберите дату'
       clearable
       withAsterisk
-      onDateChange={(date: Date) => console.log(`date = ${date}`)}
+      onDateChange={(date: Date) =>
+        console.log(
+          `date = ${date}`,
+          InputDateAndLessonNumber.changeDateState(true)
+        )
+      }
     />
   );
-}
+});
 
 export default InputDate;

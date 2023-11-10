@@ -6,7 +6,7 @@
 
 .dropdownMenu {
   border-radius: 10px;
-  height: 13vh;
+  height: 14vh;
   margin-left: 2.5vw;
 }
 
@@ -17,10 +17,18 @@
 }
 
 .dropdownMenu .item {
-  width: 6vw;
   font-size: 10px;
   color: rgb(0, 110, 255);
   margin-top: 0.2vw;
   padding: 0;
   border: 1px solid rgb(0, 110, 255);
+}
+
+.dropdownMenu .div {
+  display: inline-block;
+  border: 1px solid rgb(0, 110, 255);
+  color: rgb(0, 110, 255);
+  padding: 0.5px 2px 0.5px 2px;
+  font-size: 10px;
+  border-radius: 3px;
 }

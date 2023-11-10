@@ -5,6 +5,7 @@ import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
 
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );

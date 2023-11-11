@@ -15,33 +15,23 @@ import { useState } from "react";
 import InputEquipment from "./components/InputDate/InputEquipment";
 import InputDateAndLessonNumber from "./store/inputdate";
 import axios from "axios";
-import { IFaculty } from "./types/types";
+import { IFaculty, IEquipment } from "./types/types";
 import { useEffect } from "react";
+import GetFaculties from "./helpers/requests";
+import requests from "./helpers/requests";
 
 const App: React.FC = observer(() => {
   const [clicked, setClicked] = useState<boolean>(false);
   const [facutly, setFaculty] = useState<IFaculty[]>([]);
+  const [equipment, setEquipment] = useState<IEquipment[]>([]);
 
-  async function RespFunc() {
-    try {
-      const response = await axios.get<IFaculty[]>(
-        "https://08d3-85-172-29-2.ngrok-free.app/api/faculties/selection",
-        {
-          headers: {
-            "ngrok-skip-browser-warning": "69420",
-          },
-        }
-      );
-      console.log("Response lenght = ", response.data.length);
-      console.log("Response = ", response.data);
-      setFaculty(response.data);
-    } catch (e) {
-      console.log(e);
-    }
+  async function setFacultyAndEquipmentStates() {
+    setFaculty(await requests.GetFaculties());
+    setEquipment(await requests.GetEquipment());
   }
 
   useEffect(() => {
-    RespFunc();
+    setFacultyAndEquipmentStates();
   }, []);
 
   function showResult() {
@@ -59,7 +49,7 @@ const App: React.FC = observer(() => {
       <div>
         <InputMinimalCapacity />
         <InputFaculties faculty={facutly} />
-        <InputEquipment />
+        <InputEquipment equipment={equipment} />
         <Button
           variant='filled'
           className={classes.findbtn}

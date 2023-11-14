@@ -10,6 +10,10 @@ $backgroundColor: rgb(255, 255, 255);
   margin-bottom: 0.2vw;
 }
 
+.resultDiv:hover {
+  background-color: black;
+}
+
 @mixin divs {
   margin-top: 0.4vw;
   height: 4vh;

@@ -4,7 +4,16 @@ import { DateInput } from "@mantine/dates";
 import "@mantine/dates/styles.css";
 import classes from "./InputDate.module.css";
 import { observer } from "mobx-react-lite";
-import InputDateAndLessonNumber from "../../store/inputdate";
+import InputData from "../../store/inputdata";
+
+const setFormattedDateInStore = (date: Date) => {
+  InputData.setDate(JSON.stringify(date));
+};
+
+
+//! настроить формат вывода и русифицировать
+//!11.12.2023
+
 
 const InputDate: React.FC = observer(() => {
   const [date, setDate] = useState<Date | null>(null);
@@ -18,12 +27,10 @@ const InputDate: React.FC = observer(() => {
       placeholder='Выберите дату'
       clearable
       withAsterisk
-      onDateChange={(date: Date) =>
-        console.log(
-          `date = ${date}`,
-          InputDateAndLessonNumber.changeDateState(true)
-        )
-      }
+      onDateChange={(date: Date) => {
+        InputData.changeDateState(true);
+        setFormattedDateInStore(date);
+      }}
     />
   );
 });

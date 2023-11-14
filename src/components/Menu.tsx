@@ -22,7 +22,8 @@ const MenuInfo: React.FC = () => {
       </Menu.Target>
 
       <Menu.Dropdown className={classes.dropdownMenu} w={125}>
-        <Menu.Label className={classes.label}>Оснащение</Menu.Label>
+        <Menu.Label className={classes.label}>Оснащение</Menu.Label>\
+        //! Убрать меню, потому что тут нет в нём смысла
         {/* <Menu.Item className={classes.item}>КОМПЬЮТЕРЫ: </Menu.Item>
         <Menu.Item className={classes.item}>ПРОЕКТОР: </Menu.Item>
         <Menu.Item className={classes.item}>МАРКЕРНАЯ ДОСКА:</Menu.Item> */}

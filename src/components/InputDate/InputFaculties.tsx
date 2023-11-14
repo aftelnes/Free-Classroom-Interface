@@ -1,9 +1,14 @@
 import classes from "./InputDate.module.css";
 import { IFaculty } from "../../types/types";
-import { Select } from "@mantine/core";
 import { observer } from "mobx-react-lite";
+import { MultiSelect } from "@mantine/core";
+import InputData from "../../store/inputdata";
 
 type FacultyArray = IFaculty[];
+
+const setFormattedFacultiesInStore = (value: string[]) => {
+  console.log(`FormFac = ${value}`);
+};
 
 const InputFaculties: React.FC<{ faculty: FacultyArray }> = observer(
   ({ faculty }) => {
@@ -15,14 +20,17 @@ const InputFaculties: React.FC<{ faculty: FacultyArray }> = observer(
 
     return (
       <div>
-        <Select
+        <MultiSelect
           className={classes.inputDate}
           label='Желаемые факультеты'
           placeholder='Выберите желаемые факультеты'
           data={facultyAry}
+          onChange={(event) => {
+            console.log(`Event`, event);
+            setFormattedFacultiesInStore(event);
+          }}
           clearable
-          //Распечатка факультета
-          onChange={(event) => console.log(event)}
+          hidePickedOptions
         />
       </div>
     );

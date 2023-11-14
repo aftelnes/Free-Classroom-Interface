@@ -1,8 +1,9 @@
-import { useState } from "react";
 import { NumberInput } from "@mantine/core";
 import classes from "./InputDate.module.css";
+import { observer } from "mobx-react-lite";
 
-const InputMinimalCapacity: React.FC = () => {
+
+const InputMinimalCapacity: React.FC = observer(() => {
   return (
       <NumberInput
         className={classes.inputDate}
@@ -13,6 +14,6 @@ const InputMinimalCapacity: React.FC = () => {
         allowNegative={false}
       />
   );
-};
+});
 
 export default InputMinimalCapacity;

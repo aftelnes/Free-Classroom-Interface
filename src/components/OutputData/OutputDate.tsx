@@ -1,6 +1,6 @@
 import { Table } from "@mantine/core";
 import classes from "../styles/OutputDate/OutPutDate.module.css";
-import MenuInfo from "./Menu";
+// import MenuInfo from "../Menu";
 
 const OutputDate = () => {
   const elements = [
@@ -15,7 +15,7 @@ const OutputDate = () => {
       <Table.Td className={classes.faculty}>{element.faculty}</Table.Td>
       <Table.Td className={classes.placesNum}>
         {element.placesNum}
-        <MenuInfo />
+        {/* <MenuInfo /> */}
       </Table.Td>
     </Table.Tr>
   ));

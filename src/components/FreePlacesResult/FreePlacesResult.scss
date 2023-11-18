@@ -1,6 +1,6 @@
 $backgroundColor: rgb(255, 255, 255);
 
-.resultDiv {
+.freePlacesResult {
   background-color: $backgroundColor;
   width: 20vw;
   margin-left: 2vw;
@@ -8,10 +8,6 @@ $backgroundColor: rgb(255, 255, 255);
   height: 6vh;
   border: 0.5px solid rgb(209, 209, 209);
   margin-bottom: 0.2vw;
-}
-
-.resultDiv:hover {
-  background-color: black;
 }
 
 @mixin divs {
@@ -24,32 +20,32 @@ $backgroundColor: rgb(255, 255, 255);
   border-radius: 7px;
 }
 
-.resultDiv .image {
+.freePlacesResult .image {
   @include divs;
   width: 2vw;
-  padding-top: 0.25vw;
   padding-left: 1vw;
 }
-.resultDiv .classNum {
+.freePlacesResult .classNum {
   @include divs;
   width: 3.9vw;
   padding-top: 0.05vw;
   padding-left: 0.9vw;
   text-align: left;
 }
-.resultDiv .facultyName {
+.freePlacesResult .facultyName {
   @include divs;
   width: 3.9vw;
   padding-top: 0.05vw;
   text-align: left;
 }
-.resultDiv .places {
+.freePlacesResult .places {
   @include divs;
   width: 3.9vw;
   padding-top: 0.05vw;
   text-align: left;
 }
-.resultDiv .menu {
-  @include divs;
-  width: 3.9vw;
+.freePlacesResult .button{
+  padding-top: 0.25vw;
+  padding-left: 1.8vw;
+  border: 0;
 }

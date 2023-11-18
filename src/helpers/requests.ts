@@ -14,6 +14,7 @@ try {
     );
     return response.data;
 } catch (e) {
+    console.log('Упал!!')
     console.log(e);
 };
 };
@@ -31,6 +32,7 @@ try {
     );
     return response.data;
 } catch (e) {
+    console.log('Упал!!')
     console.log(e);
 };
 };
@@ -44,7 +46,7 @@ try {
         "ngrok-skip-browser-warning": "69420",
         },
         data: {
-            "date": "13.11.2023",
+            "date": "2023-11-16",
             "number": 3,
             "faculty": 3,
             "equipment": "",

@@ -1,12 +1,11 @@
 import { makeAutoObservable } from "mobx";
-import { IFaculty } from "../types/types";
 
 class InputData{
 
-    dateState:boolean = false;
+    dateState: boolean = false;
     lessonNumState: boolean = false;
 
-    date: string = '';
+    date: string = 'default';
     lessonNum: number = 0;
     faculty: number[] = [0];
     equipment: number[] = [0];
@@ -17,19 +16,20 @@ class InputData{
     };
 
     //Флаги первых двух инпутов, чтобы после ввода информации в первые 2 выпадали остальные 3 инпута
-    changeDateState(value: boolean){
-        this.dateState = value;
-        console.log(`Я вызвался и изменил dateState = ${value}`);
+    changeDateState(){
+        this.dateState = true;
+        console.log(`Я вызвался и изменил dateState = ${true}`);
     };
-    changeLessonNumState(value: boolean){
-        this.lessonNumState = value;
-        console.log(`Я вызвался и изменил lessonNumState = ${value}`);
+    changeLessonNumState(){
+        this.lessonNumState = true;
+        console.log(`Я вызвался и изменил lessonNumState = ${true}`);
     };
 
 
     //Запись значений 
     setDate(date: string){
         this.date = date;
+        console.log(`Дата записана = ${this.date}`);
     };
     setLessonNum(lessonNum: number){
         this.lessonNum = lessonNum;

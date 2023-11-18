@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { NativeSelect } from "@mantine/core";
 import { observer } from "mobx-react-lite";
-import InputData from "../../store/inputdata";
+import { FC } from "react";
+import InputData from "../../store/inputData";
 import classes from "./InputDate.module.css";
 
-const InputLessonNumber: React.FC = observer(() => {
+const InputLessonNumber: FC = observer(() => {
   const [lessonNumber, setLessonNumber] = useState("");
 
   const onChangeClicked = (event: any) => {
     setLessonNumber(event.currentTarget.value);
-    InputData.changeLessonNumState(true);
+    InputData.changeLessonNumState();
   };
 
   return (

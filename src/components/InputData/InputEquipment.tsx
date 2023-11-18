@@ -1,14 +1,15 @@
 import { MultiSelect } from "@mantine/core";
+import { FC, useState } from "react";
 import classes from "./InputDate.module.css";
 import { IEquipment } from "../../types/types";
-import { observer } from "mobx-react-lite";
+import requests from "../../helpers/requests";
 
+const InputEquipment: FC = () => {
+  const [equipment, setEquipment] = useState<IEquipment[]>([]);
+  (async function setEquipmentState() {
+    setEquipment(await requests.GetEquipment());
+  })();
 
-type EquipmentArray = IEquipment[];
-
-const InputEquipment: React.FC<{ equipment: EquipmentArray }> = observer(({
-  equipment,
-}) => {
   const equipmentAry: string[] = [""];
   equipment.map((item) => {
     equipmentAry.push(item.name);
@@ -23,6 +24,6 @@ const InputEquipment: React.FC<{ equipment: EquipmentArray }> = observer(({
       clearable
     />
   );
-});
+};
 
 export default InputEquipment;

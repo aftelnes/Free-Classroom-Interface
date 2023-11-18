@@ -1,21 +1,16 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import { FC } from "react";
+import { useState } from "react";
 import { DateInput } from "@mantine/dates";
 import "@mantine/dates/styles.css";
+import InputData from "../../store/inputData";
 import classes from "./InputDate.module.css";
-import { observer } from "mobx-react-lite";
-import InputData from "../../store/inputdata";
 
 const setFormattedDateInStore = (date: Date) => {
-  InputData.setDate(JSON.stringify(date));
+  InputData.setDate(JSON.stringify(date).slice(1, 11));
 };
 
 
-//! настроить формат вывода и русифицировать
-//!11.12.2023
-
-
-const InputDate: React.FC = observer(() => {
+const InputDate: FC = () => {
   const [date, setDate] = useState<Date | null>(null);
 
   return (
@@ -23,16 +18,17 @@ const InputDate: React.FC = observer(() => {
       className={classes.inputDate}
       value={date}
       onChange={setDate}
+      valueFormat='YYYY/MM/DD'
       label='Дата'
       placeholder='Выберите дату'
       clearable
       withAsterisk
       onDateChange={(date: Date) => {
-        InputData.changeDateState(true);
         setFormattedDateInStore(date);
+        InputData.changeDateState();
       }}
     />
   );
-});
+};
 
 export default InputDate;

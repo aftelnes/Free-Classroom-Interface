@@ -1,4 +1,4 @@
-.resultDiv {
+.freePlacesResult {
   background-color: rgb(255, 255, 255);
   width: 20vw;
   margin-left: 2vw;
@@ -8,7 +8,7 @@
   margin-bottom: 0.2vw;
 }
 
-.resultDiv .image {
+.freePlacesResult .image {
   margin-top: 0.4vw;
   height: 4vh;
   font-size: 14px;
@@ -17,11 +17,10 @@
   background: rgb(255, 255, 255);
   border-radius: 7px;
   width: 2vw;
-  padding-top: 0.25vw;
   padding-left: 1vw;
 }
 
-.resultDiv .classNum {
+.freePlacesResult .classNum {
   margin-top: 0.4vw;
   height: 4vh;
   font-size: 14px;
@@ -35,7 +34,7 @@
   text-align: left;
 }
 
-.resultDiv .facultyName {
+.freePlacesResult .facultyName {
   margin-top: 0.4vw;
   height: 4vh;
   font-size: 14px;
@@ -48,7 +47,7 @@
   text-align: left;
 }
 
-.resultDiv .places {
+.freePlacesResult .places {
   margin-top: 0.4vw;
   height: 4vh;
   font-size: 14px;
@@ -61,13 +60,8 @@
   text-align: left;
 }
 
-.resultDiv .menu {
-  margin-top: 0.4vw;
-  height: 4vh;
-  font-size: 14px;
-  float: left;
-  text-align: center;
-  background: rgb(255, 255, 255);
-  border-radius: 7px;
-  width: 3.9vw;
+.freePlacesResult .button {
+  padding-top: 0.25vw;
+  padding-left: 1.8vw;
+  border: 0;
 }

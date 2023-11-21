@@ -1,13 +1,14 @@
 .equipmentValue .Header {
   color: gray;
-}
-
-.equipmentValue .equipment {
-  border-radius: 10px;
-  border-color: aqua;
+  margin: 5px;
 }
 
 .equipmentValue div {
-  border-radius: 1px;
-  border-color: aqua;
+  display: inline-block;
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: rgb(0, 110, 255);
+  color: rgb(0, 110, 255);
+  font-size: 13px;
+  margin-bottom: 1px;
 }

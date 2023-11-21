@@ -3,6 +3,7 @@ import classes from "../../styles/UI/UI.module.css";
 import FreePlacesResult from "../FreePlacesResult/FreePlacesResult";
 
 const OutputDataArea: FC = () => {
+
   return (
     <div className={classes.outputDataArea}>
       Котики
@@ -11,6 +12,6 @@ const OutputDataArea: FC = () => {
       <FreePlacesResult />
     </div>
   );
-};
+}
 
 export default OutputDataArea;

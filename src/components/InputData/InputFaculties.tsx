@@ -1,24 +1,34 @@
 import { MultiSelect } from "@mantine/core";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { IFaculty } from "../../types/types";
 import classes from "./InputDate.module.css";
 import requests from "../../helpers/requests";
-
-const setFormattedFacultiesInStore = (value: string[]) => {
-  console.log(`FormFac = ${value}`);
-};
+import inputData from "../../store/inputData";
 
 const InputFaculties: FC = () => {
-  const [facutly, setFaculty] = useState<IFaculty[]>([]);
+  //Состояние созданное для получения факультетов с респонса
+  const [facutlyFromResp, setFacultyFromResp] = useState<IFaculty[]>([]);
+  //Функция записывающая в состояние ответ с респонса
   (async function setFacultyState() {
-    setFaculty(await requests.GetFaculties());
+    setFacultyFromResp(
+      await requests.getFacultiesOrEquipment<IFaculty[]>(
+        "https://0ee3-85-172-29-2.ngrok-free.app/api/faculties/selection"
+      )
+    );
   })();
-
-  //Создаем массив, в который добавляем исколючительно факультеты в формате string
-  const facultyAry: string[] = [""];
-  facutly.map((item) => {
-    facultyAry.push(item.short_name);
+  //Создаем массив, в который добавляем айдишник и название факультета в виде списка
+  const facultyAry: any[] = [""];
+  facutlyFromResp.map((item) => {
+    facultyAry.push({ value: `${item.id}`, label: `${item.short_name}` });
   });
+
+  //состояние отвечающее за выбранныые факультеты
+  const [selectedFaculties, setSelectedFaculties] = useState<string[] | number[]>([]);
+  //отслеживаем выбранные факультеты и записываем их в общий store
+  useEffect(() => {
+    console.log(`SelFac = ${selectedFaculties}`);
+    inputData.setFaculty(selectedFaculties);
+  }, [selectedFaculties]);
 
   return (
     <div>
@@ -27,10 +37,7 @@ const InputFaculties: FC = () => {
         label='Желаемые факультеты'
         placeholder='Выберите желаемые факультеты'
         data={facultyAry}
-        onChange={(event) => {
-          console.log(`Event`, event);
-          setFormattedFacultiesInStore(event);
-        }}
+        onChange={setSelectedFaculties}
         clearable
         hidePickedOptions
       />

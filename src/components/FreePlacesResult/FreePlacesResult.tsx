@@ -1,9 +1,11 @@
 import { IconBuildingBank } from "@tabler/icons-react";
+import { FC } from "react";
 import { IconUser } from "@tabler/icons-react";
 import classes from "./FreePlacesResult.module.css";
 import Equipment from "../Equipment/Equipment";
 
-const FreePlacesResult: React.FC = () => {
+
+const FreePlacesResult: FC= () => {
   return (
     <div className={classes.freePlacesResult}>
       <div className={classes.classNum}>304Н</div>

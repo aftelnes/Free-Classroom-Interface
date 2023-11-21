@@ -17,7 +17,7 @@ const Equipment = () => {
       <Popover.Target>
         <Button
           className={classes.button}
-          leftSection={<IconDotsVertical size={20} />}
+          rightSection={<IconDotsVertical size={15} />}
           variant='default'
           onMouseEnter={open}
           onMouseLeave={close}
@@ -25,7 +25,6 @@ const Equipment = () => {
       </Popover.Target>
       <Popover.Dropdown style={{ pointerEvents: "none" }}>
         <Text size='sm'>
-          This popover is shown when user hovers the target element
           <EquipmentValue />
         </Text>
       </Popover.Dropdown>

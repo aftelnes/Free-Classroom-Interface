@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _react = require("react");
 var _core = require("@mantine/core");
-var _hooks = require("@mantine/hooks");
-var _iconsReact = require("@tabler/icons-react");
-var _FreePlacesResultModule = _interopRequireDefault(require("../FreePlacesResult/FreePlacesResult.module.css"));
-var _EquipmentValue = _interopRequireDefault(require("./EquipmentValue"));
+var _mobxReactLite = require("mobx-react-lite");
+var _inputData = _interopRequireDefault(require("../../store/inputData"));
+var _InputDateModule = _interopRequireDefault(require("./InputDate.module.css"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -16,34 +16,24 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-var Equipment = function Equipment() {
-  var _useDisclosure = (0, _hooks.useDisclosure)(false),
-    _useDisclosure2 = _slicedToArray(_useDisclosure, 2),
-    opened = _useDisclosure2[0],
-    _useDisclosure2$ = _useDisclosure2[1],
-    close = _useDisclosure2$.close,
-    open = _useDisclosure2$.open;
-  return /*#__PURE__*/React.createElement(_core.Popover, {
-    width: 200,
-    position: "bottom",
-    withArrow: true,
-    shadow: "md",
-    opened: opened
-  }, /*#__PURE__*/React.createElement(_core.Popover.Target, null, /*#__PURE__*/React.createElement(_core.Button, {
-    className: _FreePlacesResultModule.default.button,
-    rightSection: /*#__PURE__*/React.createElement(_iconsReact.IconDotsVertical, {
-      size: 15
-    }),
-    variant: "default",
-    onMouseEnter: open,
-    onMouseLeave: close
-  })), /*#__PURE__*/React.createElement(_core.Popover.Dropdown, {
-    style: {
-      pointerEvents: "none"
-    }
-  }, /*#__PURE__*/React.createElement(_core.Text, {
-    size: "sm"
-  }, /*#__PURE__*/React.createElement(_EquipmentValue.default, null))));
-};
-var _default = Equipment;
+var InputLessonNumber = (0, _mobxReactLite.observer)(function () {
+  var _useState = (0, _react.useState)(""),
+    _useState2 = _slicedToArray(_useState, 2),
+    lessonNumber = _useState2[0],
+    setLessonNumber = _useState2[1];
+  var onChangeClicked = function onChangeClicked(event) {
+    setLessonNumber(event.currentTarget.value);
+    _inputData.default.changeLessonNumState();
+  };
+  return /*#__PURE__*/React.createElement(_core.NumberInput, {
+    className: _InputDateModule.default.inputDate,
+    label: "\u041D\u043E\u043C\u0435\u0440 \u0437\u0430\u043D\u044F\u0442\u0438\u044F",
+    placeholder: "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043D\u043E\u043C\u0435\u0440 \u0437\u0430\u043D\u044F\u0442\u0438\u044F",
+    min: 0,
+    max: 9,
+    clampBehavior: "strict",
+    allowNegative: false
+  });
+});
+var _default = InputLessonNumber;
 exports.default = _default;

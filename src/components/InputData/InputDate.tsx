@@ -5,14 +5,13 @@ import "@mantine/dates/styles.css";
 import InputData from "../../store/inputData";
 import classes from "./InputDate.module.css";
 
-
 const InputDate: FC = () => {
   const [date, setDate] = useState<Date | null>(null);
 
   useEffect(() => {
     if (date != null) {
       InputData.changeDateState();
-      InputData.setDate(JSON.stringify(date));
+      InputData.setDate(JSON.stringify(date).slice(1, 11));
     }
   }, [date]);
 
@@ -21,7 +20,7 @@ const InputDate: FC = () => {
       className={classes.inputDate}
       value={date}
       onChange={setDate}
-      valueFormat='YYYY/MM/DD'
+      valueFormat='YYYY-MM-DD'
       label='Дата'
       placeholder='Выберите дату'
       clearable

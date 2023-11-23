@@ -1,13 +1,14 @@
-import { action, makeAutoObservable, observable } from "mobx";
+import { makeAutoObservable} from "mobx";
 
 class InputData {
   dateState: boolean = false;
   lessonNumState: boolean = false;
+  findBtnClicked: boolean = false;
 
   date: string | null = null;
-  lessonNum: number = 0;
+  lessonNum: number | string = 0;
   faculty: number[] | string[] = [0];
-  equipment: number[] = [0];
+  equipment: number[] | string[] = [0];
   size: number | string = 0;
 
   constructor() {
@@ -29,17 +30,18 @@ class InputData {
     this.date = date;
     console.log(`Дата записана = ${this.date}`);
   }
-  setLessonNum(lessonNum: number) {
+  setLessonNum(lessonNum: number | string) {
     this.lessonNum = lessonNum;
-    console.log(`Номер пары записан  = ${this.lessonNum}`);
+    console.log(
+      `Номер пары записан  = ${this.lessonNum} typeof = ${typeof this
+        .lessonNum}`
+    );
   }
   setFaculty(faculty: number[] | string[]) {
     this.faculty = faculty;
-    console.log(
-      `ID Факультетов записан = ${this.faculty}`
-    );
+    console.log(`ID Факультетов записан = ${this.faculty}`);
   }
-  setEquipment(equipment: number[]) {
+  setEquipment(equipment: number[] | string[]) {
     this.equipment = equipment;
     console.log(`ID оснащения записан = ${this.equipment}`);
   }
@@ -51,6 +53,10 @@ class InputData {
   showInfo() {
     console.log(`date = ${this.date} \ lessonNum = ${this.lessonNum} \
         faculty = ${this.faculty} \ equipment = ${this.equipment} \ size = ${this.size}`);
+  }
+
+  setFindBtnClicked() {
+    this.findBtnClicked = true;
   }
 }
 

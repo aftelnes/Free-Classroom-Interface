@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NumberInput } from "@mantine/core";
 import { observer } from "mobx-react-lite";
 import { FC } from "react";
@@ -6,15 +6,15 @@ import InputData from "../../store/inputData";
 import classes from "./InputDate.module.css";
 
 const InputLessonNumber: FC = observer(() => {
-  const [lessonNumber, setLessonNumber] = useState<number | null>(null);
+  const [lessonNumber, setLessonNumber] = useState<number | string>(0);
 
-  const onChangeClicked = (event: any) => {
-    setLessonNumber(event.currentTarget.value);
-    InputData.changeLessonNumState();
-  };
+  useEffect(() => {
+    InputData.setLessonNum(lessonNumber);
+  }, [lessonNumber]);
 
   return (
     <NumberInput
+      withAsterisk
       className={classes.inputDate}
       label='Номер занятия'
       placeholder='Выберите номер занятия'
@@ -22,10 +22,7 @@ const InputLessonNumber: FC = observer(() => {
       max={9}
       clampBehavior='strict'
       allowNegative={false}
-      onChange={(event) => {
-        console.log(`event = ${event}, typeof = ${typeof event}`);
-        InputData.changeLessonNumState();
-      }}
+      onChange={setLessonNumber}
     />
   );
 });

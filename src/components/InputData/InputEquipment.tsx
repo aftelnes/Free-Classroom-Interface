@@ -1,23 +1,31 @@
 import { MultiSelect } from "@mantine/core";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import classes from "./InputDate.module.css";
 import { IEquipment } from "../../types/types";
-import requests from "../../helpers/requests";
+import getFacultiesOrEquipment from "../../helpers/requests/getFacultyAndEquipment";
+import inputData from "../../store/inputData";
 
 const InputEquipment: FC = () => {
-  const [equipment, setEquipment] = useState<IEquipment[]>([]);
+  const [equipmentFromResp, setEquipmentFromResp] = useState<IEquipment[]>([]);
   (async function setEquipmentState() {
-    setEquipment(
-      await requests.getFacultiesOrEquipment<IEquipment[]>(
+    setEquipmentFromResp(
+      await getFacultiesOrEquipment<IEquipment[]>(
         "https://0ee3-85-172-29-2.ngrok-free.app/api/equipments/selection"
       )
     );
   })();
 
-  const equipmentAry: string[] = [""];
-  equipment.map((item) => {
-    equipmentAry.push(item.name);
+  const equipmentAry: any[] = [""];
+  equipmentFromResp.map((item) => {
+    equipmentAry.push({ value: `${item.id}`, label: `${item.name}` });
   });
+
+  const [selectedEquipment, setSelectedEquipment] = useState<
+    string[] | number[]
+  >([]);
+  useEffect(() => {
+    inputData.setEquipment(selectedEquipment);
+  }, [selectedEquipment]);
 
   return (
     <MultiSelect
@@ -25,6 +33,7 @@ const InputEquipment: FC = () => {
       label='Желаемое оборудование'
       placeholder='Выберите желаемое оборудование'
       data={equipmentAry}
+      onChange={setSelectedEquipment}
       clearable
     />
   );

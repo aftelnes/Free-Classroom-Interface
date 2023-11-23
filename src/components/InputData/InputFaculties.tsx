@@ -2,7 +2,7 @@ import { MultiSelect } from "@mantine/core";
 import { FC, useEffect, useState } from "react";
 import { IFaculty } from "../../types/types";
 import classes from "./InputDate.module.css";
-import requests from "../../helpers/requests";
+import getFacultiesOrEquipment from "../../helpers/requests/getFacultyAndEquipment";
 import inputData from "../../store/inputData";
 
 const InputFaculties: FC = () => {
@@ -11,7 +11,7 @@ const InputFaculties: FC = () => {
   //Функция записывающая в состояние ответ с респонса
   (async function setFacultyState() {
     setFacultyFromResp(
-      await requests.getFacultiesOrEquipment<IFaculty[]>(
+      await getFacultiesOrEquipment<IFaculty[]>(
         "https://0ee3-85-172-29-2.ngrok-free.app/api/faculties/selection"
       )
     );
@@ -26,7 +26,6 @@ const InputFaculties: FC = () => {
   const [selectedFaculties, setSelectedFaculties] = useState<string[] | number[]>([]);
   //отслеживаем выбранные факультеты и записываем их в общий store
   useEffect(() => {
-    console.log(`SelFac = ${selectedFaculties}`);
     inputData.setFaculty(selectedFaculties);
   }, [selectedFaculties]);
 

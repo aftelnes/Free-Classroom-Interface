@@ -14,6 +14,4 @@ async function getFacultiesOrEquipment<T>(url: string): Promise<any> {
   }
 }
 
-
-
 export default getFacultiesOrEquipment;

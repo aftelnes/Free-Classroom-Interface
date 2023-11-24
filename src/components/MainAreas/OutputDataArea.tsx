@@ -1,25 +1,19 @@
-import { FC, useEffect, useState } from "react";
-import classes from "../../styles/UI/UI.module.css";
-import FreePlacesResult from "../FreePlacesResult/FreePlacesResult";
-import inputData from "../../store/inputData";
+import { FC } from "react";
 import { observer } from "mobx-react-lite";
-import { IPlacesFree } from "../../types/types";
-import getPlacesFree from "../../helpers/requests/getFreePlaces";
+import classes from "../../styles/UI/UI.module.css";
+import inputData from "../../store/inputData";
+import OutputData from "../OutputData/OutputData";
+import ResultHeader from "../ResultHeader/ResultHeader";
 
 const OutputDataArea: FC = observer(() => {
-
   const test = () => {
     console.log("FIND BTN CLICKEDD");
-    
-    return null;
+    return <OutputData />;
   };
 
   return (
     <div className={classes.outputDataArea}>
-      Котики
-      <FreePlacesResult />
-      <FreePlacesResult />
-      <FreePlacesResult />
+      <ResultHeader />
       {inputData.findBtnClicked && test()}
     </div>
   );

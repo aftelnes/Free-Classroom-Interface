@@ -3,21 +3,29 @@ export interface IFaculty {
   name: string;
   short_name: string;
   inactive: boolean;
-};
+}
 
-export interface IEquipment{
+export interface IEquipment {
   id: number;
   name: string;
-};
+}
 
-export interface IPlacesFree{
+export interface IPlacesFree {
+  id: number;
+  address: string;
+  name: string;
+  faculty: {
     id: number;
-    address: string;
-    name: string;
-    faculty: {
-      id: number,
-      short_name: string
-    },
-    size: number,
-    equipments: []
-};
+    short_name: string;
+  };
+  size: number;
+  equipments: [
+    {
+      equipment: {
+        id: number;
+        name: string;
+      };
+      amount: number;
+    }
+  ];
+}

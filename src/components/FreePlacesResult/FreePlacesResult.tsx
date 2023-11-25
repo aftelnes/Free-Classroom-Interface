@@ -3,18 +3,14 @@ import { FC } from "react";
 import { IconUser } from "@tabler/icons-react";
 import classes from "./FreePlacesResult.module.css";
 import Equipment from "../Equipment/Equipment";
-import { IPlacesFree } from "../../types/types";
+import { IPlacesFreeProps } from "../../types/types";
 
-interface IPlacesFreeProps {
-  name: string;
-  facultyName: any;
-  size: number;
-}
 
 const FreePlacesResult: FC<IPlacesFreeProps> = ({
   name,
   facultyName,
   size,
+  equipments,
 }) => {
   return (
     <div className={classes.freePlacesResult}>
@@ -31,10 +27,9 @@ const FreePlacesResult: FC<IPlacesFreeProps> = ({
       </div>
       <div className={classes.places}>{size}</div>
       <div className={classes.menu}>
-        <Equipment />
+        <Equipment equipments={equipments}/>  
       </div>
     </div>
-
   );
 };
 

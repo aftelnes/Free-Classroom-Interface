@@ -17,6 +17,7 @@ const InputDate: FC = () => {
 
   return (
     <DateInput
+      minDate={new Date()}
       className={classes.inputDate}
       value={date}
       onChange={setDate}

@@ -1,11 +1,16 @@
+import { FC } from "react";
 import classes from "./EquipmentValue.module.css";
+import { IEquipmentProps } from "../../types/types";
 
-const EquipmentValue = () => {
+const EquipmentValue: FC<IEquipmentProps> = ({ equipments }) => {
   return (
     <div className={classes.equipmentValue}>
       <h5 className={classes.Header}>Оснащение</h5>
-      <div>Копмьютеры: 12</div>
-      <div>Проектор: 1</div>
+      {equipments.map((item) => (
+        <div>
+          {item.equipment.name} :{item.amount}
+        </div>
+      ))}
     </div>
   );
 };

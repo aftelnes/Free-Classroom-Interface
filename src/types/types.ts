@@ -29,3 +29,31 @@ export interface IPlacesFree {
     }
   ];
 }
+
+export interface IEquipmentProps {
+  equipments: [
+    {
+      equipment: {
+        id: number;
+        name: string;
+      };
+      amount: number;
+    }
+  ];
+}
+
+
+export interface IPlacesFreeProps {
+  name: string;
+  facultyName: any;
+  size: number;
+  equipments: [
+    {
+      equipment: {
+        id: number;
+        name: string;
+      };
+      amount: number;
+    }
+  ];
+}

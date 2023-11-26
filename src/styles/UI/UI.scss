@@ -1,5 +1,7 @@
 $backgroundColor: rgb(255, 255, 255);
 $backgroundColorArea: rgb(255, 226, 226);
+$fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
 
 .ui {
   background-color: $backgroundColor;
@@ -22,20 +24,19 @@ $backgroundColorArea: rgb(255, 226, 226);
 
 .ui .inputDataArea {
   @include areas;
-  background-color: rgb(204, 127, 228);
+  background-color: $backgroundColor;
 }
 .ui .outputDataArea {
   @include areas;
   margin-top: 13vw;
   height: 60vh;
-  background-color: rgb(219, 145, 241);
+  background-color: $backgroundColor;
 }
 
 @mixin header {
   text-align: center;
   font-size: 21px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: $fontFamily;
 }
 .ui .findClass {
   @include header;
@@ -49,4 +50,19 @@ $backgroundColorArea: rgb(255, 226, 226);
 .ui .findbtn {
   width: 7vw;
   margin-left: -6.9vw;
+}
+
+.ui .emptyDiv {
+  background-color: $backgroundColor;
+  width: 20vw;
+  margin-left: 2vw;
+  border-radius: 7px;
+  height: 6vh;
+  border: 0.5px solid rgb(209, 209, 209);
+  margin-bottom: 0.2vw;
+  h4 {
+    color: rgb(66, 124, 211);
+    margin-top: 0.4vw;
+    font-family: $fontFamily;
+  }
 }

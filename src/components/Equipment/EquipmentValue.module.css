@@ -6,7 +6,7 @@
 .equipmentValue div {
   display: inline-block;
   border-radius: 5px;
-  border: 2px solid;
+  border: 1px solid;
   border-color: rgb(0, 110, 255);
   color: rgb(0, 110, 255);
   font-size: 13px;

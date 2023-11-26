@@ -1,37 +1,31 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import { ScrollArea } from "@mantine/core";
+import { observer } from "mobx-react-lite";
 import { IPlacesFree } from "../../types/types";
 import getPlacesFree from "../../helpers/requests/getFreePlaces";
 import FreePlacesResult from "../FreePlacesResult/FreePlacesResult";
+import outputData from "../../store/outputData";
 
 const OutputData: FC = () => {
   const [freePlacesResp, setFreePlacesResp] = useState<IPlacesFree[]>([]);
 
   (async function setFreePlacesState() {
     setFreePlacesResp(await getPlacesFree<IPlacesFree[]>());
+    // Меняем состояние показа пустого блока, который показывается пока пользотель ничего не выбрал
+    outputData.changeShowEmptyBlock();
   })();
 
   return (
     <div>
       <ScrollArea h={350} type='always' offsetScrollbars scrollHideDelay={1500}>
-        {/* {freePlacesResp.map((item, index) => (
-          <div>{item.name}</div>
-        ))} */}
-        {freePlacesResp.map(
-          (item) => (
-            // console.log(`EQ = ${item.equipments[0].equipment.name}`),
-            // console.log(`EQ = ${item.equipments[0].amount}`),
-            // console.log(`=========================`),
-            (
-              <FreePlacesResult
-                name={item.name}
-                facultyName={"good"}
-                size={item.size}
-                equipments={item.equipments}
-              />
-            )
-          )
-        )}
+        {freePlacesResp.map((item) => (
+          <FreePlacesResult
+            name={item.name}
+            facultyName={"good"}
+            size={item.size}
+            equipments={item.equipments}
+          />
+        ))}
       </ScrollArea>
     </div>
   );

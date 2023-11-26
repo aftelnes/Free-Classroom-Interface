@@ -18,7 +18,7 @@ const InputLessonNumber: FC = observer(() => {
       className={classes.inputDate}
       label='Номер занятия'
       placeholder='Выберите номер занятия'
-      min={0}
+      min={1}
       max={9}
       clampBehavior='strict'
       allowNegative={false}

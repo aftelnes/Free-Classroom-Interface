@@ -10,8 +10,8 @@ const InputDataArea: FC = () => {
     <DatesProvider
       settings={{
         locale: "ru",
-      }}
-    >
+        timezone: "UTC",
+      }}>
       <div className={classes.inputDataArea}>
         <MainImageAndHeader />
         <Inputs />

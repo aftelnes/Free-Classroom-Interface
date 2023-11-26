@@ -5,7 +5,7 @@ import classes from "./InputDate.module.css";
 import inputData from "../../store/inputData";
 
 const InputMinimalPlaceSize: FC = observer(() => {
-  const [size, setSize] = useState<string | number>(0);
+  const [size, setSize] = useState<string | number>(1);
 
   useEffect(() => {
     inputData.setSize(size);
@@ -18,7 +18,7 @@ const InputMinimalPlaceSize: FC = observer(() => {
       className={classes.inputDate}
       label='Минимальная вместимость'
       placeholder='Введите желаемое кол-во мест'
-      min={0}
+      min={1}
       max={100}
       clampBehavior='strict'
       allowNegative={false}

@@ -1,19 +1,18 @@
 $blueColor: rgb(0, 110, 255);
 
-.equipmentValue .Header{
-    color: gray;
-    margin: 5px;
+.equipmentValue .Header {
+  color: gray;
+  margin: 5px;
 }
 
-
-.equipmentValue{
-    div{
-        display:inline-block;
-        border-radius: 5px;
-        border: 2px solid;
-        border-color: $blueColor;
-        color: $blueColor;
-        font-size: 13px;
-        margin-bottom: 1px;
-    }
+.equipmentValue {
+  div {
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: $blueColor;
+    color: $blueColor;
+    font-size: 13px;
+    margin-bottom: 1px;
+  }
 }

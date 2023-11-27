@@ -15,7 +15,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   width: 24vw;
   // height: 105vh;
   margin: 0.5vw;
-  background-color: $backgroundColor;
+  background-color: rgb(124, 151, 192);
   float: left;
   text-align: center;
   border-radius: 10px;
@@ -24,13 +24,13 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
 .ui .inputDataArea {
   @include areas;
-  background-color: $backgroundColor;
+  // background-color: $backgroundColor;
 }
 .ui .outputDataArea {
   @include areas;
   margin-top: 13vw;
   height: 60vh;
-  background-color: $backgroundColor;
+  // background-color: $backgroundColor;
 }
 
 @mixin header {

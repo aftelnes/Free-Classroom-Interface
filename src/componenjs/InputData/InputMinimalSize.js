@@ -8,14 +8,31 @@ var _core = require("@mantine/core");
 var _mobxReactLite = require("mobx-react-lite");
 var _react = require("react");
 var _InputDateModule = _interopRequireDefault(require("./InputDate.module.css"));
+var _inputData = _interopRequireDefault(require("../../store/inputData"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var InputMinimalPlaceSize = (0, _mobxReactLite.observer)(function () {
+  var _useState = (0, _react.useState)(1),
+    _useState2 = _slicedToArray(_useState, 2),
+    size = _useState2[0],
+    setSize = _useState2[1];
+  (0, _react.useEffect)(function () {
+    _inputData.default.setSize(size);
+  }, [size]);
   return /*#__PURE__*/React.createElement(_core.NumberInput, {
-    withAsterisk: true,
+    value: size,
+    onChange: setSize,
     className: _InputDateModule.default.inputDate,
     label: "\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0432\u043C\u0435\u0441\u0442\u0438\u043C\u043E\u0441\u0442\u044C",
+    description: "\u041E\u0442 1 \u0434\u043E 120",
     placeholder: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0436\u0435\u043B\u0430\u0435\u043C\u043E\u0435 \u043A\u043E\u043B-\u0432\u043E \u043C\u0435\u0441\u0442",
-    min: 0,
+    min: 1,
+    max: 120,
     clampBehavior: "strict",
     allowNegative: false
   });

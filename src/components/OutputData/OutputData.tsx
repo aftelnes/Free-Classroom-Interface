@@ -18,14 +18,27 @@ const OutputData: FC = () => {
   return (
     <div>
       <ScrollArea h={350} type='always' offsetScrollbars scrollHideDelay={1500}>
-        {freePlacesResp.map((item) => (
-          <FreePlacesResult
-            name={item.name}
-            facultyName={"good"}
-            size={item.size}
-            equipments={item.equipments}
-          />
-        ))}
+        {freePlacesResp.map((item) => {
+          if (item.faculty == null) {
+            return (
+              <FreePlacesResult
+                name={item.name}
+                facultyName={"-"}
+                size={item.size}
+                equipments={item.equipments}
+              />
+            );
+          } else {
+            return (
+              <FreePlacesResult
+                name={item.name}
+                facultyName={item.faculty.short_name}
+                size={item.size}
+                equipments={item.equipments}
+              />
+            );
+          }
+        })}
       </ScrollArea>
     </div>
   );

@@ -17,9 +17,10 @@ const InputMinimalPlaceSize: FC = observer(() => {
       onChange={setSize}
       className={classes.inputDate}
       label='Минимальная вместимость'
+      description='От 1 до 120'
       placeholder='Введите желаемое кол-во мест'
       min={1}
-      max={100}
+      max={120}
       clampBehavior='strict'
       allowNegative={false}
     />

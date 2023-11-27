@@ -57,12 +57,21 @@ var OutputData = function OutputData() {
     offsetScrollbars: true,
     scrollHideDelay: 1500
   }, freePlacesResp.map(function (item) {
-    return /*#__PURE__*/React.createElement(_FreePlacesResult.default, {
-      name: item.name,
-      facultyName: "good",
-      size: item.size,
-      equipments: item.equipments
-    });
+    if (item.faculty == null) {
+      return /*#__PURE__*/React.createElement(_FreePlacesResult.default, {
+        name: item.name,
+        facultyName: "-",
+        size: item.size,
+        equipments: item.equipments
+      });
+    } else {
+      return /*#__PURE__*/React.createElement(_FreePlacesResult.default, {
+        name: item.name,
+        facultyName: item.faculty.short_name,
+        size: item.size,
+        equipments: item.equipments
+      });
+    }
   })));
 };
 var _default = OutputData;

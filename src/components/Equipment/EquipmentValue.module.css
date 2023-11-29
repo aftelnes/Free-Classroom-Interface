@@ -5,6 +5,10 @@
 
 .equipmentValue div {
   display: inline-block;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border-radius: 5px;
   border: 1px solid;
   border-color: rgb(0, 110, 255);

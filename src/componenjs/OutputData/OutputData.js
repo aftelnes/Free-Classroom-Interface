@@ -7,7 +7,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _react = require("react");
 var _core = require("@mantine/core");
-var _mobxReactLite = require("mobx-react-lite");
 var _types = require("../../types/types");
 var _getFreePlaces = _interopRequireDefault(require("../../helpers/requests/getFreePlaces"));
 var _FreePlacesResult = _interopRequireDefault(require("../FreePlacesResult/FreePlacesResult"));

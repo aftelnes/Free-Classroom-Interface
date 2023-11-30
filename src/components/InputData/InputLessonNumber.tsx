@@ -6,10 +6,11 @@ import InputData from "../../store/inputData";
 import classes from "./InputDate.module.css";
 
 const InputLessonNumber: FC = observer(() => {
-  const [lessonNumber, setLessonNumber] = useState<number | string>(0);
+  const [lessonNumber, setLessonNumber] = useState<number | "">(1);
 
   useEffect(() => {
     InputData.setLessonNum(lessonNumber);
+    InputData.changeLessonNumState();
   }, [lessonNumber]);
 
   return (
@@ -20,8 +21,8 @@ const InputLessonNumber: FC = observer(() => {
       placeholder='Выберите номер занятия'
       min={1}
       max={9}
-      clampBehavior='strict'
-      allowNegative={false}
+      // clampBehavior='strict'
+      // allowNegative={false}
       onChange={setLessonNumber}
     />
   );

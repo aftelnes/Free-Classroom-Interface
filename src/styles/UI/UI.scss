@@ -1,68 +1,201 @@
 $backgroundColor: rgb(255, 255, 255);
-$backgroundColorArea: rgb(255, 226, 226);
+$backgroundColorArea: rgb(202, 177, 177);
 $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
 
-.ui {
-  background-color: $backgroundColor;
-  width: 50vw;
-  height: 110vh;
-  margin-left: 25vw;
-  border-radius: 10px;
-}
+@media screen and (max-width: 1280px) {
+  .ui {
+    // background-color: $backgroundColor;
+    width: 100vw;
+    height: 110vh;
+    // margin-left: 2vw;
+    border-radius: 10px;
+    background-color: $backgroundColorArea;
+  }
 
-@mixin areas {
-  width: 24vw;
-  // height: 105vh;
-  margin: 0.5vw;
-  // background-color: rgb(124, 151, 192);
-  float: left;
-  text-align: center;
-  border-radius: 10px;
-  padding-bottom: 2vw;
-}
 
-.ui .inputDataArea {
-  @include areas;
-  background-color: $backgroundColor;
-}
-.ui .outputDataArea {
-  @include areas;
-  margin-top: 13vw;
-  height: 60vh;
-  background-color: $backgroundColor;
-}
+  @mixin areas {
+    min-width: 47vw;
+    margin: 0.5vw;
+    float: left;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 2vw;
+  }
 
-@mixin header {
-  text-align: center;
-  font-size: 21px;
-  font-family: $fontFamily;
-}
-.ui .findClass {
-  @include header;
-}
-.ui .resultClass {
-  @include header;
-  text-align: left;
-  margin-left: 2vw;
-}
+  .ui .inputDataArea {
+    @include areas;
+    background-color: $backgroundColor;
+  }
+  .ui .outputDataArea {
+    @include areas;
+    margin-top: 25vw;
+    height: 60vh;
+    background-color: $backgroundColor;
+  }
 
-.ui .findbtn {
-  width: 7vw;
-  margin-left: -6.9vw;
-}
-
-.ui .emptyDiv {
-  background-color: $backgroundColor;
-  width: 20vw;
-  margin-left: 2vw;
-  border-radius: 7px;
-  height: 6vh;
-  border: 0.5px solid rgb(209, 209, 209);
-  margin-bottom: 0.2vw;
-  h4 {
-    color: rgb(66, 124, 211);
-    margin-top: 0.4vw;
+  @mixin header {
+    text-align: center;
+    font-size: 21px;
     font-family: $fontFamily;
+  }
+  .ui .findClass {
+    @include header;
+  }
+  .ui .resultClass {
+    @include header;
+    text-align: left;
+    margin-left: 2vw;
+  }
+
+  .ui .findbtn {
+    width: 10vw;
+    margin-left: -27vw;
+  }
+
+  .ui .emptyDiv {
+    background-color: $backgroundColor;
+    width: 40vw;
+    margin-left: 2vw;
+    border-radius: 7px;
+    height: 6vh;
+    border: 0.5px solid rgb(209, 209, 209);
+    margin-bottom: 0.2vw;
+    h4 {
+      color: rgb(66, 124, 211);
+      margin-top: 0.4vw;
+      font-family: $fontFamily;
+    }
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .ui {
+    // background-color: $backgroundColor;
+    width: 100vw;
+    height: 110vh;
+    // margin-left: 2vw;
+    border-radius: 10px;
+    background-color: $backgroundColorArea;
+  }
+
+  @mixin areas {
+    min-width: 47vw;
+    margin: 0.5vw;
+    float: left;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 2vw;
+  }
+
+  .ui .inputDataArea {
+    @include areas;
+    background-color: $backgroundColor;
+  }
+  .ui .outputDataArea {
+    @include areas;
+    margin-top: 17vw;
+    height: 60vh;
+    background-color: $backgroundColor;
+  }
+
+  @mixin header {
+    text-align: center;
+    font-size: 21px;
+    font-family: $fontFamily;
+  }
+  .ui .findClass {
+    @include header;
+  }
+  .ui .resultClass {
+    @include header;
+    text-align: left;
+    margin-left: 2vw;
+  }
+
+  .ui .findbtn {
+    width: 10vw;
+    margin-left: -17vw;
+  }
+
+  .ui .emptyDiv {
+    background-color: $backgroundColor;
+    width: 40vw;
+    margin-left: 2vw;
+    border-radius: 7px;
+    height: 6vh;
+    border: 0.5px solid rgb(209, 209, 209);
+    margin-bottom: 0.2vw;
+    h4 {
+      color: rgb(66, 124, 211);
+      margin-top: 0.4vw;
+      font-family: $fontFamily;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .ui {
+    // background-color: $backgroundColor;
+    width: 60vw;
+    height: 110vh;
+    margin-left: 20vw;
+    border-radius: 10px;
+    background-color: $backgroundColorArea;
+  }
+
+
+  @mixin areas {
+    min-width: 29vw;
+    margin: 0.5vw;
+    float: left;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 2vw;
+  }
+
+  .ui .inputDataArea {
+    @include areas;
+    background-color: $backgroundColor;
+  }
+  .ui .outputDataArea {
+    @include areas;
+    margin-top: 10vw;
+    height: 60vh;
+    background-color: $backgroundColor;
+  }
+
+  @mixin header {
+    text-align: center;
+    font-size: 21px;
+    font-family: $fontFamily;
+  }
+  .ui .findClass {
+    @include header;
+  }
+  .ui .resultClass {
+    @include header;
+    text-align: left;
+    margin-left: 2vw;
+  }
+
+  .ui .findbtn {
+    width: 7vw;
+    margin-left: -18vw;
+  }
+
+  .ui .emptyDiv {
+    background-color: $backgroundColor;
+    width: 15vw;
+    margin-left: 2vw;
+    border-radius: 7px;
+    height: 6vh;
+    border: 0.5px solid rgb(209, 209, 209);
+    margin-bottom: 0.2vw;
+    h4 {
+      color: rgb(66, 124, 211);
+      margin-top: 0.4vw;
+      font-family: $fontFamily;
+    }
   }
 }

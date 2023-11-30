@@ -6,14 +6,17 @@ $blueColor: rgb(0, 110, 255);
 }
 
 .equipmentValue {
+  padding-bottom: 2vh;
   div {
+    margin-bottom: 4vh;
+    padding: 0;
     display: inline-block;
-    flex-direction: column;
     border-radius: 5px;
     border: 1px solid;
     border-color: $blueColor;
     color: $blueColor;
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 1px;
+    z-index: 1;
   }
 }

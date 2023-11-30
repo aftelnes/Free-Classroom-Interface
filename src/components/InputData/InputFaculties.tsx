@@ -23,7 +23,9 @@ const InputFaculties: FC = () => {
   });
 
   //состояние отвечающее за выбранныые факультеты
-  const [selectedFaculties, setSelectedFaculties] = useState<string[] | number[]>([]);
+  const [selectedFaculties, setSelectedFaculties] = useState<
+    string[] | number[]
+  >([]);
   //отслеживаем выбранные факультеты и записываем их в общий store
   useEffect(() => {
     inputData.setFaculty(selectedFaculties);
@@ -38,7 +40,12 @@ const InputFaculties: FC = () => {
         data={facultyAry}
         onChange={setSelectedFaculties}
         clearable
-        hidePickedOptions
+        dropdownPosition='bottom'
+        transitionProps={{
+          duration: 150,
+          transition: "pop-top-left",
+          timingFunction: "ease",
+        }}
       />
     </div>
   );

@@ -1,7 +1,7 @@
 import { FC, useEffect } from "react";
 import { useState } from "react";
 import { DateInput } from "@mantine/dates";
-import "@mantine/dates/styles.css";
+// import "@mantine/dates/styles.css";
 import InputData from "../../store/inputData";
 import classes from "./InputDate.module.css";
 

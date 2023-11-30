@@ -7,8 +7,10 @@ exports.default = void 0;
 var _core = require("@mantine/core");
 var _hooks = require("@mantine/hooks");
 var _iconsReact = require("@tabler/icons-react");
+var _react = require("react");
 var _FreePlacesResultModule = _interopRequireDefault(require("../FreePlacesResult/FreePlacesResult.module.css"));
 var _EquipmentValue = _interopRequireDefault(require("./EquipmentValue"));
+var _types = require("../../types/types");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -16,7 +18,8 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-var Equipment = function Equipment() {
+var Equipment = function Equipment(_ref) {
+  var equipments = _ref.equipments;
   var _useDisclosure = (0, _hooks.useDisclosure)(false),
     _useDisclosure2 = _slicedToArray(_useDisclosure, 2),
     opened = _useDisclosure2[0],
@@ -24,26 +27,41 @@ var Equipment = function Equipment() {
     close = _useDisclosure2$.close,
     open = _useDisclosure2$.open;
   return /*#__PURE__*/React.createElement(_core.Popover, {
-    width: 200,
-    position: "bottom",
-    withArrow: true,
+    width: 170,
+    position: "top"
+    // withArrow
+    ,
+    zIndex: 1,
     shadow: "md",
+    middlewares: {
+      flip: false,
+      shift: true,
+      inline: false
+    },
     opened: opened
   }, /*#__PURE__*/React.createElement(_core.Popover.Target, null, /*#__PURE__*/React.createElement(_core.Button, {
     className: _FreePlacesResultModule.default.button,
-    rightSection: /*#__PURE__*/React.createElement(_iconsReact.IconDotsVertical, {
+    rightIcon: /*#__PURE__*/React.createElement(_iconsReact.IconDotsVertical, {
       size: 15
-    }),
+    })
+    // rightSection={<IconDotsVertical size={15} />}
+    ,
     variant: "default",
     onMouseEnter: open,
     onMouseLeave: close
   })), /*#__PURE__*/React.createElement(_core.Popover.Dropdown, {
     style: {
-      pointerEvents: "none"
+      pointerEvents: "none",
+      zIndex: 1
     }
   }, /*#__PURE__*/React.createElement(_core.Text, {
-    size: "sm"
-  }, /*#__PURE__*/React.createElement(_EquipmentValue.default, null))));
+    size: "sm",
+    style: {
+      zIndex: 1
+    }
+  }, /*#__PURE__*/React.createElement(_EquipmentValue.default, {
+    equipments: equipments
+  }))));
 };
 var _default = Equipment;
 exports.default = _default;

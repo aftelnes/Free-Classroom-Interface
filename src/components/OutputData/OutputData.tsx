@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
 import { ScrollArea } from "@mantine/core";
-import { observer } from "mobx-react-lite";
 import { IPlacesFree } from "../../types/types";
 import getPlacesFree from "../../helpers/requests/getFreePlaces";
 import FreePlacesResult from "../FreePlacesResult/FreePlacesResult";

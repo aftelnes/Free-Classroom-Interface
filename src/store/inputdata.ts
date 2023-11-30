@@ -6,10 +6,10 @@ class InputData {
   findBtnClicked: boolean = false;
 
   date: string | null = null;
-  lessonNum: number | string = 0;
+  lessonNum: number | "" = "";
   faculty: number[] | string[] = [0];
   equipment: number[] | string[] = [0];
-  size: number | string = 0;
+  size: number | "" = 0;
 
   constructor() {
     makeAutoObservable(this);
@@ -30,7 +30,7 @@ class InputData {
     this.date = date;
     console.log(`Дата записана = ${this.date}`);
   }
-  setLessonNum(lessonNum: number | string) {
+  setLessonNum(lessonNum: number | "") {
     this.lessonNum = lessonNum;
     console.log(
       `Номер пары записан  = ${this.lessonNum} typeof = ${typeof this
@@ -39,13 +39,15 @@ class InputData {
   }
   setFaculty(faculty: number[] | string[]) {
     this.faculty = faculty;
-    console.log(`ID Факультетов записан = ${this.faculty}`);
+    console.log(
+      `ID Факультетов записан = ${this.faculty} typeof = ${typeof this.faculty}`
+    );
   }
   setEquipment(equipment: number[] | string[]) {
     this.equipment = equipment;
     console.log(`ID оснащения записан = ${this.equipment}`);
   }
-  setSize(size: number | string) {
+  setSize(size: number | "") {
     this.size = size;
     console.log(`Кол-во мест записано = ${this.size} typeof = ${typeof size}`);
   }

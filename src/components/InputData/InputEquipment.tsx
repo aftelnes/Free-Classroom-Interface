@@ -34,6 +34,12 @@ const InputEquipment: FC = () => {
       placeholder='Выберите желаемое оборудование'
       data={equipmentAry}
       onChange={setSelectedEquipment}
+      dropdownPosition='bottom'
+      transitionProps={{
+        duration: 150,
+        transition: "pop-top-left",
+        timingFunction: "ease",
+      }}
       clearable
     />
   );

@@ -9,6 +9,7 @@ import InputDate from "../InputData/InputDate";
 import InputData from "../../store/inputData";
 import InputLessonNumber from "../InputData/InputLessonNumber";
 import getPlacesFree from "../../helpers/requests/getFreePlaces";
+import classesInputs from "../Inputs/Inputs.module.css";
 
 const renderLessonNum = () => {
   return <InputLessonNumber />;
@@ -40,8 +41,9 @@ const Inputs: FC = observer(() => {
     <div>
       <InputDate />
       {InputData.dateState && renderLessonNum()}
+      {/* {showOtherInputs()} */}
       {InputData.dateState &&
-        InputData.lessonNum != 0 &&
+        InputData.lessonNumState &&
         showNotOptionalInputsAndFindButton()}
     </div>
   );

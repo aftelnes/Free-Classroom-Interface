@@ -1,6 +1,24 @@
-.inputDate {
-  width: 14.2vw;
-  text-align: left;
-  margin-left: 5vw;
-  margin-bottom: 1.5vh;
+@media screen and (max-width: 1280px) {
+  .inputDate {
+    width: 35vw;
+    text-align: left;
+    margin-left: 5vw;
+    margin-bottom: 1.5vh;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .inputDate {
+    width: 25vw;
+    text-align: left;
+    margin-left: 10vw;
+    margin-bottom: 1.5vh;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .inputDate {
+    width: 25vw;
+    text-align: left;
+    margin-left: 2vw;
+    margin-bottom: 1.5vh;
+  }
 }

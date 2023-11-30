@@ -3,16 +3,18 @@
   margin: 5px;
 }
 
+.equipmentValue {
+  padding-bottom: 2vh;
+}
 .equipmentValue div {
+  margin-bottom: 4vh;
+  padding: 0;
   display: inline-block;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   border-radius: 5px;
   border: 1px solid;
   border-color: rgb(0, 110, 255);
   color: rgb(0, 110, 255);
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 1px;
+  z-index: 1;
 }

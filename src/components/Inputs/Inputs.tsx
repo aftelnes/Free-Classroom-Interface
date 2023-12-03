@@ -43,7 +43,7 @@ const Inputs: FC = observer(() => {
       {InputData.dateState && renderLessonNum()}
       {/* {showOtherInputs()} */}
       {InputData.dateState &&
-        InputData.lessonNumState &&
+        InputData.lessonNum != 0 &&
         showNotOptionalInputsAndFindButton()}
     </div>
   );

@@ -6,7 +6,7 @@ import InputData from "../../store/inputData";
 import classes from "./InputDate.module.css";
 
 const InputLessonNumber: FC = observer(() => {
-  const [lessonNumber, setLessonNumber] = useState<number | "">(1);
+  const [lessonNumber, setLessonNumber] = useState<number | "">(0);
 
   useEffect(() => {
     InputData.setLessonNum(lessonNumber);

@@ -46,7 +46,7 @@
     width: 40vw;
     margin-left: 2vw;
     border-radius: 7px;
-    height: 6vh;
+    height: 5vh;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
   }
@@ -104,7 +104,7 @@
     width: 40vw;
     margin-left: 2vw;
     border-radius: 7px;
-    height: 6vh;
+    height: 5vh;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
   }
@@ -138,7 +138,7 @@
     text-align: center;
     border-radius: 10px;
     padding-bottom: 2vw;
-    margin-top: 10vw;
+    margin-top: 11vw;
     height: 60vh;
     background-color: rgb(255, 255, 255);
   }
@@ -156,14 +156,14 @@
   }
   .ui .findbtn {
     width: 7vw;
-    margin-left: -18vw;
+    margin-left: -8vw;
   }
   .ui .emptyDiv {
     background-color: rgb(255, 255, 255);
-    width: 15vw;
+    width: 25vw;
     margin-left: 2vw;
     border-radius: 7px;
-    height: 6vh;
+    height: 5vh;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
   }

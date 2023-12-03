@@ -16,7 +16,7 @@ const OutputData: FC = () => {
 
   return (
     <div>
-      <ScrollArea h={350} type='always' offsetScrollbars scrollHideDelay={1500}>
+      <ScrollArea h={400} type='always' offsetScrollbars scrollHideDelay={1500}>
         {freePlacesResp.map((item) => {
           if (item.faculty == null) {
             return (

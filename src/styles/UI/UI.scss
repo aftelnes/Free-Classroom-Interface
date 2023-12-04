@@ -29,7 +29,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   .ui .outputDataArea {
     @include areas;
     margin-top: 25vw;
-    height: 60vh;
+    height: 53vh;
     background-color: $backgroundColor;
   }
 
@@ -49,7 +49,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
   .ui .findbtn {
     width: 10vw;
-    margin-left: -27vw;
+    margin-left: -21vw;
   }
 
   .ui .emptyDiv {
@@ -159,7 +159,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   .ui .outputDataArea {
     @include areas;
     margin-top: 11vw;
-    height: 60vh;
+    height: 55vh;
     background-color: $backgroundColor;
   }
 

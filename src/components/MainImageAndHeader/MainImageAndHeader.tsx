@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import MainImage from "./MainImage";
 import MainHeader from "./MainHeader";
 

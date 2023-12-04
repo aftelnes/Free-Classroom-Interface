@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Button } from "@mantine/core";
 import { observer } from "mobx-react-lite";
+
 import classes from "../../styles/UI/UI.module.css";
 import InputMinimalPlaceSize from "../InputData/InputMinimalSize";
 import InputFaculties from "../../components/InputData/InputFaculties";
@@ -9,7 +10,6 @@ import InputDate from "../InputData/InputDate";
 import InputData from "../../store/inputData";
 import InputLessonNumber from "../InputData/InputLessonNumber";
 import getPlacesFree from "../../helpers/requests/getFreePlaces";
-import classesInputs from "../Inputs/Inputs.module.css";
 
 const renderLessonNum = () => {
   return <InputLessonNumber />;
@@ -41,7 +41,6 @@ const Inputs: FC = observer(() => {
     <div>
       <InputDate />
       {InputData.dateState && renderLessonNum()}
-      {/* {showOtherInputs()} */}
       {InputData.dateState &&
         InputData.lessonNum != 0 &&
         showNotOptionalInputsAndFindButton()}

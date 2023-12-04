@@ -1,8 +1,8 @@
 @media screen and (max-width: 1280px) {
   .inputDate {
-    width: 35vw;
+    width: 30vw;
     text-align: left;
-    margin-left: 5vw;
+    margin-left: 8vw;
     margin-bottom: 1.5vh;
   }
 }

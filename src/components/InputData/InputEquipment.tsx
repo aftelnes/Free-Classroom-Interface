@@ -1,5 +1,6 @@
 import { MultiSelect } from "@mantine/core";
 import { FC, useEffect, useState } from "react";
+
 import classes from "./InputDate.module.css";
 import { IEquipment } from "../../types/types";
 import getFacultiesOrEquipment from "../../helpers/requests/getFacultyAndEquipment";
@@ -41,6 +42,7 @@ const InputEquipment: FC = () => {
         timingFunction: "ease",
       }}
       clearable
+      size='md'
     />
   );
 };

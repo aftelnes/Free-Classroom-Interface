@@ -4,11 +4,9 @@
 }
 
 .equipmentValue {
-  padding-bottom: 2vh;
+  text-align: left;
 }
 .equipmentValue div {
-  margin-bottom: 4vh;
-  padding: 0;
   display: inline-block;
   border-radius: 5px;
   border: 1px solid;
@@ -17,4 +15,7 @@
   font-size: 14px;
   margin-bottom: 1px;
   z-index: 1;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: Arial, Helvetica, sans-serif;
 }

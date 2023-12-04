@@ -1,10 +1,10 @@
 import { IconBuildingBank } from "@tabler/icons-react";
 import { FC } from "react";
 import { IconUser } from "@tabler/icons-react";
+
 import classes from "./FreePlacesResult.module.css";
 import Equipment from "../Equipment/Equipment";
 import { IPlacesFreeProps } from "../../types/types";
-
 
 const FreePlacesResult: FC<IPlacesFreeProps> = ({
   name,
@@ -27,7 +27,7 @@ const FreePlacesResult: FC<IPlacesFreeProps> = ({
       </div>
       <div className={classes.places}>{size}</div>
       <div className={classes.menu}>
-        <Equipment equipments={equipments}/>  
+        <Equipment equipments={equipments} />
       </div>
     </div>
   );

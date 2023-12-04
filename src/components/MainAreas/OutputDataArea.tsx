@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { observer } from "mobx-react-lite";
+
 import classes from "../../styles/UI/UI.module.css";
 import inputData from "../../store/inputData";
 import OutputData from "../OutputData/OutputData";

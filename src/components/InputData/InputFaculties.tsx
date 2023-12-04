@@ -1,5 +1,6 @@
 import { MultiSelect } from "@mantine/core";
 import { FC, useEffect, useState } from "react";
+
 import { IFaculty } from "../../types/types";
 import classes from "./InputDate.module.css";
 import getFacultiesOrEquipment from "../../helpers/requests/getFacultyAndEquipment";
@@ -46,6 +47,7 @@ const InputFaculties: FC = () => {
           transition: "pop-top-left",
           timingFunction: "ease",
         }}
+        size='md'
       />
     </div>
   );

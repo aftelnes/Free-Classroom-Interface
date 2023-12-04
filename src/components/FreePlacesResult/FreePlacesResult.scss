@@ -1,15 +1,17 @@
 $backgroundColor: rgb(255, 255, 255);
+$fontFamily: Arial, Helvetica, sans-serif;
 
 @media screen and (max-width: 1280px) {
   .freePlacesResult {
     background-color: $backgroundColor;
-    width: 40vw;
+    width: 33vw;
     margin-left: 2vw;
     border-radius: 7px;
     height: 6vh;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
     animation: show-freePlacesResult 1.5s forwards;
+    font-family: $fontFamily;
   }
 
   @keyframes show-freePlacesResult {
@@ -33,26 +35,26 @@ $backgroundColor: rgb(255, 255, 255);
 
   .freePlacesResult .image {
     @include divs;
-    width: 6vw;
+    width: 4.5vw;
     padding-left: 1vw;
   }
   .freePlacesResult .classNum {
     @include divs;
-    width: 6vw;
+    width: 4.5vw;
     padding-top: 0.05vw;
     padding-left: 0.9vw;
     text-align: left;
   }
   .freePlacesResult .facultyName {
     @include divs;
-    width: 6vw;
+    width: 4.5vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
   }
   .freePlacesResult .places {
     @include divs;
-    width: 6vw;
+    width: 4.5vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
@@ -71,13 +73,14 @@ $backgroundColor: rgb(255, 255, 255);
 @media screen and (min-width: 1281px) {
   .freePlacesResult {
     background-color: $backgroundColor;
-    width: 40vw;
+    width: 30vw;
     margin-left: 2vw;
     border-radius: 7px;
     height: 6vh;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
     animation: show-freePlacesResult 1.5s forwards;
+    font-family: $fontFamily;
   }
   @keyframes show-freePlacesResult {
     0% {
@@ -100,26 +103,26 @@ $backgroundColor: rgb(255, 255, 255);
 
   .freePlacesResult .image {
     @include divs;
-    width: 6vw;
+    width: 4vw;
     padding-left: 1vw;
   }
   .freePlacesResult .classNum {
     @include divs;
-    width: 6vw;
+    width: 4vw;
     padding-top: 0.05vw;
     padding-left: 0.9vw;
     text-align: left;
   }
   .freePlacesResult .facultyName {
     @include divs;
-    width: 6vw;
+    width: 4vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
   }
   .freePlacesResult .places {
     @include divs;
-    width: 6vw;
+    width: 4vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
@@ -138,13 +141,14 @@ $backgroundColor: rgb(255, 255, 255);
 @media screen and (min-width: 1600px) {
   .freePlacesResult {
     background-color: $backgroundColor;
-    width: 27vw;
+    width: 19vw;
     margin-left: 1vw;
     border-radius: 7px;
     height: 6vh;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
     animation: show-freePlacesResult 1.5s forwards;
+    font-family: $fontFamily;
   }
 
   @keyframes show-freePlacesResult {
@@ -168,26 +172,26 @@ $backgroundColor: rgb(255, 255, 255);
 
   .freePlacesResult .image {
     @include divs;
-    width: 3.7vw;
+    width: 2.5vw;
     padding-left: 1vw;
   }
   .freePlacesResult .classNum {
     @include divs;
-    width: 3.7vw;
+    width: 2.5vw;
     padding-top: 0.05vw;
     padding-left: 0.9vw;
     text-align: left;
   }
   .freePlacesResult .facultyName {
     @include divs;
-    width: 3.7vw;
+    width: 2.5vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
   }
   .freePlacesResult .places {
     @include divs;
-    width: 3.7vw;
+    width: 2.5vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
@@ -195,7 +199,7 @@ $backgroundColor: rgb(255, 255, 255);
   .freePlacesResult .button {
     padding-top: 0.25vw;
     padding-left: 1.5vw;
-    margin-left: 2vw;
+    margin-left: 1.5vw;
     width: 0.5vw;
     margin-top: 2px;
     border: 0;

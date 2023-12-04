@@ -1,7 +1,7 @@
 @media screen and (max-width: 1280px) {
   .freePlacesResult {
     background-color: rgb(255, 255, 255);
-    width: 40vw;
+    width: 33vw;
     margin-left: 2vw;
     border-radius: 7px;
     height: 6vh;
@@ -9,6 +9,7 @@
     margin-bottom: 0.2vw;
     -webkit-animation: show-freePlacesResult 1.5s forwards;
             animation: show-freePlacesResult 1.5s forwards;
+    font-family: Arial, Helvetica, sans-serif;
   }
   @-webkit-keyframes show-freePlacesResult {
     0% {
@@ -34,7 +35,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 6vw;
+    width: 4.5vw;
     padding-left: 1vw;
   }
   .freePlacesResult .classNum {
@@ -45,7 +46,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 6vw;
+    width: 4.5vw;
     padding-top: 0.05vw;
     padding-left: 0.9vw;
     text-align: left;
@@ -58,7 +59,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 6vw;
+    width: 4.5vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
@@ -71,7 +72,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 6vw;
+    width: 4.5vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
@@ -89,7 +90,7 @@
 @media screen and (min-width: 1281px) {
   .freePlacesResult {
     background-color: rgb(255, 255, 255);
-    width: 40vw;
+    width: 30vw;
     margin-left: 2vw;
     border-radius: 7px;
     height: 6vh;
@@ -97,6 +98,7 @@
     margin-bottom: 0.2vw;
     -webkit-animation: show-freePlacesResult 1.5s forwards;
             animation: show-freePlacesResult 1.5s forwards;
+    font-family: Arial, Helvetica, sans-serif;
   }
   @-webkit-keyframes show-freePlacesResult {
     0% {
@@ -122,7 +124,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 6vw;
+    width: 4vw;
     padding-left: 1vw;
   }
   .freePlacesResult .classNum {
@@ -133,7 +135,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 6vw;
+    width: 4vw;
     padding-top: 0.05vw;
     padding-left: 0.9vw;
     text-align: left;
@@ -146,7 +148,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 6vw;
+    width: 4vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
@@ -159,7 +161,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 6vw;
+    width: 4vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
@@ -177,7 +179,7 @@
 @media screen and (min-width: 1600px) {
   .freePlacesResult {
     background-color: rgb(255, 255, 255);
-    width: 27vw;
+    width: 19vw;
     margin-left: 1vw;
     border-radius: 7px;
     height: 6vh;
@@ -185,6 +187,7 @@
     margin-bottom: 0.2vw;
     -webkit-animation: show-freePlacesResult 1.5s forwards;
             animation: show-freePlacesResult 1.5s forwards;
+    font-family: Arial, Helvetica, sans-serif;
   }
   @-webkit-keyframes show-freePlacesResult {
     0% {
@@ -210,7 +213,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 3.7vw;
+    width: 2.5vw;
     padding-left: 1vw;
   }
   .freePlacesResult .classNum {
@@ -221,7 +224,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 3.7vw;
+    width: 2.5vw;
     padding-top: 0.05vw;
     padding-left: 0.9vw;
     text-align: left;
@@ -234,7 +237,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 3.7vw;
+    width: 2.5vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
@@ -247,7 +250,7 @@
     text-align: center;
     background: rgb(255, 255, 255);
     border-radius: 7px;
-    width: 3.7vw;
+    width: 2.5vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
@@ -255,7 +258,7 @@
   .freePlacesResult .button {
     padding-top: 0.25vw;
     padding-left: 1.5vw;
-    margin-left: 2vw;
+    margin-left: 1.5vw;
     width: 0.5vw;
     margin-top: 2px;
     border: 0;

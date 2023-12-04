@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import classes from "./EquipmentValue.module.css";
 import { IEquipmentProps } from "../../types/types";
 

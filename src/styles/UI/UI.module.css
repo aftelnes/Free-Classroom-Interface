@@ -22,7 +22,7 @@
     border-radius: 10px;
     padding-bottom: 2vw;
     margin-top: 25vw;
-    height: 60vh;
+    height: 53vh;
     background-color: rgb(255, 255, 255);
   }
   .ui .findClass {
@@ -39,7 +39,7 @@
   }
   .ui .findbtn {
     width: 10vw;
-    margin-left: -27vw;
+    margin-left: -21vw;
   }
   .ui .emptyDiv {
     background-color: rgb(255, 255, 255);
@@ -139,7 +139,7 @@
     border-radius: 10px;
     padding-bottom: 2vw;
     margin-top: 11vw;
-    height: 60vh;
+    height: 55vh;
     background-color: rgb(255, 255, 255);
   }
   .ui .findClass {

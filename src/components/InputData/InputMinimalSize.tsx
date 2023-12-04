@@ -1,11 +1,12 @@
 import { NumberInput } from "@mantine/core";
 import { observer } from "mobx-react-lite";
 import { FC, useEffect, useState } from "react";
+
 import classes from "./InputDate.module.css";
 import inputData from "../../store/inputData";
 
 const InputMinimalPlaceSize: FC = observer(() => {
-  const [size, setSize] = useState<number | ''>(1);
+  const [size, setSize] = useState<number | "">(1);
 
   useEffect(() => {
     inputData.setSize(size);
@@ -21,6 +22,7 @@ const InputMinimalPlaceSize: FC = observer(() => {
       placeholder='Введите желаемое кол-во мест'
       min={1}
       max={120}
+      size='md'
     />
   );
 });

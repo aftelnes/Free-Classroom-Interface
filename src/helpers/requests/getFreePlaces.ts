@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import inputData from "../../store/inputData";
 
 async function getPlacesFree<T>(): Promise<any> {
@@ -24,6 +25,5 @@ async function getPlacesFree<T>(): Promise<any> {
     console.log(e);
   }
 }
-
 
 export default getPlacesFree;

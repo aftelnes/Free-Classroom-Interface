@@ -20,6 +20,7 @@ async function getPlacesFree<T>(): Promise<any> {
         },
       }
     );
+    console.log("Я сработашл");
     return response.data;
   } catch (e) {
     console.log(e);

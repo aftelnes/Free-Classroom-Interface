@@ -1,14 +1,13 @@
 import { FC, useState } from "react";
 import { ScrollArea } from "@mantine/core";
 
-import { IPlacesFree } from "../../types/types";
-import getPlacesFree from "../../helpers/requests/getFreePlaces";
-import FreePlacesResult from "../FreePlacesResult/FreePlacesResult";
-import outputData from "../../store/outputData";
+import { IPlacesFree } from "../types/types";
+import getPlacesFree from "../helpers/requests/getFreePlaces";
+import FreePlacesResult from "../components/FreePlacesResult/FreePlacesResult";
+import outputData from "../store/outputEmptyStub";
 
 const OutputData: FC = () => {
   const [freePlacesResp, setFreePlacesResp] = useState<IPlacesFree[]>([]);
-
   (async function setFreePlacesState() {
     setFreePlacesResp(await getPlacesFree<IPlacesFree[]>());
     // Меняем состояние показа пустого блока, который показывается пока пользотель ничего не выбрал
@@ -16,12 +15,12 @@ const OutputData: FC = () => {
   })();
 
   return (
-    <ScrollArea h={400} type='never' offsetScrollbars scrollHideDelay={1500}>
+    <ScrollArea h={400} type='always' offsetScrollbars scrollHideDelay={2000}>
       {freePlacesResp.map((item) => {
         if (item.faculty == null) {
           return (
             <FreePlacesResult
-              name={item.name}
+              number={item.name}
               facultyName={"-"}
               size={item.size}
               equipments={item.equipments}
@@ -30,7 +29,7 @@ const OutputData: FC = () => {
         } else {
           return (
             <FreePlacesResult
-              name={item.name}
+              number={item.name}
               facultyName={item.faculty.short_name}
               size={item.size}
               equipments={item.equipments}

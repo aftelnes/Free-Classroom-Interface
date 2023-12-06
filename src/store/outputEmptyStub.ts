@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 
-class OutputData {
+class EmptyStub {
   showEmptyBlock: boolean = true;
   constructor() {
     makeAutoObservable(this);
@@ -10,4 +10,4 @@ class OutputData {
   }
 }
 
-export default new OutputData();
+export default new EmptyStub();

@@ -1,29 +1,30 @@
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1024px) {
   .ui {
-    width: 100vw;
-    height: 110vh;
+    width: 97vw;
+    height: 100vh;
     border-radius: 10px;
-    background-color: rgb(202, 177, 177);
+    background-color: rgb(116, 109, 172);
   }
   .ui .inputDataArea {
-    min-width: 47vw;
     margin: 0.5vw;
     float: left;
     text-align: center;
     border-radius: 10px;
     padding-bottom: 2vw;
-    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    min-width: 52vw;
+    background-color: rgb(202, 177, 177);
   }
   .ui .outputDataArea {
-    min-width: 47vw;
     margin: 0.5vw;
     float: left;
     text-align: center;
     border-radius: 10px;
     padding-bottom: 2vw;
-    margin-top: 25vw;
-    height: 53vh;
-    background-color: rgb(255, 255, 255);
+    margin-top: 300px;
+    min-width: 43vw;
+    height: 60vh;
+    background-color: rgb(202, 177, 177);
   }
   .ui .findClass {
     text-align: center;
@@ -39,11 +40,12 @@
   }
   .ui .findbtn {
     width: 10vw;
-    margin-left: -21vw;
+    margin-left: 18vw;
+    margin-top: 20px;
   }
   .ui .emptyDiv {
     background-color: rgb(255, 255, 255);
-    width: 40vw;
+    width: 38vw;
     margin-left: 2vw;
     border-radius: 7px;
     height: 5vh;
@@ -52,36 +54,37 @@
   }
   .ui .emptyDiv h4 {
     color: rgb(66, 124, 211);
-    margin-top: 0.4vw;
+    margin-top: 1vw;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   }
 }
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1025px) {
   .ui {
-    width: 100vw;
-    height: 110vh;
+    width: 97vw;
+    height: 100vh;
     border-radius: 10px;
-    background-color: rgb(202, 177, 177);
+    background-color: rgb(119, 194, 169);
   }
   .ui .inputDataArea {
-    min-width: 47vw;
     margin: 0.5vw;
     float: left;
     text-align: center;
     border-radius: 10px;
     padding-bottom: 2vw;
-    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    min-width: 47vw;
+    background-color: rgb(202, 177, 177);
   }
   .ui .outputDataArea {
-    min-width: 47vw;
     margin: 0.5vw;
     float: left;
     text-align: center;
     border-radius: 10px;
     padding-bottom: 2vw;
-    margin-top: 17vw;
+    min-width: 37vw;
+    margin-top: 300px;
     height: 60vh;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(202, 177, 177);
   }
   .ui .findClass {
     text-align: center;
@@ -97,11 +100,12 @@
   }
   .ui .findbtn {
     width: 10vw;
-    margin-left: -17vw;
+    margin-left: 15vw;
+    margin-top: 20px;
   }
   .ui .emptyDiv {
     background-color: rgb(255, 255, 255);
-    width: 40vw;
+    width: 30vw;
     margin-left: 2vw;
     border-radius: 7px;
     height: 5vh;
@@ -110,57 +114,61 @@
   }
   .ui .emptyDiv h4 {
     color: rgb(66, 124, 211);
-    margin-top: 0.4vw;
+    margin-top: 0.7vw;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   }
 }
 @media screen and (min-width: 1600px) {
   .ui {
-    width: 60vw;
-    height: 110vh;
-    margin-left: 20vw;
+    width: 53vw;
+    height: 100vh;
+    margin-left: 23.5vw;
     border-radius: 10px;
-    background-color: rgb(202, 177, 177);
+    background-color: rgb(219, 228, 225);
   }
   .ui .inputDataArea {
-    min-width: 29vw;
+    min-width: 700px;
     margin: 0.5vw;
     float: left;
     text-align: center;
     border-radius: 10px;
     padding-bottom: 2vw;
-    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    min-width: 29vw;
+    background-color: rgb(202, 177, 177);
   }
   .ui .outputDataArea {
-    min-width: 29vw;
+    min-width: 700px;
     margin: 0.5vw;
     float: left;
     text-align: center;
     border-radius: 10px;
     padding-bottom: 2vw;
-    margin-top: 11vw;
-    height: 55vh;
-    background-color: rgb(255, 255, 255);
+    margin-top: 300px;
+    height: 60vh;
+    min-width: 22vw;
+    background-color: rgb(202, 177, 177);
   }
   .ui .findClass {
     text-align: center;
-    font-size: 21px;
+    font-size: 22px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   }
   .ui .resultClass {
     text-align: center;
-    font-size: 21px;
+    font-size: 22px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     text-align: left;
     margin-left: 2vw;
   }
   .ui .findbtn {
     width: 7vw;
-    margin-left: -8vw;
+    margin-left: 8vw;
+    margin-top: 20px;
   }
   .ui .emptyDiv {
     background-color: rgb(255, 255, 255);
-    width: 25vw;
+    width: 18vw;
     margin-left: 2vw;
     border-radius: 7px;
     height: 5vh;
@@ -169,7 +177,7 @@
   }
   .ui .emptyDiv h4 {
     color: rgb(66, 124, 211);
-    margin-top: 0.4vw;
+    margin-top: 0.5vw;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   }
 }

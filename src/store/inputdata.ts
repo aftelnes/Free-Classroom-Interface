@@ -11,6 +11,11 @@ class InputData {
   equipment: number[] | string[] = [0];
   size: number | "" = 0;
 
+  test: boolean = false;
+  setTest() {
+    this.test = true;
+  }
+
   constructor() {
     makeAutoObservable(this);
   }
@@ -18,14 +23,17 @@ class InputData {
   //Флаги первых двух инпутов, чтобы после ввода информации в первые 2 выпадали остальные 3 инпута
   changeDateState() {
     this.dateState = true;
+    console.log("Изменил DateState = true");
   }
   changeLessonNumState() {
     this.lessonNumState = true;
+    console.log("Изменил LessonNumState = true");
   }
 
   //Запись значений
   setDate(date: string | null) {
     this.date = date;
+    console.log(this.date);
   }
   setLessonNum(lessonNum: number | "") {
     this.lessonNum = lessonNum;

@@ -5,8 +5,10 @@ import { FC, useEffect, useState } from "react";
 import classes from "./InputDate.module.css";
 import inputData from "../../store/inputData";
 
-const InputMinimalPlaceSize: FC = observer(() => {
+const InputMinimalPlaceSize: FC = () => {
   const [size, setSize] = useState<number | "">(1);
+
+  console.log("ТУУУт");
 
   useEffect(() => {
     inputData.setSize(size);
@@ -25,6 +27,6 @@ const InputMinimalPlaceSize: FC = observer(() => {
       size='md'
     />
   );
-});
+};
 
 export default InputMinimalPlaceSize;

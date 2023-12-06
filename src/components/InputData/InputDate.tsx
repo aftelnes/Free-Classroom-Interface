@@ -22,7 +22,7 @@ const InputDate: FC = () => {
       className={classes.inputDate}
       value={date}
       onChange={setDate}
-      valueFormat='YYYY.MM.DD'
+      valueFormat='DD.MM.YYYY'
       label='Дата'
       placeholder='Выберите дату'
       clearable

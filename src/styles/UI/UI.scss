@@ -3,18 +3,16 @@ $backgroundColorArea: rgb(202, 177, 177);
 $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1024px) {
   .ui {
-    // background-color: $backgroundColor;
-    width: 100vw;
-    height: 110vh;
-    // margin-left: 2vw;
+    width: 97vw;
+    height: 100vh;
     border-radius: 10px;
-    background-color: $backgroundColorArea;
+    // background-color: $backgroundColor;
+    background-color: rgb(116, 109, 172);
   }
 
   @mixin areas {
-    min-width: 47vw;
     margin: 0.5vw;
     float: left;
     text-align: center;
@@ -24,13 +22,16 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
   .ui .inputDataArea {
     @include areas;
-    background-color: $backgroundColor;
+    margin-top: 50px;
+    min-width: 52vw;
+    background-color: $backgroundColorArea;
   }
   .ui .outputDataArea {
     @include areas;
-    margin-top: 25vw;
-    height: 53vh;
-    background-color: $backgroundColor;
+    margin-top: 300px;
+    min-width: 43vw;
+    height: 60vh;
+    background-color: $backgroundColorArea;
   }
 
   @mixin header {
@@ -49,12 +50,13 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
   .ui .findbtn {
     width: 10vw;
-    margin-left: -21vw;
+    margin-left: 18vw;
+    margin-top: 20px;
   }
 
   .ui .emptyDiv {
     background-color: $backgroundColor;
-    width: 40vw;
+    width: 38vw;
     margin-left: 2vw;
     border-radius: 7px;
     height: 5vh;
@@ -62,24 +64,23 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     margin-bottom: 0.2vw;
     h4 {
       color: rgb(66, 124, 211);
-      margin-top: 0.4vw;
+      margin-top: 1vw;
       font-family: $fontFamily;
     }
   }
 }
 
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1025px) {
   .ui {
     // background-color: $backgroundColor;
-    width: 100vw;
-    height: 110vh;
-    // margin-left: 2vw;
+    width: 97vw;
+    height: 100vh;
     border-radius: 10px;
-    background-color: $backgroundColorArea;
+    // background-color: $backgroundColor;
+    background-color: rgb(119, 194, 169);
   }
 
   @mixin areas {
-    min-width: 47vw;
     margin: 0.5vw;
     float: left;
     text-align: center;
@@ -89,13 +90,16 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
   .ui .inputDataArea {
     @include areas;
-    background-color: $backgroundColor;
+    margin-top: 50px;
+    min-width: 47vw;
+    background-color: $backgroundColorArea;
   }
   .ui .outputDataArea {
     @include areas;
-    margin-top: 17vw;
+    min-width: 37vw;
+    margin-top: 300px;
     height: 60vh;
-    background-color: $backgroundColor;
+    background-color: $backgroundColorArea;
   }
 
   @mixin header {
@@ -114,12 +118,13 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
   .ui .findbtn {
     width: 10vw;
-    margin-left: -17vw;
+    margin-left: 15vw;
+    margin-top: 20px;
   }
 
   .ui .emptyDiv {
     background-color: $backgroundColor;
-    width: 40vw;
+    width: 30vw;
     margin-left: 2vw;
     border-radius: 7px;
     height: 5vh;
@@ -127,7 +132,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     margin-bottom: 0.2vw;
     h4 {
       color: rgb(66, 124, 211);
-      margin-top: 0.4vw;
+      margin-top: 0.7vw;
       font-family: $fontFamily;
     }
   }
@@ -136,15 +141,16 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 @media screen and (min-width: 1600px) {
   .ui {
     // background-color: $backgroundColor;
-    width: 60vw;
-    height: 110vh;
-    margin-left: 20vw;
+    width: 53vw;
+    height: 100vh;
+    margin-left: 23.5vw;
     border-radius: 10px;
-    background-color: $backgroundColorArea;
+    // background-color: $backgroundColor;
+    background-color: rgb(219, 228, 225);
   }
 
   @mixin areas {
-    min-width: 29vw;
+    min-width: 700px;
     margin: 0.5vw;
     float: left;
     text-align: center;
@@ -154,18 +160,21 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
   .ui .inputDataArea {
     @include areas;
-    background-color: $backgroundColor;
+    margin-top: 50px;
+    min-width: 29vw;
+    background-color: $backgroundColorArea;
   }
   .ui .outputDataArea {
     @include areas;
-    margin-top: 11vw;
-    height: 55vh;
-    background-color: $backgroundColor;
+    margin-top: 300px;
+    height: 60vh;
+    min-width: 22vw;
+    background-color: $backgroundColorArea;
   }
 
   @mixin header {
     text-align: center;
-    font-size: 21px;
+    font-size: 22px;
     font-family: $fontFamily;
   }
   .ui .findClass {
@@ -179,12 +188,13 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
   .ui .findbtn {
     width: 7vw;
-    margin-left: -8vw;
+    margin-left: 8vw;
+    margin-top: 20px;
   }
 
   .ui .emptyDiv {
     background-color: $backgroundColor;
-    width: 25vw;
+    width: 18vw;
     margin-left: 2vw;
     border-radius: 7px;
     height: 5vh;
@@ -192,7 +202,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     margin-bottom: 0.2vw;
     h4 {
       color: rgb(66, 124, 211);
-      margin-top: 0.4vw;
+      margin-top: 0.5vw;
       font-family: $fontFamily;
     }
   }

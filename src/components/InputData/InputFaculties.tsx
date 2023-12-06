@@ -3,22 +3,19 @@ import { FC, useEffect, useState } from "react";
 
 import { IFaculty } from "../../types/types";
 import classes from "./InputDate.module.css";
-import getFacultiesOrEquipment from "../../helpers/requests/getFacultyAndEquipment";
+import getData from "../../helpers/requests/getData";
 import inputData from "../../store/inputData";
 
 const InputFaculties: FC = () => {
   //Состояние созданное для получения факультетов с респонса
   const [facutlyFromResp, setFacultyFromResp] = useState<IFaculty[]>([]);
+  console.log("Тут");
   //Функция записывающая в состояние ответ с респонса
   (async function setFacultyState() {
-    setFacultyFromResp(
-      await getFacultiesOrEquipment<IFaculty[]>(
-        "https://0ee3-85-172-29-2.ngrok-free.app/api/faculties/selection"
-      )
-    );
+    setFacultyFromResp(await getData<IFaculty[]>("faculties"));
   })();
   //Создаем массив, в который добавляем айдишник и название факультета в виде списка
-  const facultyAry: any[] = [""];
+  const facultyAry: any[] = [];
   facutlyFromResp.map((item) => {
     facultyAry.push({ value: `${item.id}`, label: `${item.short_name}` });
   });

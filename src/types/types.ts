@@ -42,9 +42,8 @@ export interface IEquipmentProps {
   ];
 }
 
-
 export interface IPlacesFreeProps {
-  name: string;
+  number: string;
   facultyName: any;
   size: number;
   equipments: [

@@ -7,14 +7,14 @@ import Equipment from "../Equipment/Equipment";
 import { IPlacesFreeProps } from "../../types/types";
 
 const FreePlacesResult: FC<IPlacesFreeProps> = ({
-  name,
+  number,
   facultyName,
   size,
   equipments,
 }) => {
   return (
     <div className={classes.freePlacesResult}>
-      <div className={classes.classNum}>{name}</div>
+      <div className={classes.classNum}>{number}</div>
       <div className={classes.image}>
         <IconBuildingBank
           style={{ width: "80%", height: "80%" }}

@@ -12,6 +12,7 @@ import InputLessonNumber from "../InputData/InputLessonNumber";
 import getPlacesFree from "../../helpers/requests/getFreePlaces";
 
 const renderLessonNum = () => {
+  console.log("Hren");
   return <InputLessonNumber />;
 };
 
@@ -21,7 +22,8 @@ const Inputs: FC = observer(() => {
     InputData.setFindBtnClicked();
   };
 
-  function showNotOptionalInputsAndFindButton() {
+  const showNotOptionalInputsAndFindButton = () => {
+    console.log("SRABOTAL");
     return (
       <div>
         <InputMinimalPlaceSize />
@@ -35,7 +37,7 @@ const Inputs: FC = observer(() => {
         </Button>
       </div>
     );
-  }
+  };
 
   return (
     <div>

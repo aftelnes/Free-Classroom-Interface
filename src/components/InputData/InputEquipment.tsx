@@ -3,20 +3,16 @@ import { FC, useEffect, useState } from "react";
 
 import classes from "./InputDate.module.css";
 import { IEquipment } from "../../types/types";
-import getFacultiesOrEquipment from "../../helpers/requests/getFacultyAndEquipment";
+import getData from "../../helpers/requests/getData";
 import inputData from "../../store/inputData";
 
 const InputEquipment: FC = () => {
   const [equipmentFromResp, setEquipmentFromResp] = useState<IEquipment[]>([]);
   (async function setEquipmentState() {
-    setEquipmentFromResp(
-      await getFacultiesOrEquipment<IEquipment[]>(
-        "https://0ee3-85-172-29-2.ngrok-free.app/api/equipments/selection"
-      )
-    );
+    setEquipmentFromResp(await getData<IEquipment[]>("equipments"));
   })();
 
-  const equipmentAry: any[] = [""];
+  const equipmentAry: any[] = [];
   equipmentFromResp.map((item) => {
     equipmentAry.push({ value: `${item.id}`, label: `${item.name}` });
   });

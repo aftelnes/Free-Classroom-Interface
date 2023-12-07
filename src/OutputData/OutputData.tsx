@@ -1,18 +1,16 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect } from "react";
 import { ScrollArea } from "@mantine/core";
 
 import { IPlacesFree } from "../types/types";
 import getPlacesFree from "../helpers/requests/getFreePlaces";
 import FreePlacesResult from "../components/FreePlacesResult/FreePlacesResult";
-import outputData from "../store/outputEmptyStub";
+import outputData from "../store/outputEmptyStubStore";
 
-let tmp: IPlacesFree[] = [];
+let resultFaculties: IPlacesFree[] = [];
 
 const OutputData: FC = () => {
-  console.log("OutputData");
-
   (async function setFreePlacesState() {
-    tmp = await getPlacesFree<IPlacesFree[]>();
+    resultFaculties = await getPlacesFree<IPlacesFree[]>();
   })();
 
   useEffect(() => {
@@ -21,7 +19,7 @@ const OutputData: FC = () => {
 
   return (
     <ScrollArea h={400} type='always' offsetScrollbars scrollHideDelay={2000}>
-      {tmp.map((item) => {
+      {resultFaculties.map((item) => {
         if (item.faculty == null) {
           return (
             <FreePlacesResult

@@ -1,4 +1,4 @@
-import { FC, useEffect, useState, useContext } from "react";
+import { FC, useEffect, useState } from "react";
 import { Button } from "@mantine/core";
 
 import classes from "../../styles/UI/UI.module.css";
@@ -9,7 +9,7 @@ import InputDate from "../InputData/InputDate";
 import FindBtnStore from "../../store/findBtnStore";
 import InputLessonNumber from "../InputData/InputLessonNumber";
 
-const Inputs: FC<any> = () => {
+const Inputs: FC = () => {
   const findButtonClicked = () => {
     FindBtnStore.setFindBtnClicked();
   };
@@ -18,7 +18,6 @@ const Inputs: FC<any> = () => {
     return <InputLessonNumber parentCallback={lessonNumberCallback} />;
   };
 
-  //Этот компонент не перерисовывется
   const showNotOptionalInputsAndFindButton = () => {
     return (
       <div>

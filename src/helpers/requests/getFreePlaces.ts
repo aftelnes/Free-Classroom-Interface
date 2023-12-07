@@ -3,7 +3,6 @@ import axios from "axios";
 import InputDataStore from "../../store/inputDataStore";
 
 async function getPlacesFree<T>(): Promise<any> {
-  console.log(`getPlacesFree`);
   try {
     const response = await axios.get<T>(
       "https://0ee3-85-172-29-2.ngrok-free.app/api/timetable/places/free",

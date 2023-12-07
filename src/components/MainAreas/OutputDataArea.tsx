@@ -5,7 +5,7 @@ import classes from "../../styles/UI/UI.module.css";
 import FindBtnStore from "../../store/findBtnStore";
 import OutputData from "../../OutputData/OutputData";
 import ResultHeader from "../ResultHeader/ResultHeader";
-import EmptyStub from "../../store/outputEmptyStub";
+import EmptyStub from "../../store/outputEmptyStubStore";
 
 const showEmptyDiv = () => {
   return (
@@ -16,8 +16,6 @@ const showEmptyDiv = () => {
 };
 
 const OutputDataArea: FC = observer(() => {
-  console.log("OutputDataArea");
-
   return (
     <div className={classes.outputDataArea}>
       <ResultHeader />

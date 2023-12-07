@@ -7,7 +7,7 @@ $fontFamily: Arial, Helvetica, sans-serif;
     width: 38vw;
     margin-left: 2vw;
     border-radius: 7px;
-    height: 4vh;
+    height: 5vh;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
     animation: show-freePlacesResult 1.5s forwards;
@@ -37,10 +37,11 @@ $fontFamily: Arial, Helvetica, sans-serif;
     @include divs;
     width: 5.5vw;
     padding-left: 1vw;
+    margin-top: 1vw;
   }
   .freePlacesResult .classNum {
     @include divs;
-    margin-top: 0.6vw;
+    margin-top: 1vw;
     width: 6vw;
     padding-top: 0.05vw;
     padding-left: 0.9vw;
@@ -48,15 +49,15 @@ $fontFamily: Arial, Helvetica, sans-serif;
   }
   .freePlacesResult .facultyName {
     @include divs;
-    margin-top: 0.6vw;
-    width: 7vw;
+    margin-top: 1vw;
+    width: 8vw;
     padding-top: 0.05vw;
     text-align: left;
     margin-left: -0.5vw;
   }
   .freePlacesResult .places {
     @include divs;
-    margin-top: 0.6vw;
+    margin-top: 1vw;
     width: 6vw;
     padding-top: 0.05vw;
     text-align: left;
@@ -64,7 +65,7 @@ $fontFamily: Arial, Helvetica, sans-serif;
   }
   .freePlacesResult .button {
     padding-top: 0.25vw;
-    padding-left: 2vw;
+    padding-left: 1.5vw;
     width: 0.2vw;
     margin-top: 2px;
     border: 0;

@@ -1,15 +1,14 @@
 import { makeAutoObservable } from "mobx";
 
 class FindBtnStore {
-  findBtnClicked: boolean = false;
+  findBtnClicked: number = 0;
 
   constructor() {
     makeAutoObservable(this);
   }
 
   setFindBtnClicked() {
-    this.findBtnClicked = true;
-    console.log(`this.findBtnClicked = ${this.findBtnClicked}`);
+    this.findBtnClicked += 1;
   }
 }
 

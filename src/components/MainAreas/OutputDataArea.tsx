@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 import { observer } from "mobx-react-lite";
 
 import classes from "../../styles/UI/UI.module.css";
@@ -22,7 +22,7 @@ const OutputDataArea: FC = observer(() => {
     <div className={classes.outputDataArea}>
       <ResultHeader />
       {EmptyStub.showEmptyBlock == true && showEmptyDiv()}
-      {FindBtnStore.findBtnClicked && <OutputData />}
+      {FindBtnStore.findBtnClicked != 0 && <OutputData />}
     </div>
   );
 });

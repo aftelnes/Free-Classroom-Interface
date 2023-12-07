@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { ScrollArea } from "@mantine/core";
 
 import { IPlacesFree } from "../types/types";
@@ -8,11 +8,17 @@ import outputData from "../store/outputEmptyStub";
 
 const OutputData: FC = () => {
   const [freePlacesResp, setFreePlacesResp] = useState<IPlacesFree[]>([]);
-  (async function setFreePlacesState() {
-    setFreePlacesResp(await getPlacesFree<IPlacesFree[]>());
-    // Меняем состояние показа пустого блока, который показывается пока пользотель ничего не выбрал
-    outputData.changeShowEmptyBlock();
-  })();
+
+  console.log("OutputData");
+
+  useEffect(() => {
+    (async function setFreePlacesState() {
+      setFreePlacesResp(await getPlacesFree<IPlacesFree[]>());
+      // Меняем состояние показа пустого блока, который показывается пока пользотель ничего не выбрал
+      console.log(`useEffect`);
+      outputData.changeShowEmptyBlock();
+    })();
+  }, []);
 
   return (
     <ScrollArea h={400} type='always' offsetScrollbars scrollHideDelay={2000}>

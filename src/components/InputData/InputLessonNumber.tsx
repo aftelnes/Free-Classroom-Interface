@@ -2,17 +2,18 @@ import { useEffect, useState } from "react";
 import { NumberInput } from "@mantine/core";
 import { FC } from "react";
 
-import InputData from "../../store/inputData";
 import classes from "./InputDate.module.css";
+import allInputDataStore from "../../store/inputDataStore";
 
-const InputLessonNumber: FC = () => {
+import lessonNumberStore from "../../store/lessonNumberStore";
+
+const InputLessonNumber: FC<any> = ({ parentCallback }) => {
   const [lessonNumber, setLessonNumber] = useState<number | "">(0);
 
-  console.log("Отрисовался ");
-
   useEffect(() => {
-    InputData.setLessonNum(lessonNumber);
-    InputData.changeLessonNumState();
+    lessonNumberStore.setLesNumber(lessonNumber);
+    allInputDataStore.setLessonNum(lessonNumber);
+    parentCallback(lessonNumber);
   }, [lessonNumber]);
 
   return (

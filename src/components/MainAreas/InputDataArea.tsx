@@ -11,8 +11,6 @@ const InputDataArea: FC = () => {
     <DatesProvider
       settings={{
         locale: "ru",
-        firstDayOfWeek: 0,
-        weekendDays: [0],
       }}>
       <div className={classes.inputDataArea}>
         <MainImageAndHeader />

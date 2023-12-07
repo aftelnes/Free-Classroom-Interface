@@ -1,17 +1,15 @@
 import { NumberInput } from "@mantine/core";
-import { observer } from "mobx-react-lite";
 import { FC, useEffect, useState } from "react";
 
 import classes from "./InputDate.module.css";
-import inputData from "../../store/inputData";
+import InputDataStore from "../../store/inputDataStore";
 
 const InputMinimalPlaceSize: FC = () => {
   const [size, setSize] = useState<number | "">(1);
 
-  console.log("ТУУУт");
-
   useEffect(() => {
-    inputData.setSize(size);
+    // inputData.setSize(size);
+    InputDataStore.setSize(size);
   }, [size]);
 
   return (

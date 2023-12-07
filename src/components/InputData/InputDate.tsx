@@ -2,16 +2,16 @@ import { FC, useEffect } from "react";
 import { useState } from "react";
 import { DateInput } from "@mantine/dates";
 
-import InputData from "../../store/inputData";
 import classes from "./InputDate.module.css";
+import InputDataStore from "../../store/inputDataStore";
 
-const InputDate: FC = () => {
+const InputDate: FC<any> = ({ parentCallback }) => {
   const [date, setDate] = useState<Date | null>(null);
 
   useEffect(() => {
     if (date != null) {
-      InputData.changeDateState();
-      InputData.setDate(JSON.stringify(date).slice(1, 11));
+      InputDataStore.setDate(JSON.stringify(date).slice(1, 11));
+      parentCallback(date);
     }
   }, [date]);
 

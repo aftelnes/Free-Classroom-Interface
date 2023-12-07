@@ -1,8 +1,8 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { observer } from "mobx-react-lite";
 
 import classes from "../../styles/UI/UI.module.css";
-import InputData from "../../store/inputData";
+import FindBtnStore from "../../store/findBtnStore";
 import OutputData from "../../OutputData/OutputData";
 import ResultHeader from "../ResultHeader/ResultHeader";
 import EmptyStub from "../../store/outputEmptyStub";
@@ -16,11 +16,13 @@ const showEmptyDiv = () => {
 };
 
 const OutputDataArea: FC = observer(() => {
+  console.log("OutputDataArea");
+
   return (
     <div className={classes.outputDataArea}>
       <ResultHeader />
       {EmptyStub.showEmptyBlock == true && showEmptyDiv()}
-      {InputData.findBtnClicked && <OutputData />}
+      {FindBtnStore.findBtnClicked && <OutputData />}
     </div>
   );
 });

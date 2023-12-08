@@ -8,8 +8,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     width: 97vw;
     height: 100vh;
     border-radius: 10px;
-    // background-color: $backgroundColor;
-    background-color: rgb(116, 109, 172);
+    background-color: $backgroundColor;
   }
 
   @mixin areas {
@@ -24,14 +23,14 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     @include areas;
     margin-top: 50px;
     min-width: 52vw;
-    background-color: $backgroundColorArea;
+    background-color: $backgroundColor;
   }
   .ui .outputDataArea {
     @include areas;
     margin-top: 300px;
     min-width: 43vw;
     height: 60vh;
-    background-color: $backgroundColorArea;
+    background-color: $backgroundColor;
   }
 
   @mixin header {
@@ -72,12 +71,10 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
 @media screen and (min-width: 1025px) {
   .ui {
-    // background-color: $backgroundColor;
+    background-color: $backgroundColor;
     width: 97vw;
     height: 100vh;
     border-radius: 10px;
-    // background-color: $backgroundColor;
-    background-color: rgb(119, 194, 169);
   }
 
   @mixin areas {
@@ -92,14 +89,14 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     @include areas;
     margin-top: 50px;
     min-width: 47vw;
-    background-color: $backgroundColorArea;
+    background-color: $backgroundColor;
   }
   .ui .outputDataArea {
     @include areas;
     min-width: 37vw;
     margin-top: 300px;
     height: 60vh;
-    background-color: $backgroundColorArea;
+    background-color: $backgroundColor;
   }
 
   @mixin header {
@@ -140,13 +137,11 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
 @media screen and (min-width: 1600px) {
   .ui {
-    // background-color: $backgroundColor;
+    background-color: $backgroundColor;
     width: 53vw;
     height: 100vh;
     margin-left: 23.5vw;
     border-radius: 10px;
-    // background-color: $backgroundColor;
-    background-color: rgb(219, 228, 225);
   }
 
   @mixin areas {
@@ -162,14 +157,14 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     @include areas;
     margin-top: 50px;
     min-width: 29vw;
-    background-color: $backgroundColorArea;
+    background-color: $backgroundColor;
   }
   .ui .outputDataArea {
     @include areas;
     margin-top: 300px;
     height: 60vh;
     min-width: 22vw;
-    background-color: $backgroundColorArea;
+    background-color: $backgroundColor;
   }
 
   @mixin header {

@@ -3,7 +3,7 @@
     width: 97vw;
     height: 100vh;
     border-radius: 10px;
-    background-color: rgb(116, 109, 172);
+    background-color: rgb(255, 255, 255);
   }
   .ui .inputDataArea {
     margin: 0.5vw;
@@ -13,7 +13,7 @@
     padding-bottom: 2vw;
     margin-top: 50px;
     min-width: 52vw;
-    background-color: rgb(202, 177, 177);
+    background-color: rgb(255, 255, 255);
   }
   .ui .outputDataArea {
     margin: 0.5vw;
@@ -24,7 +24,7 @@
     margin-top: 300px;
     min-width: 43vw;
     height: 60vh;
-    background-color: rgb(202, 177, 177);
+    background-color: rgb(255, 255, 255);
   }
   .ui .findClass {
     text-align: center;
@@ -60,10 +60,10 @@
 }
 @media screen and (min-width: 1025px) {
   .ui {
+    background-color: rgb(255, 255, 255);
     width: 97vw;
     height: 100vh;
     border-radius: 10px;
-    background-color: rgb(119, 194, 169);
   }
   .ui .inputDataArea {
     margin: 0.5vw;
@@ -73,7 +73,7 @@
     padding-bottom: 2vw;
     margin-top: 50px;
     min-width: 47vw;
-    background-color: rgb(202, 177, 177);
+    background-color: rgb(255, 255, 255);
   }
   .ui .outputDataArea {
     margin: 0.5vw;
@@ -84,7 +84,7 @@
     min-width: 37vw;
     margin-top: 300px;
     height: 60vh;
-    background-color: rgb(202, 177, 177);
+    background-color: rgb(255, 255, 255);
   }
   .ui .findClass {
     text-align: center;
@@ -120,11 +120,11 @@
 }
 @media screen and (min-width: 1600px) {
   .ui {
+    background-color: rgb(255, 255, 255);
     width: 53vw;
     height: 100vh;
     margin-left: 23.5vw;
     border-radius: 10px;
-    background-color: rgb(219, 228, 225);
   }
   .ui .inputDataArea {
     min-width: 700px;
@@ -135,7 +135,7 @@
     padding-bottom: 2vw;
     margin-top: 50px;
     min-width: 29vw;
-    background-color: rgb(202, 177, 177);
+    background-color: rgb(255, 255, 255);
   }
   .ui .outputDataArea {
     min-width: 700px;
@@ -147,7 +147,7 @@
     margin-top: 300px;
     height: 60vh;
     min-width: 22vw;
-    background-color: rgb(202, 177, 177);
+    background-color: rgb(255, 255, 255);
   }
   .ui .findClass {
     text-align: center;

@@ -10,17 +10,7 @@ $fontFamily: Arial, Helvetica, sans-serif;
     height: 5vh;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
-    animation: show-freePlacesResult 1.5s forwards;
     font-family: $fontFamily;
-  }
-
-  @keyframes show-freePlacesResult {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 
   @mixin divs {
@@ -82,16 +72,7 @@ $fontFamily: Arial, Helvetica, sans-serif;
     height: 5vh;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
-    animation: show-freePlacesResult 1.5s forwards;
     font-family: $fontFamily;
-  }
-  @keyframes show-freePlacesResult {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 
   @mixin divs {
@@ -153,17 +134,7 @@ $fontFamily: Arial, Helvetica, sans-serif;
     height: 5vh;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
-    animation: show-freePlacesResult 1.5s forwards;
     font-family: $fontFamily;
-  }
-
-  @keyframes show-freePlacesResult {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 
   @mixin divs {

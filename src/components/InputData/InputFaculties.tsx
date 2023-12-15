@@ -4,8 +4,7 @@ import { FC, useEffect, useState } from "react";
 import { IFaculty } from "../../types/types";
 import getData from "../../helpers/requests/getData";
 import classes from "./InputDate.module.css";
-
-export let tmp: string[];
+import InputDataStore from "../../store/inputDataStore";
 
 const InputFaculties: FC = () => {
   const [facutlyFromResp, setFacultyFromResp] = useState<IFaculty[]>([]);
@@ -15,12 +14,9 @@ const InputFaculties: FC = () => {
     facultyAry.push({ value: `${item.id}`, label: `${item.short_name}` });
   });
 
-  const [ary, setAry] = useState<string[]>();
-
-  const setDataToStore = () => {
-    tmp = ary;
+  const setDataToStore = (facultyId) => {
+    InputDataStore.setFaculty(facultyId);
   };
-  setDataToStore();
 
   useEffect(() => {
     (async function setFacultyState() {
@@ -35,8 +31,7 @@ const InputFaculties: FC = () => {
         label='Желаемые факультеты'
         placeholder='Выберите желаемые факультеты'
         data={facultyAry}
-        // onChange={(facultiesId) => setDataToStore(facultiesId)}
-        onChange={setAry}
+        onChange={(facultyId) => setDataToStore(facultyId)}
         clearable
         dropdownPosition='bottom'
         transitionProps={{

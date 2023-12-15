@@ -1,10 +1,9 @@
 import axios from "axios";
 
 import InputDataStore from "../../store/inputDataStore";
+import qs from "qs";
 
 async function getPlacesFree<T>(): Promise<any> {
-  let t: number[];
-  t = [1, 2, 3];
   console.log("getPlacesFree");
   try {
     const response = await axios<T>(
@@ -17,9 +16,11 @@ async function getPlacesFree<T>(): Promise<any> {
           date: InputDataStore.date,
           number: InputDataStore.lessonNum,
           faculty: InputDataStore.faculty,
-          // faculty: 1,
           equipment: InputDataStore.equipment,
           size: InputDataStore.size,
+        },
+        paramsSerializer: (params) => {
+          return qs.stringify(params, { arrayFormat: "repeat" });
         },
       }
     );

@@ -1,11 +1,9 @@
 class InputDataStore {
   date: string | null = null;
   lessonNum: number | "" = "";
-  // faculty: number[] | string[] = [0];
-  faculty: number[] = [1, 2, 3];
+  faculty: number[] = [];
 
-  // equipment: number[] | string[] = [0];
-  equipment: string[] = [];
+  equipment: number[] = [];
   size: number | "" = 0;
 
   setDate(date: string | null) {
@@ -14,14 +12,16 @@ class InputDataStore {
   setLessonNum(lessonNum: number | "") {
     this.lessonNum = lessonNum;
   }
-  // setFaculty(faculty: string[]) {
-  //   // this.faculty = faculty;
-  //   this.faculty = faculty;
-  //   console.log(`this.faculty = ${typeof this.faculty[0]}`);
-  // }
+  setFaculty(faculty: string[]) {
+    this.faculty = faculty.map((item) => {
+      return Number(item);
+    });
+  }
 
   setEquipment(equipment: string[]) {
-    this.equipment = equipment;
+    this.equipment = equipment.map((item) => {
+      return Number(item);
+    });
   }
   setSize(size: number | "") {
     this.size = size;

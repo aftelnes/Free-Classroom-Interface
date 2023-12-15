@@ -8,10 +8,18 @@ import InputEquipment from "../../components/InputData/InputEquipment";
 import InputDate from "../InputData/InputDate";
 import FindBtnStore from "../../store/findBtnStore";
 import InputLessonNumber from "../InputData/InputLessonNumber";
+import freePlacesStore from "../../store/freePlacesStore";
+
+import getPlacesFree from "../../helpers/requests/getFreePlaces";
+import { IPlacesFree } from "../../types/types";
 
 const Inputs: FC = () => {
   const findButtonClicked = () => {
     FindBtnStore.setFindBtnClicked();
+    (async function setFreePlacesState() {
+      freePlacesStore.resultFreePlaces = await getPlacesFree<IPlacesFree[]>();
+    })();
+    freePlacesStore.showInfo();
   };
 
   const renderLessonNum = () => {
@@ -42,6 +50,7 @@ const Inputs: FC = () => {
   const lessonNumberCallback = (lessonNum: number | "") => {
     setLessonNumState(lessonNum);
   };
+  console.log("Inputs");
 
   useEffect(() => {}, [dateState, lessonNumState]);
 

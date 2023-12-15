@@ -1,28 +1,25 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import { ScrollArea } from "@mantine/core";
 
-import { IPlacesFree } from "../types/types";
-import getPlacesFree from "../helpers/requests/getFreePlaces";
 import FreePlacesResult from "../components/FreePlacesResult/FreePlacesResult";
 import outputData from "../store/outputEmptyStubStore";
+import freePlacesStore from "../store/freePlacesStore";
+import { observer } from "mobx-react-lite";
 
-let resultFaculties: IPlacesFree[] = [];
 
-const OutputData: FC = () => {
-  (async function setFreePlacesState() {
-    resultFaculties = await getPlacesFree<IPlacesFree[]>();
-  })();
-
+const OutputData: FC = observer(() => {
+  console.log("OutputData")
   useEffect(() => {
     outputData.changeShowEmptyBlock();
-  }, []);
+  });
 
   return (
     <ScrollArea h={400} type='always' offsetScrollbars scrollHideDelay={2000}>
-      {resultFaculties.map((item) => {
+      {freePlacesStore.resultFreePlaces.map((item) => {
         if (item.faculty == null) {
           return (
             <FreePlacesResult
+              key={item.id}
               number={item.name}
               facultyName={"-"}
               size={item.size}
@@ -32,6 +29,7 @@ const OutputData: FC = () => {
         } else {
           return (
             <FreePlacesResult
+              key={item.id}
               number={item.name}
               facultyName={item.faculty.short_name}
               size={item.size}
@@ -42,6 +40,6 @@ const OutputData: FC = () => {
       })}
     </ScrollArea>
   );
-};
+});
 
 export default OutputData;

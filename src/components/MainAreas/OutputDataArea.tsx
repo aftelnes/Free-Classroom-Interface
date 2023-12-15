@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { observer } from "mobx-react-lite";
 
 import classes from "../../styles/UI/UI.module.css";

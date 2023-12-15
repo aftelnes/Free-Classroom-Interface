@@ -1,6 +1,7 @@
 import axios from "axios";
 
 async function getData<T>(dataRoute: string): Promise<any> {
+  console.log("jjjj");
   try {
     const response = await axios.get<T>(
       `${process.env.REACT_APP_API_URL}/${dataRoute}`,

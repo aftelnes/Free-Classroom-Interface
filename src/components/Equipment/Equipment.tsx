@@ -28,7 +28,7 @@ const Equipment: FC<IEquipmentProps> = ({ equipments }) => {
       </Popover.Target>
       <Popover.Dropdown style={{ pointerEvents: "none", zIndex: 1 }}>
         <Text size='sm' style={{ zIndex: 1 }}>
-          <EquipmentValue equipments={equipments} />
+          <EquipmentValue equipments={equipments} key={equipments[0].amount} />
         </Text>
       </Popover.Dropdown>
     </Popover>

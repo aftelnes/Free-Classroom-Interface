@@ -7,7 +7,7 @@ import InputDataStore from "../../store/inputDataStore";
 
 const InputDate: FC<any> = ({ parentCallback }) => {
   const [date, setDate] = useState<Date | null>(null);
-
+  
   useEffect(() => {
     if (date != null) {
       InputDataStore.setDate(JSON.stringify(date).slice(1, 11));

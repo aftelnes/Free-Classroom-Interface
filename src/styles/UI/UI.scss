@@ -22,20 +22,20 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   .ui .inputDataArea {
     @include areas;
     margin-top: 50px;
-    min-width: 52vw;
+    min-width: 44vw;
     background-color: $backgroundColor;
+    margin-left: 5vw;
   }
   .ui .outputDataArea {
     @include areas;
     margin-top: 300px;
-    min-width: 43vw;
-    height: 60vh;
+    min-width: 44vw;
     background-color: $backgroundColor;
   }
 
   @mixin header {
     text-align: center;
-    font-size: 21px;
+    font-size: 25.5px;
     font-family: $fontFamily;
   }
   .ui .findClass {
@@ -48,9 +48,10 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   }
 
   .ui .findbtn {
-    width: 10vw;
-    margin-left: 18vw;
+    width: 15vw;
+    margin-left: 22vw;
     margin-top: 20px;
+    border-radius: 10px;
   }
 
   .ui .emptyDiv {
@@ -88,20 +89,20 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   .ui .inputDataArea {
     @include areas;
     margin-top: 50px;
-    min-width: 47vw;
+    min-width: 37vw;
     background-color: $backgroundColor;
+    margin-left: 10vw;
   }
   .ui .outputDataArea {
     @include areas;
     min-width: 37vw;
     margin-top: 300px;
-    height: 60vh;
     background-color: $backgroundColor;
   }
 
   @mixin header {
     text-align: center;
-    font-size: 21px;
+    font-size: 25.5px;
     font-family: $fontFamily;
   }
   .ui .findClass {
@@ -117,6 +118,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     width: 10vw;
     margin-left: 15vw;
     margin-top: 20px;
+    border-radius: 10px;
   }
 
   .ui .emptyDiv {
@@ -138,9 +140,9 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 @media screen and (min-width: 1600px) {
   .ui {
     background-color: $backgroundColor;
-    width: 53vw;
+    width: 48vw;
     height: 100vh;
-    margin-left: 23.5vw;
+    margin-left: 23vw;
     border-radius: 10px;
   }
 
@@ -156,20 +158,19 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   .ui .inputDataArea {
     @include areas;
     margin-top: 50px;
-    min-width: 29vw;
+    min-width: 24vw;
     background-color: $backgroundColor;
   }
   .ui .outputDataArea {
     @include areas;
     margin-top: 300px;
-    height: 60vh;
     min-width: 22vw;
     background-color: $backgroundColor;
   }
 
   @mixin header {
     text-align: center;
-    font-size: 22px;
+    font-size: 25.5px;
     font-family: $fontFamily;
   }
   .ui .findClass {
@@ -182,9 +183,10 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   }
 
   .ui .findbtn {
-    width: 7vw;
-    margin-left: 8vw;
+    width: 6vw;
+    margin-left: 8.2vw;
     margin-top: 20px;
+    border-radius: 10px;
   }
 
   .ui .emptyDiv {

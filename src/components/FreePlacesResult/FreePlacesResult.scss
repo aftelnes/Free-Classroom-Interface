@@ -1,6 +1,15 @@
 $backgroundColor: rgb(255, 255, 255);
 $fontFamily: Arial, Helvetica, sans-serif;
 
+@keyframes show-freePlacesResult {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .freePlacesResult {
     background-color: $backgroundColor;
@@ -11,6 +20,7 @@ $fontFamily: Arial, Helvetica, sans-serif;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
     font-family: $fontFamily;
+    animation: show-freePlacesResult 1s forwards;
   }
 
   @mixin divs {
@@ -73,6 +83,7 @@ $fontFamily: Arial, Helvetica, sans-serif;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
     font-family: $fontFamily;
+    animation: show-freePlacesResult 1s forwards;
   }
 
   @mixin divs {
@@ -119,9 +130,9 @@ $fontFamily: Arial, Helvetica, sans-serif;
     padding-left: 1.5vw;
     width: 0.5vw;
     margin-top: 2px;
-    margin-left: 2vw;
+    margin-left: 4vw;
     border: 0;
-    z-index: 1;
+    // background-color: burlywood;
   }
 }
 
@@ -135,6 +146,7 @@ $fontFamily: Arial, Helvetica, sans-serif;
     border: 0.5px solid rgb(209, 209, 209);
     margin-bottom: 0.2vw;
     font-family: $fontFamily;
+    animation: show-freePlacesResult 1s forwards;
   }
 
   @mixin divs {

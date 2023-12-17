@@ -8,7 +8,6 @@ const InputMinimalPlaceSize: FC = () => {
   const [size, setSize] = useState<number | "">(1);
 
   useEffect(() => {
-    // inputData.setSize(size);
     InputDataStore.setSize(size);
   }, [size]);
 

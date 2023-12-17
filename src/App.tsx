@@ -1,6 +1,6 @@
 import classes from "./styles/UI/UI.module.css";
 import "@mantine/styles";
-import { FC, createContext, useEffect, useState } from "react";
+import { FC } from "react";
 
 import OutputDate from "./components/MainAreas/OutputDataArea";
 import InputDataArea from "./components/MainAreas/InputDataArea";

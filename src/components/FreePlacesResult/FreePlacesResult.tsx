@@ -8,7 +8,7 @@ import { IPlacesFreeProps } from "../../types/types";
 
 const FreePlacesResult: FC<IPlacesFreeProps> = ({
   number,
-  facultyName,
+  faculty,
   size,
   equipments,
 }) => {
@@ -21,7 +21,9 @@ const FreePlacesResult: FC<IPlacesFreeProps> = ({
           stroke={1.5}
         />
       </div>
-      <div className={classes.facultyName}>{facultyName}</div>
+      <div className={classes.facultyName}>
+        {faculty ? faculty.short_name : "-"}
+      </div>
       <div className={classes.image}>
         <IconUser style={{ width: "80%", height: "80%" }} stroke={1.5} />
       </div>

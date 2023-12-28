@@ -1,28 +1,26 @@
 import { MultiSelect } from "@mantine/core";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 
-import { IFaculty } from "../../types/types";
-import getData from "../../helpers/requests/getData";
 import classes from "./InputDate.module.css";
 import InputDataStore from "../../store/inputDataStore";
+import store from "../../store/store";
+
+interface IFacultyAry {
+  value: string;
+  label: string;
+}
 
 const InputFaculties: FC = () => {
-  const [facutlyFromResp, setFacultyFromResp] = useState<IFaculty[]>([]);
-
-  const facultyAry: any[] = [];
-  facutlyFromResp.map((item) => {
-    facultyAry.push({ value: `${item.id}`, label: `${item.short_name}` });
+  const facultyAry: IFacultyAry[] = [];
+  store.faculty.map((item) => {
+    if (!item.inactive) {
+      facultyAry.push({ value: `${item.id}`, label: item.short_name });
+    }
   });
 
   const setDataToStore = (facultyId) => {
     InputDataStore.setFaculty(facultyId);
   };
-
-  useEffect(() => {
-    (async function setFacultyState() {
-      setFacultyFromResp(await getData<IFaculty[]>("faculties"));
-    })();
-  }, []);
 
   return (
     <div>

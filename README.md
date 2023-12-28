@@ -44,3 +44,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Project Config
+
+`Node Js` - 18.17.1
+`Mantine` - 6.0.11
+`Tabler`- 2.40.0
+`Axios` - 1.6.0
+`Mobx` - 6.10.2
+`Mobx-React-Lite` - 4.0.5

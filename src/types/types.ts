@@ -44,7 +44,10 @@ export interface IEquipmentProps {
 
 export interface IPlacesFreeProps {
   number: string;
-  facultyName: any;
+  faculty?: {
+    id: number;
+    short_name: string;
+  };
   size: number;
   equipments: [
     {

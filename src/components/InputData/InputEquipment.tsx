@@ -1,28 +1,24 @@
 import { MultiSelect } from "@mantine/core";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 
 import classes from "./InputDate.module.css";
-import { IEquipment } from "../../types/types";
-import getData from "../../helpers/requests/getData";
 import InputDataStore from "../../store/inputDataStore";
+import store from "../../store/store";
+
+interface IEquipmentAry {
+  value: string;
+  label: string;
+}
 
 const InputEquipment: FC = () => {
-  const [equipmentFromResp, setEquipmentFromResp] = useState<IEquipment[]>([]);
-
-  const equipmentAry: any[] = [];
-  equipmentFromResp.map((item) => {
-    equipmentAry.push({ value: `${item.id}`, label: `${item.name}` });
+  const equipmentAry: IEquipmentAry[] = [];
+  store.equipment.map((item) => {
+    equipmentAry.push({ value: `${item.id}`, label: item.name });
   });
 
   const setDataToStore = (equipmentId) => {
     InputDataStore.setEquipment(equipmentId);
   };
-
-  useEffect(() => {
-    (async function setEquipmentState() {
-      setEquipmentFromResp(await getData<IEquipment[]>("equipments"));
-    })();
-  }, []);
 
   return (
     <MultiSelect

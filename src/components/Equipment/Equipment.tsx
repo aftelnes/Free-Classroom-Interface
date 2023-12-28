@@ -3,8 +3,8 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconDotsVertical } from "@tabler/icons-react";
 import { FC } from "react";
 
+import classesEquipValue from "./EquipmentValue.module.css";
 import classes from "../FreePlacesResult/FreePlacesResult.module.css";
-import EquipmentValue from "./EquipmentValue";
 import { IEquipmentProps } from "../../types/types";
 
 const Equipment: FC<IEquipmentProps> = ({ equipments }) => {
@@ -13,7 +13,6 @@ const Equipment: FC<IEquipmentProps> = ({ equipments }) => {
     <Popover
       width={180}
       position='bottom'
-      zIndex={1}
       withinPortal
       shadow='md'
       middlewares={{ flip: false, shift: true, inline: false }}
@@ -26,9 +25,17 @@ const Equipment: FC<IEquipmentProps> = ({ equipments }) => {
           onMouseEnter={open}
           onMouseLeave={close}></Button>
       </Popover.Target>
-      <Popover.Dropdown style={{ pointerEvents: "none", zIndex: 1 }}>
-        <Text size='sm' style={{ zIndex: 1 }}>
-          <EquipmentValue equipments={equipments} key={equipments[0].amount} />
+      <Popover.Dropdown style={{ pointerEvents: "none" }}>
+        <Text size='sm'>
+          {/* Блок отвечающий за выпадающее окошко со списоком оснашения */}
+          <div className={classesEquipValue.equipmentValue}>
+            <h5 className={classesEquipValue.Header}>Оснащение</h5>
+            {equipments.map((item) => (
+              <div key={item.equipment.id}>
+                {item.equipment.name} :{item.amount}
+              </div>
+            ))}
+          </div>
         </Text>
       </Popover.Dropdown>
     </Popover>

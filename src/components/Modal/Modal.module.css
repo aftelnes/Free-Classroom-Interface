@@ -1,0 +1,31 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  z-index: 0;
+}
+
+.ModalContent {
+  padding: 25px;
+  margin-bottom: 25vw;
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  min-width: 400px;
+  -webkit-box-shadow: 3px 3px 4px 4px rgba(98, 196, 235, 0.5);
+          box-shadow: 3px 3px 4px 4px rgba(98, 196, 235, 0.5);
+}
+
+.Modal.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}

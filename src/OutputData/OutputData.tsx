@@ -6,9 +6,8 @@ import outputData from "../store/outputEmptyStubStore";
 import freePlacesStore from "../store/freePlacesStore";
 import { observer } from "mobx-react-lite";
 
-
 const OutputData: FC = observer(() => {
-  console.log("OutputData")
+  console.log("OutputData");
   useEffect(() => {
     outputData.changeShowEmptyBlock();
   });
@@ -16,15 +15,15 @@ const OutputData: FC = observer(() => {
   return (
     <ScrollArea h={400} type='always' offsetScrollbars scrollHideDelay={2000}>
       {freePlacesStore.resultFreePlaces.map((item) => {
-          return (
-            <FreePlacesResult
-              key={item.id}
-              number={item.name}
-              faculty={item.faculty}
-              size={item.size}
-              equipments={item.equipments}
-            />
-          );
+        return (
+          <FreePlacesResult
+            key={item.id}
+            number={item.name}
+            faculty={item.faculty}
+            size={item.size}
+            equipments={item.equipments}
+          />
+        );
       })}
     </ScrollArea>
   );

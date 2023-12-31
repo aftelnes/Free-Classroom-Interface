@@ -2,8 +2,9 @@ import axios from "axios";
 
 import InputDataStore from "../../store/inputDataStore";
 import qs from "qs";
+import freePlacesStore from "../../store/freePlacesStore";
 
-async function getPlacesFree<T>(): Promise<any> {
+async function getPlacesFree<T>(): Promise<T> {
   try {
     const response = await axios<T>(
       `${process.env.REACT_APP_API_URL}/timetable/places/free`,

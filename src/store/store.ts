@@ -7,6 +7,8 @@ class Store {
   //Информация по оснащению, пришедшего с респонса
   equipment: IEquipment[] = [];
 
+  requestError: boolean = false;
+
   constructor() {
     makeAutoObservable(this);
   }

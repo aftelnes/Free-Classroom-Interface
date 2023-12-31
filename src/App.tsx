@@ -1,32 +1,76 @@
 import "@mantine/styles";
-import { FC } from "react";
+import { FC, useState } from "react";
+import { Button } from "@mantine/core";
+import { observer } from "mobx-react-lite";
 
 import OutputDate from "./components/MainAreas/OutputDataArea";
 import InputDataArea from "./components/MainAreas/InputDataArea";
 import store from "./store/store";
 import classes from "./styles/UI/UI.module.css";
-import { IFaculty } from "./types/types";
+import { IEquipment, IFaculty } from "./types/types";
 import getData from "./helpers/requests/getData";
 
-const App: FC = () => {
-  //При отрисовки интерфейса сразу отправляем запросы на получение факультетов и оснащения
+import Modal from "./components/Modal/Modal";
+
+const App: FC = observer(() => {
+  const [modal, setModal] = useState(true);
+
+  //when App is rendering throwing requests to Faculties and Equipment
   try {
     (async function setFacultyDataInStore() {
       store.faculty = await await getData<IFaculty[]>("faculties");
     })();
     (async function setFacultyDataInStore() {
-      store.equipment = await await getData<IFaculty[]>("equipments");
+      store.equipment = await await getData<IEquipment[]>("equipments");
     })();
   } catch (error) {
     console.log(`ERR = ${error}`);
   }
 
+  //button to refresh the page, if interface enabled with sever problems
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
   return (
     <div className={classes.ui}>
+      {store.requestError ? (
+        <Modal visible={modal} setVisible={setModal}>
+          <h2
+            style={{
+              textAlign: "center",
+              padding: 20,
+            }}>
+            К сожалению сервис не доступен
+          </h2>
+          <Button className={classes.findbtn} onClick={refreshPage}>
+            обновить
+          </Button>
+        </Modal>
+      ) : (
+        <div>
+          <InputDataArea />
+          <OutputDate />
+        </div>
+      )}
+
+      {/* {store.requestError && (
+        <Modal visible={modal} setVisible={setModal}>
+          <h2
+            style={{
+              textAlign: "center",
+              padding: 20,
+            }}>
+            К сожалению сервис не доступен
+          </h2>
+          <Button>обновить</Button>
+        </Modal>
+      )}
+
       <InputDataArea />
-      <OutputDate />
+      <OutputDate /> */}
     </div>
   );
-};
+});
 
 export default App;

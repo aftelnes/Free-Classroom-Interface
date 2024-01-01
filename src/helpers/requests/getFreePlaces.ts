@@ -1,8 +1,7 @@
 import axios from "axios";
 
-import InputDataStore from "../../store/inputDataStore";
 import qs from "qs";
-import freePlacesStore from "../../store/freePlacesStore";
+import store from "../../store/store";
 
 async function getPlacesFree<T>(): Promise<T> {
   try {
@@ -13,17 +12,18 @@ async function getPlacesFree<T>(): Promise<T> {
           "ngrok-skip-browser-warning": "69420",
         },
         params: {
-          date: InputDataStore.date,
-          number: InputDataStore.lessonNum,
-          faculty: InputDataStore.faculty,
-          equipment: InputDataStore.equipment,
-          size: InputDataStore.size,
+          date: store.date,
+          number: store.lessonNum,
+          faculty: store.faculties,
+          equipment: store.equipments,
+          size: store.size,
         },
         paramsSerializer: (params) => {
           return qs.stringify(params, { arrayFormat: "repeat" });
         },
       }
     );
+    console.log("request for free places");
     return response.data;
   } catch (e) {
     console.log(e);

@@ -47,7 +47,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Project Config
 
-`Node Js` - 18.17.1
+`Node Js` - 18.17.1 
 `Mantine` - 6.0.11
 `Tabler`- 2.40.0
 `Axios` - 1.6.0

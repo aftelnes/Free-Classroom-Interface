@@ -6,38 +6,17 @@ import InputMinimalPlaceSize from "../InputData/InputMinimalSize";
 import InputFaculties from "../../components/InputData/InputFaculties";
 import InputEquipment from "../../components/InputData/InputEquipment";
 import InputDate from "../InputData/InputDate";
-import FindBtnStore from "../../store/findBtnStore";
 import InputLessonNumber from "../InputData/InputLessonNumber";
-import freePlacesStore from "../../store/freePlacesStore";
 import getPlacesFree from "../../helpers/requests/getFreePlaces";
 import { IPlacesFree } from "../../types/types";
+import store from "../../store/store";
 
 const Inputs: FC = () => {
   const findButtonClicked = () => {
-    FindBtnStore.setFindBtnClicked();
+    store.setFindBtnClicked();
     (async function setFreePlacesState() {
-      freePlacesStore.resultFreePlaces = await getPlacesFree<IPlacesFree[]>();
+      store.resultFreePlaces = await getPlacesFree<IPlacesFree[]>();
     })();
-  };
-
-  const renderLessonNum = () => {
-    return <InputLessonNumber parentCallback={lessonNumberCallback} />;
-  };
-
-  const showNotOptionalInputsAndFindButton = () => {
-    return (
-      <div>
-        <InputMinimalPlaceSize />
-        <InputFaculties />
-        <InputEquipment />
-        <Button
-          variant='filled'
-          className={classes.findbtn}
-          onClick={() => findButtonClicked()}>
-          Найти
-        </Button>
-      </div>
-    );
   };
 
   const [dateState, setDateState] = useState<Date | null>(null);
@@ -55,8 +34,22 @@ const Inputs: FC = () => {
   return (
     <div>
       <InputDate parentCallback={dateCallback} />
-      {dateState != undefined && renderLessonNum()}
-      {lessonNumState != 0 && showNotOptionalInputsAndFindButton()}
+      {dateState != undefined && (
+        <InputLessonNumber parentCallback={lessonNumberCallback} />
+      )}
+      {lessonNumState != 0 && (
+        <div>
+          <InputMinimalPlaceSize />
+          <InputFaculties />
+          <InputEquipment />
+          <Button
+            variant='filled'
+            className={classes.findbtn}
+            onClick={() => findButtonClicked()}>
+            Найти
+          </Button>
+        </div>
+      )}
     </div>
   );
 };

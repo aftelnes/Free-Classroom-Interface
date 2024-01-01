@@ -2,7 +2,6 @@ import axios from "axios";
 import store from "../../store/store";
 
 async function getData<T>(dataRoute: string): Promise<T> {
-  console.log("jjjj");
   try {
     const response = await axios.get<T>(
       `${process.env.REACT_APP_API_URL}/${dataRoute}`,
@@ -12,6 +11,7 @@ async function getData<T>(dataRoute: string): Promise<T> {
         },
       }
     );
+    console.log("response for getting fac and equip");
     return response.data;
   } catch (e) {
     console.log("Упал!!");

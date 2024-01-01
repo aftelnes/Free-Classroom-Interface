@@ -1,20 +1,16 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { ScrollArea } from "@mantine/core";
 
 import FreePlacesResult from "../components/FreePlacesResult/FreePlacesResult";
-import outputData from "../store/outputEmptyStubStore";
-import freePlacesStore from "../store/freePlacesStore";
 import { observer } from "mobx-react-lite";
+import store from "../store/store";
 
 const OutputData: FC = observer(() => {
   console.log("OutputData");
-  useEffect(() => {
-    outputData.changeShowEmptyBlock();
-  });
 
   return (
     <ScrollArea h={400} type='always' offsetScrollbars scrollHideDelay={2000}>
-      {freePlacesStore.resultFreePlaces.map((item) => {
+      {store.resultFreePlaces.map((item) => {
         return (
           <FreePlacesResult
             key={item.id}

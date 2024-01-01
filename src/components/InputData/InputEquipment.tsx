@@ -2,7 +2,6 @@ import { MultiSelect } from "@mantine/core";
 import { FC } from "react";
 
 import classes from "./InputDate.module.css";
-import InputDataStore from "../../store/inputDataStore";
 import store from "../../store/store";
 
 interface IEquipmentAry {
@@ -17,7 +16,7 @@ const InputEquipment: FC = () => {
   });
 
   const setDataToStore = (equipmentId) => {
-    InputDataStore.setEquipment(equipmentId);
+    store.setEquipment(equipmentId);
   };
 
   return (

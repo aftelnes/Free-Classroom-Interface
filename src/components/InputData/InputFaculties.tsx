@@ -2,7 +2,6 @@ import { MultiSelect } from "@mantine/core";
 import { FC } from "react";
 
 import classes from "./InputDate.module.css";
-import InputDataStore from "../../store/inputDataStore";
 import store from "../../store/store";
 
 interface IFacultyAry {
@@ -19,7 +18,7 @@ const InputFaculties: FC = () => {
   });
 
   const setDataToStore = (facultyId) => {
-    InputDataStore.setFaculty(facultyId);
+    store.setFaculty(facultyId);
   };
 
   return (

@@ -2,9 +2,9 @@ import { IconBuildingBank } from "@tabler/icons-react";
 import { FC } from "react";
 import { IconUser } from "@tabler/icons-react";
 
-import classes from "./FreePlacesResult.module.css";
-import Equipment from "../Equipment/Equipment";
-import { IPlacesFreeProps } from "../../types/types";
+import classes from "./FreePlaces.module.css";
+import Equipment from "./Equipment/Equipment";
+import { IPlacesFreeProps } from "../../../../../types/types";
 
 const FreePlacesResult: FC<IPlacesFreeProps> = ({
   number,

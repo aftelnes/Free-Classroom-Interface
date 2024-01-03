@@ -3,9 +3,9 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconDotsVertical } from "@tabler/icons-react";
 import { FC } from "react";
 
-import classesEquipValue from "./EquipmentValue.module.css";
-import classes from "../FreePlacesResult/FreePlacesResult.module.css";
-import { IEquipmentProps } from "../../types/types";
+import classesEquipValue from "./Equipment.module.css";
+import classes from "../FreePlaces.module.css";
+import { IEquipmentProps } from "../../../../../../types/types";
 
 const Equipment: FC<IEquipmentProps> = ({ equipments }) => {
   const [opened, { close, open }] = useDisclosure(false);
@@ -21,6 +21,7 @@ const Equipment: FC<IEquipmentProps> = ({ equipments }) => {
         <Button
           className={classes.button}
           rightIcon={<IconDotsVertical size={25} />}
+          // children={<IconDotsVertical size={25} />}
           variant='default'
           onMouseEnter={open}
           onMouseLeave={close}></Button>

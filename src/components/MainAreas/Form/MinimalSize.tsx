@@ -1,8 +1,8 @@
 import { NumberInput } from "@mantine/core";
 import { FC, useEffect, useState } from "react";
 
-import classes from "./InputDate.module.css";
-import store from "../../store/store";
+import classes from "./Form.module.css";
+import store from "../../../store/store";
 
 const InputMinimalPlaceSize: FC = () => {
   const [size, setSize] = useState<number | "">(1);

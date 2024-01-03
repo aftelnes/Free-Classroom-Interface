@@ -1,8 +1,8 @@
 import { MultiSelect } from "@mantine/core";
 import { FC } from "react";
 
-import classes from "./InputDate.module.css";
-import store from "../../store/store";
+import classes from "./Form.module.css";
+import store from "../../../store/store";
 
 interface IFacultyAry {
   value: string;

@@ -14,6 +14,8 @@ class Store {
   findBtnClicked: number = 0;
   //indicator for changing lesson number
   lesNumber: number | "" = 0;
+  //btn loading
+  btnLoading: boolean = false;
 
   //Data from inputs
   date: string | null = null;

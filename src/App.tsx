@@ -3,8 +3,8 @@ import { FC, useState } from "react";
 import { Button } from "@mantine/core";
 import { observer } from "mobx-react-lite";
 
-import OutputDate from "./components/MainAreas/OutputDataArea";
-import InputDataArea from "./components/MainAreas/InputDataArea";
+import OutputDate from "./components/MainAreas/ResultArea";
+import InputDataArea from "./components/MainAreas/FormArea";
 import store from "./store/store";
 import classes from "./styles/UI/UI.module.css";
 import { IEquipment, IFaculty } from "./types/types";

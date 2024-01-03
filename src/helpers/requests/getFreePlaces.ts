@@ -5,6 +5,7 @@ import store from "../../store/store";
 
 async function getPlacesFree<T>(): Promise<T> {
   try {
+    store.btnLoading = true;
     const response = await axios<T>(
       `${process.env.REACT_APP_API_URL}/timetable/places/free`,
       {
@@ -24,9 +25,11 @@ async function getPlacesFree<T>(): Promise<T> {
       }
     );
     console.log("request for free places");
+    store.btnLoading = false;
     return response.data;
   } catch (e) {
     console.log(e);
+    store.requestError = true;
   }
 }
 

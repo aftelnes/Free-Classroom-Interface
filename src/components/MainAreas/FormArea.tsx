@@ -1,15 +1,15 @@
 import { FC } from "react";
 import "dayjs/locale/ru";
 
-import MainImageAndHeader from "../MainImageAndHeader/MainImageAndHeader";
+import MainImageAndHeader from "./FormImageAndHeader/FormImageAndHeader";
 import classes from "../../styles/UI/UI.module.css";
-import Inputs from "../Inputs/Inputs";
+import Form from "./Form/Form";
 
 const InputDataArea: FC = () => {
   return (
     <div className={classes.inputDataArea}>
       <MainImageAndHeader />
-      <Inputs />
+      <Form />
     </div>
   );
 };

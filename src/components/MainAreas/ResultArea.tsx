@@ -2,9 +2,9 @@ import { FC } from "react";
 import { observer } from "mobx-react-lite";
 
 import classes from "../../styles/UI/UI.module.css";
-import OutputData from "../../OutputData/OutputData";
-import ResultHeader from "../ResultHeader/ResultHeader";
-import NoResult from "../NoResult/NoResult";
+import Result from "./Result/Data/Data";
+import ResultHeader from "./ResultHeader/ResultHeader";
+import NoResult from "./Result/Data/NoResult/NoResult";
 import store from "../../store/store";
 
 const OutputDataArea: FC = observer(() => {
@@ -13,7 +13,7 @@ const OutputDataArea: FC = observer(() => {
       <ResultHeader />
 
       {store.findBtnClicked != 0 && store.resultFreePlaces.length != 0 ? (
-        <OutputData />
+        <Result />
       ) : (
         <NoResult />
       )}

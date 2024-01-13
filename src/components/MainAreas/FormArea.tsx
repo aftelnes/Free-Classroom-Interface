@@ -2,7 +2,7 @@ import { FC } from "react";
 import "dayjs/locale/ru";
 
 import MainImageAndHeader from "./FormImageAndHeader/FormImageAndHeader";
-import classes from "../../styles/UI/UI.module.css";
+import classes from "../../styles/UI/UI.module.scss";
 import Form from "./Form/Form";
 // import classes from "../../styles/UI/UI2.module.css";
 

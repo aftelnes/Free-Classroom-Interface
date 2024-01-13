@@ -3,7 +3,7 @@ import { useState } from "react";
 import { DateInput } from "@mantine/dates";
 
 // import classes from "./Form.module.css";
-import classes from "../FormArea.module.css";
+import classes from "../FormArea.module.scss";
 import store from "../../../store/store";
 
 const InputDate: FC<any> = ({ parentCallback }) => {
@@ -18,7 +18,7 @@ const InputDate: FC<any> = ({ parentCallback }) => {
 
   return (
     <DateInput
-      size='md'
+      size='sm'
       minDate={new Date()}
       className={classes.input}
       value={date}

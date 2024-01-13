@@ -3,8 +3,8 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconDotsVertical } from "@tabler/icons-react";
 import { FC } from "react";
 
-import classesEquipValue from "./Equipment.module.css";
-import classes from "../FreePlaces.module.css";
+import classesEquipValue from "./Equipment.module.scss";
+import classes from "../FreePlaces.module.scss";
 import { IEquipmentProps } from "../../../../../types/types";
 
 const Equipment: FC<IEquipmentProps> = ({ equipments }) => {

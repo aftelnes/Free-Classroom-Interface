@@ -6,7 +6,7 @@ import { observer } from "mobx-react-lite";
 import OutputDate from "./components/MainAreas/ResultArea";
 import InputDataArea from "./components/MainAreas/FormArea";
 import store from "./store/store";
-import classes from "./styles/UI/UI.module.css";
+import classes from "./styles/UI/UI.module.scss";
 import { IEquipment, IFaculty } from "./types/types";
 import getData from "./helpers/requests/getData";
 
@@ -27,48 +27,17 @@ const App: FC = observer(() => {
     console.log(`ERR = ${error}`);
   }
 
-  //button to refresh the page, if interface enabled with sever problems
-  const refreshPage = () => {
-    window.location.reload();
-  };
 
   return (
     <div className={classes.ui}>
       {store.requestError ? (
-        <Modal visible={modal} setVisible={setModal}>
-          <h2
-            style={{
-              textAlign: "center",
-              padding: 20,
-            }}>
-            К сожалению сервис не доступен
-          </h2>
-          <Button className={classes.findbtn} onClick={refreshPage}>
-            обновить
-          </Button>
-        </Modal>
+        <Modal visible={modal} setVisible={setModal} />
       ) : (
         <div>
           <InputDataArea />
           <OutputDate />
         </div>
       )}
-
-      {/* {store.requestError && (
-        <Modal visible={modal} setVisible={setModal}>
-          <h2
-            style={{
-              textAlign: "center",
-              padding: 20,
-            }}>
-            К сожалению сервис не доступен
-          </h2>
-          <Button>обновить</Button>
-        </Modal>
-      )}
-
-      <InputDataArea />
-      <OutputDate /> */}
     </div>
   );
 });

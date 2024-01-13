@@ -1,3 +1,6 @@
+$fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
 .Modal {
   position: fixed;
   top: 0;
@@ -5,7 +8,6 @@
   right: 0;
   left: 0;
   display: none;
-  // background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
@@ -16,10 +18,26 @@
   border-radius: 16px;
   min-width: 400px;
   box-shadow: 3px 3px 4px 4px rgba(98, 196, 235, 0.5);
+  font-family: $fontFamily;
 }
 
 .Modal.active {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Modal .findbtn {
+  margin-left: 20px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+}
+
+.Modal .message{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
 }

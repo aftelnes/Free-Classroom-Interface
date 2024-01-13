@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 // import classes from "../../../styles/UI/UI.module.css";
-import classes from ".././ResultArea.module.css";
+import classes from ".././ResultArea.module.scss";
 
 const ResultHeader: FC = () => {
   return (

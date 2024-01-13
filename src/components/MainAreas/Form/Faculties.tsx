@@ -2,7 +2,7 @@ import { MultiSelect } from "@mantine/core";
 import { FC } from "react";
 
 // import classes from "./Form.module.css";
-import classes from "../FormArea.module.css";
+import classes from "../FormArea.module.scss";
 import store from "../../../store/store";
 
 interface IFacultyAry {
@@ -37,7 +37,7 @@ const InputFaculties: FC = () => {
           transition: "pop-top-left",
           timingFunction: "ease",
         }}
-        size='md'
+        size='sm'
       />
     </div>
   );

@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from "react";
 import { Button } from "@mantine/core";
 
 // import classes from "../../../styles/UI/UI.module.css";
-import classes from "../FormArea.module.css";
+import classes from "../FormArea.module.scss";
 import InputMinimalPlaceSize from "./MinimalSize";
 import InputFaculties from "./Faculties";
 import InputEquipment from "./Equipment";

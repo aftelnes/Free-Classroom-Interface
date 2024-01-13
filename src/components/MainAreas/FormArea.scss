@@ -1,0 +1,30 @@
+$fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+//FormImageAndHeader
+.mainImageAndHeader {
+  font-size: 18px;
+  font-family: $fontFamily;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  .items {
+    display: block;
+    margin: 0;
+  }
+}
+
+//Form
+.form {
+  .input {
+    display: block;
+    margin: 10px auto;
+    width: 295px;
+    text-align: left;
+  }
+  .findbtn {
+    border-radius: 10px;
+    display: block;
+    width: 120px;
+    margin: 10px 5px auto;
+  }
+}

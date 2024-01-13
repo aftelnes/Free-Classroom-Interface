@@ -1,7 +1,8 @@
 import { NumberInput } from "@mantine/core";
 import { FC, useEffect, useState } from "react";
 
-import classes from "./Form.module.css";
+// import classes from "./Form.module.css";
+import classes from "../FormArea.module.css";
 import store from "../../../store/store";
 
 const InputMinimalPlaceSize: FC = () => {
@@ -15,7 +16,7 @@ const InputMinimalPlaceSize: FC = () => {
     <NumberInput
       value={size}
       onChange={setSize}
-      className={classes.inputDate}
+      className={classes.input}
       label='Минимальная вместимость'
       description='От 1 до 120'
       placeholder='Введите желаемое кол-во мест'

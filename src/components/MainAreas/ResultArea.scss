@@ -1,0 +1,14 @@
+$fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+//ResultHeader
+.resultHeader {
+  font-size: 18px;
+  font-family: $fontFamily;
+  text-align: left;
+  margin-bottom: 10px;
+  .item {
+    display: block;
+    margin: 10px 5px auto;
+  }
+}

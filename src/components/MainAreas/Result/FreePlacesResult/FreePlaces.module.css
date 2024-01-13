@@ -1,0 +1,100 @@
+@-webkit-keyframes show-freePlacesResult {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show-freePlacesResult {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.freePlacesResult {
+  background-color: rgb(255, 255, 255);
+  width: 430px;
+  display: block;
+  margin: 0 auto;
+  margin-left: 0;
+  border-radius: 7px;
+  height: 45px;
+  border: 0.5px solid rgb(209, 209, 209);
+  margin-bottom: 0.2vw;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-animation: show-freePlacesResult 1s forwards;
+          animation: show-freePlacesResult 1s forwards;
+}
+.freePlacesResult .noResult {
+  margin: 15px;
+  color: aqua;
+  text-align: center;
+}
+
+.freePlacesResult .image {
+  height: 30px;
+  font-size: 16px;
+  float: left;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  border-radius: 7px;
+  margin-right: 10px;
+  text-align: center;
+  padding-top: 15px;
+  width: 45px;
+  padding-top: 12px;
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.freePlacesResult .classNum {
+  height: 30px;
+  font-size: 16px;
+  float: left;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  border-radius: 7px;
+  margin-right: 10px;
+  text-align: center;
+  padding-top: 15px;
+  width: 45px;
+  margin-left: 5px;
+}
+
+.freePlacesResult .facultyName {
+  height: 30px;
+  font-size: 16px;
+  float: left;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  border-radius: 7px;
+  margin-right: 10px;
+  text-align: center;
+  padding-top: 15px;
+  width: 70px;
+  text-align: left;
+}
+
+.freePlacesResult .places {
+  height: 30px;
+  font-size: 16px;
+  float: left;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  border-radius: 7px;
+  margin-right: 10px;
+  text-align: center;
+  padding-top: 15px;
+  width: 45px;
+  text-align: left;
+}
+
+.freePlacesResult .button {
+  margin-top: 5px;
+  margin-left: 50px;
+  width: 40px;
+  border: 0;
+}

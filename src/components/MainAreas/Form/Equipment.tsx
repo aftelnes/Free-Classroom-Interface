@@ -1,7 +1,8 @@
 import { MultiSelect } from "@mantine/core";
 import { FC } from "react";
 
-import classes from "./Form.module.css";
+// import classes from "./Form.module.css";
+import classes from "../FormArea.module.css";
 import store from "../../../store/store";
 
 interface IEquipmentAry {
@@ -21,7 +22,7 @@ const InputEquipment: FC = () => {
 
   return (
     <MultiSelect
-      className={classes.inputDate}
+      className={classes.input}
       label='Желаемое оборудование'
       placeholder='Выберите желаемое оборудование'
       data={equipmentAry}

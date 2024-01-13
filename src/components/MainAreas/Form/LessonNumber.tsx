@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { NumberInput } from "@mantine/core";
 import { FC } from "react";
 
-import classes from "./Form.module.css";
+// import classes from "./Form.module.css";
+import classes from "../FormArea.module.css";
 import store from "../../../store/store";
 
 const InputLessonNumber: FC<any> = ({ parentCallback }) => {
@@ -17,7 +18,7 @@ const InputLessonNumber: FC<any> = ({ parentCallback }) => {
   return (
     <NumberInput
       withAsterisk
-      className={classes.inputDate}
+      className={classes.input}
       label='Номер занятия'
       placeholder='Выберите номер занятия'
       min={1}

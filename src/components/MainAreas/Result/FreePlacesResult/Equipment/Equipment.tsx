@@ -5,7 +5,7 @@ import { FC } from "react";
 
 import classesEquipValue from "./Equipment.module.css";
 import classes from "../FreePlaces.module.css";
-import { IEquipmentProps } from "../../../../../../types/types";
+import { IEquipmentProps } from "../../../../../types/types";
 
 const Equipment: FC<IEquipmentProps> = ({ equipments }) => {
   const [opened, { close, open }] = useDisclosure(false);

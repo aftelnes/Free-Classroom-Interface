@@ -1,7 +1,8 @@
 import { MultiSelect } from "@mantine/core";
 import { FC } from "react";
 
-import classes from "./Form.module.css";
+// import classes from "./Form.module.css";
+import classes from "../FormArea.module.css";
 import store from "../../../store/store";
 
 interface IFacultyAry {
@@ -24,7 +25,7 @@ const InputFaculties: FC = () => {
   return (
     <div>
       <MultiSelect
-        className={classes.inputDate}
+        className={classes.input}
         label='Желаемые факультеты'
         placeholder='Выберите желаемые факультеты'
         data={facultyAry}

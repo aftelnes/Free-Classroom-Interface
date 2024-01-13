@@ -3,7 +3,7 @@ import { ScrollArea } from "@mantine/core";
 
 import FreePlacesResult from "./FreePlacesResult/FreePlaces";
 import { observer } from "mobx-react-lite";
-import store from "../../../../store/store";
+import store from "../../../store/store";
 
 const OutputData: FC = observer(() => {
   console.log("OutputData");

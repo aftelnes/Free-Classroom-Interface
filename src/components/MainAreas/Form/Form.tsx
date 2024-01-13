@@ -1,7 +1,8 @@
 import { FC, useEffect, useState } from "react";
 import { Button } from "@mantine/core";
 
-import classes from "../../../styles/UI/UI.module.css";
+// import classes from "../../../styles/UI/UI.module.css";
+import classes from "../FormArea.module.css";
 import InputMinimalPlaceSize from "./MinimalSize";
 import InputFaculties from "./Faculties";
 import InputEquipment from "./Equipment";
@@ -33,7 +34,7 @@ const Inputs: FC = observer(() => {
   useEffect(() => {}, [dateState, lessonNumState]);
 
   return (
-    <div>
+    <div className={classes.form}>
       <InputDate parentCallback={dateCallback} />
       {dateState != undefined && (
         <InputLessonNumber parentCallback={lessonNumberCallback} />

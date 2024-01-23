@@ -1,6 +1,5 @@
 import "@mantine/styles";
 import { FC, useState } from "react";
-import { Button } from "@mantine/core";
 import { observer } from "mobx-react-lite";
 
 import OutputDate from "./components/MainAreas/ResultArea";
@@ -9,8 +8,8 @@ import store from "./store/store";
 import classes from "./styles/UI/UI.module.scss";
 import { IEquipment, IFaculty } from "./types/types";
 import getData from "./helpers/requests/getData";
-
 import Modal from "./components/Modal/Modal";
+
 
 const App: FC = observer(() => {
   const [modal, setModal] = useState(true);
@@ -19,14 +18,11 @@ const App: FC = observer(() => {
   try {
     (async function setFacultyDataInStore() {
       store.faculty = await await getData<IFaculty[]>("faculties");
-    })();
-    (async function setFacultyDataInStore() {
       store.equipment = await await getData<IEquipment[]>("equipments");
     })();
   } catch (error) {
     console.log(`ERR = ${error}`);
   }
-
 
   return (
     <div className={classes.ui}>

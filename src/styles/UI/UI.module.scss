@@ -1,12 +1,12 @@
 $backgroundColor: rgb(255, 255, 255);
-$backgroundColorArea: rgb(202, 177, 177);
+$backgroundColorArea: rgb(75, 37, 37);
 $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
 
 .ui {
-  min-width: 850px;
+  width: 950px;
   border-radius: 10px;
-  background-color: bisque;
+  background-color: $backgroundColorArea;
   display: block;
   margin: 0 auto;
 }
@@ -22,7 +22,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   margin: 0 auto;
 }
 
-.ui .formArea {
+.formArea {
   @include areas;
   margin-top: 15px;
   background-color: $backgroundColor;
@@ -30,7 +30,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   min-width: 300px;
 }
 
-.ui .resultArea {
+.resultArea {
   @include areas;
   margin-top: 187px;
   min-width: 450px;

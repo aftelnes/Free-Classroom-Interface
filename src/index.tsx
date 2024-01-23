@@ -14,7 +14,7 @@ root.render(
       locale: "ru",
     }}>
     <MantineProvider>
-      <App />
+        <App />
     </MantineProvider>
   </DatesProvider>
 );

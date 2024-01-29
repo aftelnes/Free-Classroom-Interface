@@ -1,7 +1,8 @@
 import { FC, useEffect, useState } from "react";
 import { Button } from "@mantine/core";
+import { observer } from "mobx-react-lite";
 
-// import classes from "../../../styles/UI/UI.module.css";
+
 import classes from "../FormArea.module.scss";
 import InputMinimalPlaceSize from "./MinimalSize";
 import InputFaculties from "./Faculties";
@@ -11,7 +12,6 @@ import InputLessonNumber from "./LessonNumber";
 import getPlacesFree from "../../../helpers/requests/getFreePlaces";
 import { IPlacesFree } from "../../../types/types";
 import store from "../../../store/store";
-import { observer } from "mobx-react-lite";
 
 const Inputs: FC = observer(() => {
   const findButtonClicked = () => {

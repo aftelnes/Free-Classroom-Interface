@@ -1,12 +1,12 @@
 $backgroundColor: rgb(255, 255, 255);
-$backgroundColorArea: rgb(75, 37, 37);
+$backgroundColorArea: rgb(199, 181, 181);
 $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
 
 .ui {
   width: 950px;
   border-radius: 10px;
-  background-color: $backgroundColorArea;
+  background-color: $backgroundColor;
   display: block;
   margin: 0 auto;
 }
@@ -32,7 +32,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
 .resultArea {
   @include areas;
-  margin-top: 187px;
+  margin-top: 185px;
   min-width: 450px;
   margin-left: 7vw;
   background-color: $backgroundColor;

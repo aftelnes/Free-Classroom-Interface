@@ -2,10 +2,8 @@ import { FC } from "react";
 import { Image } from "@mantine/core";
 
 import mainicon from "../../../images/main_image.svg";
-// import classes from "./FormImageAndHeader.module.css";
 import classes from "../FormArea.module.scss";
 
-//! Добавить адаптивность - сделать верстку под весь div
 const MainImageAndHeader: FC = () => {
   return (
     <div className={classes.mainImageAndHeader}>

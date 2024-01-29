@@ -21,7 +21,6 @@ const Equipment: FC<IEquipmentProps> = ({ equipments }) => {
         <Button
           className={classes.button}
           rightIcon={<IconDotsVertical size={25} />}
-          // children={<IconDotsVertical size={25} />}
           variant='default'
           onMouseEnter={open}
           onMouseLeave={close}></Button>

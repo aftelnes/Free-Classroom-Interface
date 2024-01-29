@@ -1,7 +1,6 @@
 import { NumberInput } from "@mantine/core";
 import { FC, useEffect, useState } from "react";
 
-// import classes from "./Form.module.css";
 import classes from "../FormArea.module.scss";
 import store from "../../../store/store";
 

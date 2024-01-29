@@ -1,22 +1,14 @@
 $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
 
-.Modal {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  display: none;
-  z-index: 0;
-}
+
 
 .ModalContent {
-  padding: 25px;
-  margin-bottom: 25vw;
+  padding-bottom: 15px;
+  margin: 20px auto;
   background: rgb(255, 255, 255);
   border-radius: 16px;
-  min-width: 400px;
+  width: 400px;
   box-shadow: 3px 3px 4px 4px rgba(98, 196, 235, 0.5);
   font-family: $fontFamily;
 }
@@ -39,5 +31,4 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   text-align: center;
   display: block;
   margin: 0 auto;
-  padding: 20px;
 }

@@ -1,7 +1,6 @@
 import { MultiSelect } from "@mantine/core";
 import { FC } from "react";
 
-// import classes from "./Form.module.css";
 import classes from "../FormArea.module.scss";
 import store from "../../../store/store";
 

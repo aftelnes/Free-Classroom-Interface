@@ -1,4 +1,5 @@
 import { makeAutoObservable } from "mobx";
+
 import { IEquipment, IFaculty, IPlacesFree } from "../types/types";
 
 class Store {

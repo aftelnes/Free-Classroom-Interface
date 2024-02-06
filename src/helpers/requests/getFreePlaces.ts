@@ -25,11 +25,12 @@ async function getPlacesFree<T>(): Promise<T> {
       }
     );
     console.log("request for free places");
-    store.btnLoading = false;
     return response.data;
   } catch (e) {
     console.log(e);
     store.requestError = true;
+  } finally {
+    store.btnLoading = false;
   }
 }
 

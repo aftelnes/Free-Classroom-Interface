@@ -9,7 +9,19 @@ const OutputData: FC = observer(() => {
   console.log("OutputData");
 
   return (
-    <ScrollArea h={400} type='always' offsetScrollbars scrollHideDelay={2000}>
+    <ScrollArea
+      h={400}
+      type="always"
+      scrollbarSize={10}
+      scrollHideDelay={2000}
+      styles={(theme) => ({
+        scrollbar: {
+          '&[data-orientation="vertical"] .mantine-ScrollArea-thumb': {
+            backgroundColor: theme.colors.blue[6],
+          },
+        },
+      })}
+    >
       {store.resultFreePlaces.map((item) => {
         return (
           <FreePlacesResult

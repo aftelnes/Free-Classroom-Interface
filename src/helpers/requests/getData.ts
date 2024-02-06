@@ -11,11 +11,10 @@ async function getData<T>(dataRoute: string): Promise<T> {
         },
       }
     );
-    console.log("response for getting fac and equip");
+    // console.log("response for getting fac and equip");
     return response.data;
   } catch (e) {
-    console.log("Упал!!");
-    console.log(e);
+    // console.log(e);
     store.requestError = true;
   }
 }

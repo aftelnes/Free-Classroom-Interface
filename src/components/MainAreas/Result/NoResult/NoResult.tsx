@@ -1,11 +1,11 @@
 import { FC } from "react";
 
-import classes from "../FreePlacesResult/FreePlaces.module.scss";
+import classes from "../NoResult/NoResult.module.scss";
 
 const NoResult: FC = () => {
   return (
-    <div className={classes.freePlacesResult}>
-      <h4 className={classes.noResult}>Нет результата</h4>
+    <div className={classes.freePlacesNoResult}>
+      <h4 className={classes.noResult}>Ничего не найдено</h4>
     </div>
   );
 };

@@ -1,0 +1,31 @@
+$backgroundColor: rgb(255, 255, 255);
+$fontFamily: Arial, Helvetica, sans-serif;
+
+@keyframes show-freePlacesResult {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.freePlacesNoResult {
+  background-color: $backgroundColor;
+  width: 430px;
+  display: block;
+  margin: 0 auto;
+  margin-left: 0;
+  margin-top: 35px;
+  border-radius: 7px;
+  min-height: 30px;
+  border: 0.5px solid rgb(209, 209, 209);
+  margin-bottom: 0.2vw;
+  font-family: $fontFamily;
+  animation: show-freePlacesResult 1s forwards;
+  .noResult {
+    margin: 10px;
+    color: rgb(63, 141, 230);
+    text-align: center;
+  }
+}

@@ -28,7 +28,6 @@ const Inputs: FC = observer(() => {
   const lessonNumberCallback = (lessonNum: number | "") => {
     setLessonNumState(lessonNum);
   };
-  console.log("Inputs");
 
   useEffect(() => {}, [dateState, lessonNumState]);
 

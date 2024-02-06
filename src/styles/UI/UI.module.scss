@@ -9,7 +9,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   background-color: $backgroundColor;
   display: block;
   margin: 0 auto;
-  height: 2000px;
+  height: 900px;
 }
 
 @mixin areas {
@@ -32,7 +32,28 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 .resultArea {
   @include areas;
   margin-top: 185px;
-  min-width: 420px;
+  min-width: 450px;
   margin-left: 130px;
   background-color: $backgroundColor;
+}
+
+.findbtn {
+  border-radius: 10px;
+  display: block;
+  margin-top: 25px;
+  height: 32px;
+  // margin: 0 auto;
+  margin-left: auto;
+}
+
+.modalContent {
+  font-family: $fontFamily;
+  p {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+.error_image {
+  display: block;
+  margin: 0 auto;
 }

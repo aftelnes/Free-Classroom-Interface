@@ -12,21 +12,24 @@ const Equipment: FC<IEquipmentProps> = ({ equipments }) => {
   return (
     <Popover
       width={180}
-      position='bottom'
+      position="bottom"
       withinPortal
-      shadow='md'
+      shadow="md"
       middlewares={{ flip: false, shift: true, inline: false }}
-      opened={opened}>
+      opened={opened}
+    >
       <Popover.Target>
         <Button
           className={classes.button}
           rightIcon={<IconDotsVertical size={25} />}
-          variant='default'
+          variant="default"
           onMouseEnter={open}
-          onMouseLeave={close}></Button>
+          onMouseLeave={close}
+          compact={true}
+        ></Button>
       </Popover.Target>
       <Popover.Dropdown style={{ pointerEvents: "none" }}>
-        <Text size='sm'>
+        <Text size="sm">
           {/* Блок отвечающий за выпадающее окошко со списоком оснашения */}
           <div className={classesEquipValue.equipmentValue}>
             <h5 className={classesEquipValue.Header}>Оснащение</h5>

@@ -3,7 +3,7 @@ import { makeAutoObservable } from "mobx";
 import { IEquipment, IFaculty, IPlacesFree } from "../types/types";
 
 class Store {
-  //faculty data from response 
+  //faculty data from response
   faculty: IFaculty[] = [];
   //equipment data from response
   equipment: IEquipment[] = [];
@@ -28,7 +28,6 @@ class Store {
   constructor() {
     makeAutoObservable(this);
   }
-
 
   setFindBtnClicked() {
     this.findBtnClicked += 1;

@@ -2,8 +2,7 @@ import { Button } from "@mantine/core";
 
 import classes from "./Modal.module.scss";
 
-
-const Modal = ({visible, setVisible }) => {
+const Modal = ({ visible, setVisible }) => {
   const rootClasses = [classes.Modal];
   if (visible) {
     rootClasses.push(classes.active);
@@ -18,7 +17,8 @@ const Modal = ({visible, setVisible }) => {
     <div className={rootClasses.join(" ")} onClick={() => setVisible(true)}>
       <div
         className={classes.ModalContent}
-        onClick={(event) => event.stopPropagation()}>
+        onClick={(event) => event.stopPropagation()}
+      >
         <h3 className={classes.message}>
           <p>К сожалению сервис не доступен из-за технических неполадок.</p>
           <p>Уже устраняем!</p>

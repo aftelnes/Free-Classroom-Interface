@@ -2,7 +2,6 @@ import { FC, useEffect, useState } from "react";
 import { Button } from "@mantine/core";
 import { observer } from "mobx-react-lite";
 
-
 import classes from "../FormArea.module.scss";
 import InputMinimalPlaceSize from "./MinimalSize";
 import InputFaculties from "./Faculties";
@@ -45,10 +44,11 @@ const Inputs: FC = observer(() => {
           <InputFaculties />
           <InputEquipment />
           <Button
-            variant='filled'
+            variant="filled"
             className={classes.findbtn}
             onClick={() => findButtonClicked()}
-            loading={store.btnLoading}>
+            loading={store.btnLoading}
+          >
             Найти
           </Button>
         </div>

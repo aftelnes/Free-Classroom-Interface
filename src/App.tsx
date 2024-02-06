@@ -10,7 +10,6 @@ import { IEquipment, IFaculty } from "./types/types";
 import getData from "./helpers/requests/getData";
 import Modal from "./components/Modal/Modal";
 
-
 const App: FC = observer(() => {
   const [modal, setModal] = useState(true);
 

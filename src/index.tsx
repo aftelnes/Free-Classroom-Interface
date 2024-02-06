@@ -12,9 +12,10 @@ root.render(
   <DatesProvider
     settings={{
       locale: "ru",
-    }}>
+    }}
+  >
     <MantineProvider>
-        <App />
+      <App />
     </MantineProvider>
   </DatesProvider>
 );

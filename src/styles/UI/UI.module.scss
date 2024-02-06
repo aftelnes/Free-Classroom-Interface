@@ -9,31 +9,30 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   background-color: $backgroundColor;
   display: block;
   margin: 0 auto;
+  height: 2000px;
 }
 
 @mixin areas {
   margin: 0.5vw;
-  float: left;
-  text-align: center;
-  border-radius: 10px;
-  padding-bottom: 2vw;
-  min-width: 35vw;
   display: block;
   margin: 0 auto;
+  float: left;
+  border-radius: 10px;
+  padding-bottom: 2vw;
 }
 
 .formArea {
   @include areas;
   margin-top: 15px;
   background-color: $backgroundColor;
-  // min-width: 20vw;
   min-width: 300px;
+  margin-left: 50px;
 }
 
 .resultArea {
   @include areas;
   margin-top: 185px;
-  min-width: 450px;
-  margin-left: 7vw;
+  min-width: 420px;
+  margin-left: 130px;
   background-color: $backgroundColor;
 }

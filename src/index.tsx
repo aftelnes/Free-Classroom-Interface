@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import { MantineProvider } from "@mantine/core";
 import "@mantine/styles";
 import { DatesProvider } from "@mantine/dates";
+import { ModalsProvider } from "@mantine/modals";
 
 import App from "./App";
 
@@ -15,7 +16,9 @@ root.render(
     }}
   >
     <MantineProvider>
-      <App />
+      <ModalsProvider>
+        <App />
+      </ModalsProvider>
     </MantineProvider>
   </DatesProvider>
 );

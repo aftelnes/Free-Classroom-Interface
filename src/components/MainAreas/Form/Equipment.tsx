@@ -22,18 +22,18 @@ const InputEquipment: FC = () => {
   return (
     <MultiSelect
       className={classes.input}
-      label='Желаемое оборудование'
-      placeholder='Выберите желаемое оборудование'
+      label="Желаемое оборудование"
+      placeholder="Выберите желаемое оборудование"
       data={equipmentAry}
       onChange={(equipmentId) => setDataToStore(equipmentId)}
-      dropdownPosition='bottom'
+      dropdownPosition="bottom"
       transitionProps={{
         duration: 150,
         transition: "pop-top-left",
         timingFunction: "ease",
       }}
       clearable
-      size='sm'
+      size="sm"
     />
   );
 };

@@ -1,17 +1,17 @@
 import { FC, useEffect } from "react";
 import { useState } from "react";
 import { DateInput } from "@mantine/dates";
-import moment from "moment";
 
 import classes from "../FormArea.module.scss";
 import store from "../../../store/store";
+import formatDate from "../../../helpers/formatDate/formatDate";
 
 const InputDate: FC<any> = ({ parentCallback }) => {
   const [date, setDate] = useState<Date | null>(null);
 
   useEffect(() => {
     if (date != null) {
-      store.setDate(moment(date).format("YYYY-MM-DD"));
+      store.setDate(formatDate(date));
       parentCallback(date);
     }
   }, [date]);

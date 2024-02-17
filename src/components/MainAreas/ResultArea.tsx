@@ -12,7 +12,9 @@ const OutputDataArea: FC = observer(() => {
     <div className={classes.resultArea}>
       <ResultHeader />
 
-      {store.findBtnClicked != 0 && store.resultFreePlaces.length != 0 ? (
+      {store.findBtnClicked != 0 &&
+      store.getIncorrectLesNum() == false &&
+      store.getServError() == false ? (
         <Result />
       ) : (
         <NoResult />

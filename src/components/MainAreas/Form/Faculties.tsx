@@ -25,18 +25,18 @@ const InputFaculties: FC = () => {
     <div>
       <MultiSelect
         className={classes.input}
-        label='Желаемые факультеты'
-        placeholder='Выберите желаемые факультеты'
+        label="Желаемые факультеты"
+        placeholder="Выберите желаемые факультеты"
         data={facultyAry}
         onChange={(facultyId) => setDataToStore(facultyId)}
         clearable
-        dropdownPosition='bottom'
+        dropdownPosition="bottom"
         transitionProps={{
           duration: 150,
           transition: "pop-top-left",
           timingFunction: "ease",
         }}
-        size='sm'
+        size="sm"
       />
     </div>
   );

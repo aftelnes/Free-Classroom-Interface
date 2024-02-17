@@ -9,7 +9,6 @@ const InputLessonNumber: FC<any> = ({ parentCallback }) => {
   const [lessonNumber, setLessonNumber] = useState<number | "">(0);
 
   useEffect(() => {
-    store.setLesNumber(lessonNumber);
     store.setLessonNum(lessonNumber);
     parentCallback(lessonNumber);
   }, [lessonNumber]);
@@ -18,12 +17,12 @@ const InputLessonNumber: FC<any> = ({ parentCallback }) => {
     <NumberInput
       withAsterisk
       className={classes.input}
-      label='Номер занятия'
-      placeholder='Выберите номер занятия'
+      label="Номер занятия"
+      placeholder="Выберите номер занятия"
       min={1}
       max={9}
       onChange={setLessonNumber}
-      size='sm'
+      size="sm"
     />
   );
 };

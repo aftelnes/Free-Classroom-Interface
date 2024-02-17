@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import { Button } from "@mantine/core";
 import { observer } from "mobx-react-lite";
 
@@ -12,24 +12,29 @@ import getPlacesFree from "../../../helpers/requests/getFreePlaces";
 import { IPlacesFree } from "../../../types/types";
 import store from "../../../store/store";
 
-const Inputs: FC = observer(() => {
+const Form: FC = observer(() => {
   const findButtonClicked = () => {
     store.setFindBtnClicked();
-    (async function setFreePlacesState() {
-      store.resultFreePlaces = await getPlacesFree<IPlacesFree[]>();
-    })();
+    try {
+      (async function setFreePlacesState() {
+        store.resultFreePlaces = await getPlacesFree<IPlacesFree[]>();
+      })();
+    } catch (e) {
+      console.log(e);
+    } finally {
+      store.setIncorrectLesNum(false);
+    }
   };
 
   const [dateState, setDateState] = useState<Date | null>(null);
   const [lessonNumState, setLessonNumState] = useState<number | "">(0);
+
   const dateCallback = (date: Date) => {
     setDateState(date);
   };
   const lessonNumberCallback = (lessonNum: number | "") => {
     setLessonNumState(lessonNum);
   };
-
-  useEffect(() => {}, [dateState, lessonNumState]);
 
   return (
     <div className={classes.form}>
@@ -56,4 +61,4 @@ const Inputs: FC = observer(() => {
   );
 });
 
-export default Inputs;
+export default Form;

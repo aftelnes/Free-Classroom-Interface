@@ -3,26 +3,31 @@ import { makeAutoObservable } from "mobx";
 import { IEquipment, IFaculty, IPlacesFree } from "../types/types";
 
 class Store {
-  //faculty data from response
+  //Список факушьтетов, приходит с сервера
   faculty: IFaculty[] = [];
-  //equipment data from response
+  //Список оснащения, приходит с сервера
   equipment: IEquipment[] = [];
-  //result free places from response
+  //Список свободных аудиторий, приходит с сервера
   resultFreePlaces: IPlacesFree[] = [];
-  //flag for tracking faculty and equipment requests
-  requestError: boolean = false;
-  //indicator for find btn clicking
+  //Флаг, отвечающий за
+  servError: boolean = false;
+  //Индикатор нажатия кнопки "найти"
   findBtnClicked: number = 0;
-  //indicator for changing lesson number
-  lesNumber: number | "" = 0;
-  //btn loading
+  //Сотояние кнопки "найти", для отрисовки "загрузки"
   btnLoading: boolean = false;
+  //Индикатор корректного ввода даты
+  incorrectLesNum: boolean = false;
 
-  //Data from inputs
+  //Переменные для хранения данных из формы
+  //Дата из Date.tsx
   date: string | null = null;
+  //Номер зантия из LessonNumber.tsx
   lessonNum: number | "" = "";
+  //Список факультетов из Faculties.tsx
   faculties: number[] = [];
+  //Список оснащений из Equipment.tsx
   equipments: number[] = [];
+  //Кол-во мест из MinimalSize.tsx
   size: number | "" = 0;
 
   constructor() {
@@ -32,10 +37,6 @@ class Store {
   setFindBtnClicked() {
     this.findBtnClicked += 1;
   }
-  setLesNumber(num: number | "") {
-    this.lesNumber = num;
-  }
-
   setDate(date: string | null) {
     this.date = date;
   }
@@ -54,6 +55,21 @@ class Store {
   }
   setSize(size: number | "") {
     this.size = size;
+  }
+  setIncorrectLesNum(value: boolean) {
+    this.incorrectLesNum = value;
+  }
+  getIncorrectLesNum() {
+    return this.incorrectLesNum;
+  }
+  setServError(value: boolean) {
+    this.servError = value;
+  }
+  getServError() {
+    return this.servError;
+  }
+  setBtnLoading(value: boolean) {
+    this.btnLoading = value;
   }
 }
 

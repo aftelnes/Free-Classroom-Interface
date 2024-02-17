@@ -5,8 +5,8 @@ import FreePlacesResult from "./FreePlacesResult/FreePlaces";
 import { observer } from "mobx-react-lite";
 import store from "../../../store/store";
 
-const OutputData: FC = observer(() => {
-  console.log("OutputData");
+const Result: FC = observer(() => {
+  console.log("Result");
 
   return (
     <ScrollArea
@@ -37,4 +37,4 @@ const OutputData: FC = observer(() => {
   );
 });
 
-export default OutputData;
+export default Result;

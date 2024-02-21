@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { ScrollArea } from "@mantine/core";
 
-import FreePlacesResult from "./FreePlacesResult/FreePlaces";
+import FreePlaces from "./FreePlacesResult/FreePlaces";
 import { observer } from "mobx-react-lite";
 import store from "../../../store/store";
 
@@ -24,7 +24,7 @@ const Result: FC = observer(() => {
     >
       {store.resultFreePlaces.map((item) => {
         return (
-          <FreePlacesResult
+          <FreePlaces
             key={item.id}
             number={item.name}
             faculty={item.faculty}

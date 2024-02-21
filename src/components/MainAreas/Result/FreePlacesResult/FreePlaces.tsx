@@ -6,7 +6,7 @@ import classes from "./FreePlaces.module.scss";
 import Equipment from "./Equipment/Equipment";
 import { IPlacesFreeProps } from "../../../../types/types";
 
-const FreePlacesResult: FC<IPlacesFreeProps> = ({
+const FreePlaces: FC<IPlacesFreeProps> = ({
   number,
   faculty,
   size,
@@ -35,4 +35,4 @@ const FreePlacesResult: FC<IPlacesFreeProps> = ({
   );
 };
 
-export default FreePlacesResult;
+export default FreePlaces;

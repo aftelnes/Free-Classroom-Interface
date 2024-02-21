@@ -18,19 +18,22 @@ const App: FC = observer(() => {
   useEffect(() => {
     try {
       (async function setFacultyDataInStore() {
-        store.faculty = await getData<IFaculty[]>("faculties1");
+        store.faculty = await getData<IFaculty[]>("faculties");
         store.equipment = await getData<IEquipment[]>("equipments");
       })();
     } catch (error) {
       console.log(`ERR = ${error}`);
     }
-  }, []);
-
-  useEffect(() => {
     if (store.getServError()) {
       setShowModal(true);
     }
-  });
+  }, []);
+
+  // useEffect(() => {
+  //   if (store.getServError()) {
+  //     setShowModal(true);
+  //   }
+  // });
 
   useEffect(() => {
     if (store.getIncorrectLesNum()) {

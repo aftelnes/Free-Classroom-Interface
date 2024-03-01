@@ -42,3 +42,18 @@ _store.ts_, а в случае успешного запроса на endpoint "
 В компоненте _ResultArea.tsx_ при условии что нет ошибок _incorrectLesNum_, _servError_ и _findBtnClicked != 0_
 Показываеться компонент _Result.tsx_ отвечающий за отрисовку списка компонентов _FreePlaces.tsx_, содержащих
 информацию о свободных аудиториях, хранящуюся в _store.ts_.
+
+Инструкция по установке:
+
+1. git clone https://github.com/aftelnes/Free-Classroom-Interface.git
+2. npm install
+3. npm start
+
+Версии пакетов:
+
+1. `Node Js` - 18.17.1
+2. `Mantine` - 6.0.11
+3. `Tabler`- 2.40.0
+4. `Axios` - 1.6.0
+5. `Mobx` - 6.10.2
+6. `Mobx-React-Lite` - 4.0.5

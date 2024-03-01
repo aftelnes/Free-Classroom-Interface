@@ -12,14 +12,20 @@ const ServError = ({ value }) => {
       className={classes.modalContent}
       withinPortal
       xOffset={0}
+      size="lg"
     >
       <Image
         src={modal_window_image}
-        width={180}
+        width={250}
         className={classes.error_image}
       />
-      <p>К сожалению сервис не доступен из-за технических неполадок.</p>
-      <p>Зайдите позже</p>
+      <h1>
+        <b>Извините, что-то пошло не так</b>
+      </h1>
+      <p>
+        Попробуйте обновить страницу или загляните позже - мы обязательно всё
+        починим
+      </p>
       <Button
         className={classes.findbtn}
         onClick={() => window.location.reload()}

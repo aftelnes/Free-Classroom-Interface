@@ -7,14 +7,21 @@ import ResultHeader from "./ResultHeader/ResultHeader";
 import NoResult from "./Result/NoResult/NoResult";
 import store from "../../store/store";
 
-const OutputDataArea: FC = observer(() => {
+const ResultArea: FC = observer(() => {
+  console.log(`ary = ${store.resultFreePlaces}`);
   return (
     <div className={classes.resultArea}>
       <ResultHeader />
-
+      {/* Результат будет показываться в случае если:
+      1) Нажата кнопка "Найти"
+      2) Нет ошибки заполнения формы
+      3) Нет ошибки взаимодействия с сервером
+      4) Массив - ответ с сервера не пуст
+      соттветственно */}
       {store.findBtnClicked != 0 &&
       store.getIncorrectLesNum() == false &&
-      store.getServError() == false ? (
+      store.getServError() == false &&
+      store.resultFreePlaces.length != 0 ? (
         <Result />
       ) : (
         <NoResult />
@@ -23,4 +30,4 @@ const OutputDataArea: FC = observer(() => {
   );
 });
 
-export default OutputDataArea;
+export default ResultArea;

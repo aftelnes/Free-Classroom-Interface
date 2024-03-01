@@ -17,9 +17,9 @@ $fontFamily: Arial, Helvetica, sans-serif;
   margin: 0 auto;
   margin-left: 0;
   border-radius: 7px;
-  min-height: 45px;
+  height: 45px;
   border: 0.5px solid rgb(209, 209, 209);
-  margin-bottom: 0.2vw;
+  margin-bottom: 5px;
   font-family: $fontFamily;
   animation: show-freePlacesResult 1s forwards;
   .noResult {
@@ -63,9 +63,8 @@ $fontFamily: Arial, Helvetica, sans-serif;
   width: 45px;
   text-align: left;
 }
-.freePlacesResult .button {
-  margin-top: 8px;
-  margin-left: 60px;
-  width: 20px;
+.freePlacesResult .actionIcon {
+  margin-top: 0.5px;
+  margin-left: 385px;
   border: 0;
 }

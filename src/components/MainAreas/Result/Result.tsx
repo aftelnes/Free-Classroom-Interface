@@ -6,8 +6,6 @@ import { observer } from "mobx-react-lite";
 import store from "../../../store/store";
 
 const Result: FC = observer(() => {
-  console.log("Result");
-
   return (
     <ScrollArea
       h={400}

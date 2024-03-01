@@ -3,7 +3,7 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 
 //FormImageAndHeader
 .mainImageAndHeader {
-  font-size: 18px;
+  font-size: 20px;
   font-family: $fontFamily;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -18,15 +18,15 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   .input {
     display: block;
     margin: 10px auto;
-    width: 295px;
+    width: 330px;
     text-align: left;
   }
   .findbtn {
-    border-radius: 10px;
+    border-radius: 4px;
     display: block;
     width: 130px;
     margin-top: 25px;
     height: 32px;
-    margin-left: 165px;
+    margin-left: auto;
   }
 }

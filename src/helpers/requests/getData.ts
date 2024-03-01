@@ -13,15 +13,15 @@ import store from "../../store/store";
  * @returns
  * В случае IFaculty[]:
  * {
- * id: number,
- * name: string,
- * short_name: string,
- * inactive: boolean,
+ *  id: number,
+ *  name: string,
+ *  short_name: string,
+ *  inactive: boolean,
  * }
  * В случае IEquipment[]:
  * {
- * id: number,
- * name: string,
+ *  id: number,
+ *  name: string,
  * }
  */
 async function getData<T>(dataRoute: string): Promise<T> {

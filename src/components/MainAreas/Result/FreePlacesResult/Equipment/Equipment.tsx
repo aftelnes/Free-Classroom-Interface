@@ -1,4 +1,4 @@
-import { Popover, Text, Button } from "@mantine/core";
+import { Popover, Text, Button, ActionIcon } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconDotsVertical } from "@tabler/icons-react";
 import { FC } from "react";
@@ -19,14 +19,16 @@ const Equipment: FC<IEquipmentProps> = ({ equipments }) => {
       opened={opened}
     >
       <Popover.Target>
-        <Button
-          className={classes.button}
-          rightIcon={<IconDotsVertical size={25} />}
-          variant="default"
+        <ActionIcon
+          className={classes.actionIcon}
           onMouseEnter={open}
           onMouseLeave={close}
-          compact={true}
-        ></Button>
+          variant="transparent"
+          color="dark"
+          size="xl"
+        >
+          <IconDotsVertical size={25} />
+        </ActionIcon>
       </Popover.Target>
       <Popover.Dropdown style={{ pointerEvents: "none" }}>
         <Text size="sm">

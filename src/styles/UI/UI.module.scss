@@ -4,12 +4,12 @@ $fontFamily: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
 
 .ui {
-  width: 950px;
+  width: 960px;
   border-radius: 10px;
   display: block;
   margin: 0 auto;
   height: 900px;
-  background-color: rgb(255, 255, 255);
+  background-color: $backgroundColor;
 }
 
 @mixin areas {

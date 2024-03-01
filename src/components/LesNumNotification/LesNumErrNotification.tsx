@@ -7,12 +7,11 @@ const LesNumErrNotification = () => {
     <div>
       <Notification
         className={classes.lesNumErrNotification}
-        title="Ошибка формы"
         color="red"
         onClose={() => {}}
         withCloseButton={false}
       >
-        Данное занятие не может быть выбрано, так как оно уже закончилось
+        Занятия для выбранного времени уже пройдены
       </Notification>
     </div>
   );

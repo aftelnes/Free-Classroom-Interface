@@ -1,7 +1,6 @@
 import "@mantine/styles";
 import { FC, useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
-// import { Notifications, notifications } from "@mantine/notifications";
 
 import ResultArea from "./components/MainAreas/ResultArea";
 import FormArea from "./components/MainAreas/FormArea";

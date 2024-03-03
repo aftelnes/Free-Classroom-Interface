@@ -8,7 +8,6 @@ import NoResult from "./Result/NoResult/NoResult";
 import store from "../../store/store";
 
 const ResultArea: FC = observer(() => {
-  console.log(`ary = ${store.resultFreePlaces}`);
   return (
     <div className={classes.resultArea}>
       <ResultHeader />

@@ -17,7 +17,6 @@ const formatDate = (date: Date) => {
       : date.getMonth() + 1;
 
   const res = `${date.getFullYear()}-${month}-${day}`;
-  console.log(`res = ${res}`);
   return res;
 };
 

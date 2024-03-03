@@ -59,3 +59,9 @@ export interface IPlacesFreeProps {
     }
   ];
 }
+
+export interface INumberInputAry {
+  value: string;
+  label: string;
+  disabled: boolean;
+}

@@ -17,10 +17,10 @@ const InputMinimalPlaceSize: FC = () => {
       onChange={setSize}
       className={classes.input}
       label="Минимальная вместимость"
-      description="От 1 до 120"
+      description="От 1 до 100"
       placeholder="Введите желаемое кол-во мест"
       min={1}
-      max={120}
+      max={100}
       size="sm"
     />
   );

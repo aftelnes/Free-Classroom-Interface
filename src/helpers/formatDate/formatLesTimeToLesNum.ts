@@ -1,6 +1,6 @@
 import lessonNumberTimeAry from "../data/lessonNumberTimeAry";
 
-const formatLesTimeToLesNum = (lesTime: string) => {
+const convertLesTimeToLesNum = (lesTime: string) => {
   let res: number = 1;
 
   lessonNumberTimeAry.map((lesson) => {
@@ -12,4 +12,4 @@ const formatLesTimeToLesNum = (lesTime: string) => {
   return res;
 };
 
-export default formatLesTimeToLesNum;
+export default convertLesTimeToLesNum;

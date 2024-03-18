@@ -26,7 +26,6 @@ const InputDate: FC<any> = ({ parentCallback }) => {
       valueFormat="DD.MM.YYYY"
       label="Дата"
       placeholder="Выберите дату"
-      clearable
       withAsterisk
     />
   );

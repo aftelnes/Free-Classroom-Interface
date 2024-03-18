@@ -55,12 +55,12 @@ async function getPlacesFree<T>(): Promise<T> {
     );
     return response.data;
   } catch (error) {
-    if (
-      error.response.data.detail == "LESSON_NUMBER_MUST_BE_NO_LESS_THAN_CURRENT"
-    ) {
-      store.setIncorrectLesNum(true);
-    }
-    // store.setIncorrectLesNum(true);
+    // if (
+    //   error.response.data.detail == "LESSON_NUMBER_MUST_BE_NO_LESS_THAN_CURRENT"
+    // ) {
+    //   store.setIncorrectLesNum(true);
+    // }
+    store.setIncorrectLesNum(true);
   } finally {
     store.setBtnLoading(false);
   }
